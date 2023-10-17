@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import argparse
+import threadpool
 from time import sleep
 from datetime import datetime
 from utils.log_util import Logging
@@ -20,12 +21,14 @@ g_firmware_dir = os.path.join(os.path.dirname(__file__), "firmware")
 #  VD VE，默认VD
 #  升级方式：只升级BIOS BMC CPLD 全部升级
 #  是否支持指定文件路径
+#  支持并行升级和串行升级
 def parse_args():
     parser = argparse.ArgumentParser(description="Tool for upgrading BMC firmware in batches By Python2.7")  
     parser.add_argument("-m", '--mode', type=str, help="Upgrade Mode:upgrade, downgrade, default=upgrade", default='upgrade', choices=['upgrade', 'downgrade'])
     parser.add_argument("-e", '--env', type=str, help="BMC Env Type:VD, VE, default=VD", default='VD', choices=['VD', 'VE'])
     parser.add_argument('-t', '--type', type=str, help='Firmware Type:BMC, BIOS, CPLD, ALL, default=BMC', default='BMC', choices=['BMC', 'BIOS', 'CPLD', 'ALL'])
     parser.add_argument('-f', '--filepath', type=str, help='User Defined Upgrade FilePath, default=None', default=None)
+    parser.add_argument('-p', '--parallel', type=str, help='Parallel Upgrade:TRUE, FALSE, default=TRUE', default='TRUE', choices=['TRUE', 'FALSE'])
     args = parser.parse_args()
     return args
 
@@ -37,23 +40,33 @@ def get_os_memory(**env_info):
         return '512G' if int(output) < 512 else '1024G'
     return '512G'
 
+def upgrade_firmware(args, **env_info):
+    if args.filepath:
+        Upgrade(args.filepath, **env_info).upgrade_action()
+    elif args.type == 'BMC' or args.type == 'CPLD':
+        Upgrade(g_firmware_map[args.mode][args.env][args.type], **env_info).upgrade(args.type)
+    elif args.type == 'BIOS':
+        memory_type = get_os_memory(**env_info)
+        Upgrade(g_firmware_map[args.mode][args.env]['BIOS'][memory_type], **env_info).upgrade(args.type)
+    elif args.type == 'ALL':
+        Upgrade(g_firmware_map[args.mode][args.env]['BMC'], **env_info).upgrade('BMC')
+        Upgrade(g_firmware_map[args.mode][args.env]['CPLD'], **env_info).upgrade('CPLD')
+        memory_type = get_os_memory(**env_info)
+        Upgrade(g_firmware_map[args.mode][args.env]['BIOS'][memory_type], **env_info).upgrade('BIOS')
 
 if __name__ == "__main__":
     args = parse_args()
     g_env_map_lists = EnvParser(g_env_file).get_env_lists()
     g_firmware_map = FirmwareInfoParser(g_firmware_dir).build_firmware_map()
 
-    for env_info in g_env_map_lists:
-        if args.filepath:
-            Upgrade(args.filepath, **env_info).upgrade_action()
-        elif args.type == 'BMC' or args.type == 'CPLD':
-            Upgrade(g_firmware_map[args.mode][args.env][args.type], **env_info).upgrade(args.type)
-        elif args.type == 'BIOS':
-            memory_type = get_os_memory(**env_info)
-            Upgrade(g_firmware_map[args.mode][args.env]['BIOS'][memory_type], **env_info).upgrade(args.type)
-        elif args.type == 'ALL':
-            Upgrade(g_firmware_map[args.mode][args.env]['BMC'], **env_info).upgrade('BMC')
-            Upgrade(g_firmware_map[args.mode][args.env]['CPLD'], **env_info).upgrade('CPLD')
-            memory_type = get_os_memory(**env_info)
-            Upgrade(g_firmware_map[args.mode][args.env]['BIOS'][memory_type], **env_info).upgrade('BIOS')
-
+    if args.parallel == 'FALSE':
+        for env_info in g_env_map_lists:
+            upgrade_firmware(args, **env_info)
+    elif args.parallel == 'TRUE':
+        pool = threadpool.ThreadPool(10)
+        params = [([args], env_info) for env_info in g_env_map_lists]
+        requests = threadpool.makeRequests(upgrade_firmware, params) 
+        [pool.putRequest(req) for req in requests] 
+        pool.wait()
+    else:
+        pass
