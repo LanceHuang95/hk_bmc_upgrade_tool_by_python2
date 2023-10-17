@@ -21,11 +21,14 @@ iBMC批量升降级工具使用说明
                             Firmware Type:BMC, BIOS, CPLD, ALL, default=BMC
     -f FILEPATH, --filepath FILEPATH
                             User Defined Upgrade FilePath, default=None
+    -p {TRUE,FALSE}, --parallel  {TRUE,FALSE}
+                        Parallel Upgrade:TRUE, FALSE, default=TRUE
 5.参数说明：
     -m {upgrade,downgrade} 升级模式：升级或降级，默认升级
-    -e {VD,VE} 升级环境类型：VD或VE，默认VE
+    -e {VD,VE} 升级环境类型：VD或VE，默认VD
     -t {BMC,BIOS,CPLD,ALL} 升级固件类型：BMC、BIOS、CPLD、ALL(BMC/CPLD/BIOS),默认升级BMC
     -f FILEPATH 手动传入任意指定的升级固件绝对路径，此时 -m -e 参数失效，默认为空
+    -p {TRUE,FALSE} 并行升级:TRUE、FALSE，默认为TRUE
 
 6.使用示例：
     批量升级BMC、CPLD、BIOS: python main.py -t ALL
