@@ -44,8 +44,8 @@ class SshClient(object):
             self.logger.error("Incorrect user name or password:{}.....".format(self.host))
             ret = False
         except Exception as e:
-            self.logger.error("Other Errors:{}.....".format(self.host))
-            print 'Other Errors:{}'.format(e)
+            self.logger.error("IP:{}: Other Errors:.....".format(self.host))
+            print 'IP:{}: Other Errors:{}'.format(self.host, e)
             ret = False
         finally:
             ssh.close()
@@ -81,8 +81,8 @@ class SshClient(object):
         except AuthenticationException:
             self.logger.error("Incorrect user name or password:{}.....".format(self.host))
         except Exception as e:
-            self.logger.error("Other Errors:{}.....".format(self.host))
-            print 'Other Errors:{}'.format(e)
+            self.logger.error("IP:{}: Other Errors:.....".format(self.host))
+            print 'IP:{}: Other Errors:{}'.format(self.host, e)
         finally:
             # 激活交互式shell
             cmd_retval = None
@@ -120,10 +120,11 @@ class SshClient(object):
                             if timeout == 3:
                                 break
                     if self.verbose and r:
-                        print r
+                        # print 'IP:'+self.host+':'+r+'\n'
+                        print 'IP: '+self.host+':'+r.encode('utf-8').replace('\r', ' ')+'\n'
                         # 解决Console实时升级打印多行进度到一行
                         cmd_retval = r.encode('utf-8').replace('\r', ' ')
-                        self.logger.info(cmd_retval)
+                        self.logger.info("IP: " + self.host+':'+ cmd_retval)
                     if is_need_refresh == True:
                         # 解决实时刷新进度
                         time.sleep(5)
