@@ -56,7 +56,7 @@ class FirmwareInfoParser(object):
             #遍历filepath下所有文件，包括子目录
             files = os.listdir(filepath)
             for fi in files:
-                fi_d = os.path.join(filepath,fi)
+                fi_d = os.path.abspath(os.path.join(filepath,fi))
                 if os.path.isdir(fi_d):
                     gci(fi_d)
                 else:
