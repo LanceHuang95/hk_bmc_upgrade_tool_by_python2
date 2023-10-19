@@ -121,7 +121,7 @@ class SshClient(object):
                                 break
                     if self.verbose and r:
                         # print 'IP:'+self.host+':'+r+'\n'
-                        print 'IP: '+self.host+':'+r.encode('utf-8').replace('\r', ' ')+'\n'
+                        print 'IP: '+self.host+':'+r.replace('\r', ' ')+'\n'
                         # 解决Console实时升级打印多行进度到一行
                         cmd_retval = r.encode('utf-8').replace('\r', ' ')
                         self.logger.info("IP: " + self.host+':'+ cmd_retval)

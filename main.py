@@ -37,7 +37,7 @@ def get_os_memory(**env_info):
     if env_info['os_ip'] and env_info['os_user'] and env_info['os_passwd']:
         os_ssh_client = SshClient(env_info['os_ip'], env_info['os_user'], env_info['os_passwd'])
         output = os_ssh_client.excute_cmds(["cat /proc/meminfo | head -n 1 | awk '{print $2/(1024 * 1024)}'"])
-        return '512G' if int(output) < 512 else '1024G'
+        return '512G' if float(output.split('\n')[-2]) < 512 else '1024G'
     return '512G'
 
 def upgrade_firmware(args, **env_info):
@@ -50,9 +50,9 @@ def upgrade_firmware(args, **env_info):
         Upgrade(g_firmware_map[args.mode][args.env]['BIOS'][memory_type], **env_info).upgrade(args.type)
     elif args.type == 'ALL':
         Upgrade(g_firmware_map[args.mode][args.env]['BMC'], **env_info).upgrade('BMC')
-        Upgrade(g_firmware_map[args.mode][args.env]['CPLD'], **env_info).upgrade('CPLD')
         memory_type = get_os_memory(**env_info)
         Upgrade(g_firmware_map[args.mode][args.env]['BIOS'][memory_type], **env_info).upgrade('BIOS')
+        Upgrade(g_firmware_map[args.mode][args.env]['CPLD'], **env_info).upgrade('CPLD')
 
 if __name__ == "__main__":
     args = parse_args()

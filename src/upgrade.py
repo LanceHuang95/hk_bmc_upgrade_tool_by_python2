@@ -69,20 +69,20 @@ class Upgrade(object):
             self.bmc_ssh_client.excute_cmds(cmds, is_need_refresh=True)
             sleep(5)
             self.bmc_ssh_client.download(remote_file, local_file)
-        
-    def collect_os_log(self):
+
+    def collect_os_log(self, cmds= [], logname_lists=[]):
         if self.try_os_connect():
-            sel_log_filename = 'sel.log'
-            cmds = ['ipmitool sel elist > /tmp/sel.log']
-            current_time_str = str(datetime.now())[:19].replace(' ', '_').replace(':', '_')
-            local_file_name = '_'.join([self.os_ip, current_time_str, sel_log_filename])
-            tmp_local_file = os.path.abspath(os.path.join(os.path.dirname(__file__), "../bmc_logs/", local_file_name))
-            local_file = tmp_local_file.replace("\\", '/')
-            remote_file = r'/tmp/' + sel_log_filename
-            self.logger.info("IP:%s Begin to Collect OS Sel Log" % self.os_ip)
-            self.os_ssh_client.excute_cmds(cmds, is_need_refresh=True)
-            sleep(5)
-            self.os_ssh_client.download(remote_file, local_file)
+            self.os_ssh_client.excute_cmds(cmds, is_need_refresh=False)
+            for logname in logname_lists:
+                current_time_str = str(datetime.now())[:19].replace(' ', '_').replace(':', '_')
+                local_file_name = '_'.join([self.os_ip, current_time_str, logname])
+                tmp_local_file = os.path.abspath(os.path.join(os.path.dirname(__file__), "../bmc_logs/", logname))
+                local_file = tmp_local_file.replace("\\", '/')
+                remote_file = r'/tmp/' + logname
+                self.logger.info("IP:%s Begin to Collect OS %s" %(self.os_ip, logname))
+                sleep(1)
+                self.os_ssh_client.download(remote_file, local_file)
+                
 
     def prepare_upgrade_action(self, prepare_commands=None):
         if self.try_bmc_connect() and type(prepare_commands) == list:
@@ -123,20 +123,24 @@ class Upgrade(object):
         self.upgrade_action()
         self.after_upgrade_action([])
         while True:
-            sleep(15)
+            sleep(20)
             if self.try_bmc_connect():
                 ret_val = self.bmc_ssh_client.excute_cmds(['ipmcset -d powerstate -v 1'])
                 if ret_val:
-                    self.logger.info("IP:%s BMC Execute Power On:%s" %(self.bmc_ip, ret_val))
                     if 'being upgraded' not in ret_val and 'failed' not in ret_val:
+                        self.logger.info("IP:%s BMC Execute Power On:%s" %(self.bmc_ip, ret_val))
                         break
+                    else:
+                        self.logger.error("IP:%s BMC Execute Power On:%s" %(self.bmc_ip, ret_val))
         sleep(60)
-        # while True:
-        #     # 命令执行成功后一直ping服务器，从能ping通到不通再到通
-        #     if self.try_os_connect():
-        #         break
-        #     sleep(5)
-        self.collect_os_log()
+        if self.os_ip:
+            while True:
+                # 命令执行成功后一直ping服务器，从能ping通到不通再到通
+                sleep(20)
+                if self.try_os_connect():
+                    break
+        self.collect_os_log(['ipmitool sel elist > /tmp/sel.log', 'dmidecode > /tmp/smbios.log', 'dmidecode -t bios > /tmp/bios_version.log'],
+                            ['sel.log', 'smbios.log', 'bios_version.log'])
         self.logger.info("IP:%s OS BIOS Update FirmWare:%s Sucess" %(self.os_ip, self.firmware_real_path))
 
     def cpld_upgrade(self):
@@ -144,20 +148,22 @@ class Upgrade(object):
         self.upgrade_action()
         self.after_upgrade_action([])
         while True:
-            sleep(15)
+            sleep(20)
             if self.try_bmc_connect():
                 ret_val = self.bmc_ssh_client.excute_cmds(['ipmcset -d powerstate -v 1'])
                 if ret_val:
-                    self.logger.info("IP:%s BMC Execute Power On:%s" %(self.bmc_ip, ret_val))
                     if 'being upgraded' not in ret_val and 'failed' not in ret_val:
-                        break 
+                        self.logger.info("IP:%s BMC Execute Power On:%s" %(self.bmc_ip, ret_val))
+                        break
+                    else:
+                        self.logger.error("IP:%s BMC Execute Power On:%s" %(self.bmc_ip, ret_val)) 
         sleep(60)
-        # sleep(90)
-        # while True:
-        #     # 命令执行成功后一直ping服务器，从能ping通到不通再到通
-        #     if self.try_bmc_connect():
-        #         break
-        #     sleep(5)
+        if self.os_ip:
+            while True:
+                # 命令执行成功后一直ping服务器，从能ping通到不通再到通
+                sleep(20)
+                if self.try_os_connect():
+                    break
         self.logger.info("IP:%s BMC Cpld Update FirmWare:%s Sucess" %(self.bmc_ip, self.firmware_real_path))
 
     def upgrade(self, upgrade_type = None):

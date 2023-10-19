@@ -28,11 +28,13 @@ iBMC批量升降级工具使用说明
     -e {VD,VE} 升级环境类型：VD或VE，默认VD
     -t {BMC,BIOS,CPLD,ALL} 升级固件类型：BMC、BIOS、CPLD、ALL(BMC/CPLD/BIOS),默认升级BMC
     -f FILEPATH 手动传入任意指定的升级固件绝对路径，此时 -m -e 参数失效，默认为空
-    -p {TRUE,FALSE} 并行升级:TRUE、FALSE，默认为TRUE
+    -p {TRUE,FALSE} 并行升级:TRUE、FALSE，默认为TRUE,并行升级;传入FALSE则串行升级
 
 6.使用示例：
     批量升级BMC、CPLD、BIOS: python main.py -t ALL
-    批量降级VE环境的BIOS: python main.py -m downgrade -e VE -t BIOS
+    批量并行降级VE环境的BIOS: python main.py -m downgrade -e VE -t BIOS
+	批量串行升级VD环境的BMC: python main.py -m upgrade -e VD -t BMC -p FALSE (可简写为:python main.py -p FALSE)
+	
 
 7.日志说明：
     工具运行日志：已当前IP+日期+指定的文件名为文件保存，升级BMC后会自动一键收集BMC日志。OS_IP,OS_USER,OS_PASSWORD则升级BIOS后会收集OS指定日志install 

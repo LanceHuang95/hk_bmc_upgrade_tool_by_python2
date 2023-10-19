@@ -124,6 +124,17 @@ class FirmwareInfoParser(object):
 #     else:
 #         yield pre + [indict]
 
+# def gci(filepath):
+#     #遍历filepath下所有文件，包括子目录
+#     files = os.listdir(filepath)
+#     for fi in files:
+#         fi_d = os.path.abspath(os.path.join(filepath,fi))
+#         if os.path.isdir(fi_d):
+#             gci(fi_d)
+#         else:
+#             print (os.path.abspath(os.path.join(filepath,fi_d)))
+
+
 if __name__ == "__main__":
     F = FirmwareInfoParser()
     # tmp_list = F.filter_filelists_hpm()
@@ -136,6 +147,8 @@ if __name__ == "__main__":
     # print g_firemware_map
 
     print F.build_firmware_map()
+
+    # gci(g_firmware_dir)
 
     
 
