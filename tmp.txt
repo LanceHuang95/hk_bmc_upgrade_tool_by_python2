@@ -1,344 +1,86 @@
-SheetTitle=全量
-SheetRow=340, Col=3
-SheetRowHeight=22.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***33.0***16.5***33.0***33.0***33.0***33.0***16.5***16.5***16.5***33.0***33.0***16.5***16.5***16.5***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***16.5***16.5***16.5***33.0***33.0***16.5***16.5***16.5***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***33.0***16.5***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***16.5***16.5***33.0***16.5***16.5***33.0***16.5***16.5***16.5***16.5***33.0***16.5***33.0***33.0***33.0***33.0***16.5***33.0***33.0***33.0***16.5***16.5***16.5***16.5***16.5***33.0***16.5***33.0***16.5***16.5***16.5***16.5***33.0***33.0***16.5***16.5***16.5***33.0***33.0***16.5***16.5***16.5***16.5***33.0***16.5***16.5***33.0***33.0***33.0***33.0***33.0***33.0***33.0***33.0***33.0***33.0***33.0***16.5***16.5***16.5***16.5***16.5***16.5***33.0***33.0***33.0***16.5***16.5***16.5***16.5***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***16.5***16.5***16.5***16.5***16.5***33.0***33.0***33.0***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***16.5***33.0***33.0***16.5***16.5***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***59.25***33.0***16.5***16.5***33.0***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***33.0***33.0***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***16.5***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25
-SheetColWidth=27.25***120.375***46.75
-None***接口***None
-root***/redfish/v1/***None
-metadata***/redfish/v1/$metadata***None
-JsonSchemas***/redfish/v1/JsonSchemas***None
-JsonSchemas***/redfish/v1/JsonSchemas/{JsonSchemaFileId}***None
-Registries***/redfish/v1/Registries***None
-Registries***/redfish/v1/Registries/{MessageRegistryFileId}***None
-odata***/redfish/v1/odata***None
-AccountService***/redfish/v1/AccountService***None
-AccountService***/redfish/v1/AccountService/Accounts***None
-AccountService***/redfish/v1/AccountService/Accounts/{ManagerAccountId}***None
-AccountService***/redfish/v1/AccountService/Oem/Huawei/Actions/AccountService.ImportRootCertificate***None
-AccountService***/redfish/v1/AccountService/Oem/Huawei/Actions/AccountService.DeleteRootCertificate***None
-AccountService***/redfish/v1/AccountService/Oem/Huawei/Actions/AccountService.ImportCrl***None
-AccountService***/redfish/v1/AccountService/Accounts/{ManagerAccountId}/Oem/Huawei/Actions/Account.ImportMutualAuthClientCert***None
-AccountService***/redfish/v1/AccountService/Accounts/{ManagerAccountId}/Oem/Huawei/Actions/Account.DeleteMutualAuthClientCert***None
-AccountService***/redfish/v1/AccountService/Accounts/{ManagerAccountId}/Oem/Huawei/Actions/Account.ImportSSHPublicKey***None
-AccountService***/redfish/v1/AccountService/Accounts/{ManagerAccountId}/Oem/Huawei/Actions/Account.DeleteSSHPublicKey***None
-AccountService***/redfish/v1/AccountService/LdapService***None
-AccountService***/redfish/v1/AccountService/LdapService/LdapControllers***None
-AccountService***/redfish/v1/AccountService/LdapService/LdapControllers/{ControllerId}***None
-AccountService***/redfish/v1/AccountService/LdapService/LdapControllers/{ControllerId}/Actions/HwLdapController.ImportCert***None
-AccountService***/redfish/v1/AccountService/LdapService/LdapControllers/{ControllerId}/Actions/LdapController.ImportCrl***None
-AccountService***/redfish/v1/AccountService/KerberosService***None
-AccountService***/redfish/v1/AccountService/KerberosService/KerberosControllers***None
-AccountService***/redfish/v1/AccountService/KerberosService/KerberosControllers/{ControllerId}***None
-AccountService***/redfish/v1/AccountService/KerberosService/KerberosControllers/{ControllerId}/Actions/HwKerberosController.ImportKeyTable***None
-AccountService***/redfish/v1/AccountService/PrivilegeMap***None
-AccountService***/redfish/v1/AccountService/ExternalAccountProviders***None
-AccountService***/redfish/v1/AccountService/Roles***None
-AccountService***/redfish/v1/AccountService/Roles/{RoleId}***None
-Chassis***/redfish/v1/Chassis***None
-Chassis***/redfish/v1/Chassis/{ChassisId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Actions/Chassis.Reset***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Oem/Huawei/Actions/Chassis.ControlIndicatorLED***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Boards***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Boards/{BoardsId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Drives***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Drives/{DriveId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Drives/drives_id/Actions/Oem/Huawei/Drive.CryptoErase***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/NetworkAdapters***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/NetworkAdapters/{NetworkAdapterId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/NetworkAdapters/{NetworkAdapterId}/NetworkPorts***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/NetworkAdapters/{NetworkAdapterId}/NetworkPorts/{NetworkPortId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/NetworkAdapters/{NetworkAdapterId}/NetworkPorts/{NetworkPortId}/OpticalModule***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PCIeDevices***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PCIeDevices/{PCIeDeviceId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PCIeDevices/{PCIeDeviceId}/PCIeFunctions***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PCIeDevices/{PCIeDeviceId}/PCIeFunctions/{PCIeFunctionId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Power(规范已废弃)***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PowerSubsystem***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PowerSubsystem/PowerSupplies***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PowerSubsystem/PowerSupplies/{PowerSupplyId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PowerSubsystem/Batteries***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/PowerSubsystem/Batteries/{BatteryId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Power/PowerHistoryData***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Power/Oem/Huawei/Actions/Power.ResetHistoryData***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Power/Oem/Huawei/Actions/Power.ResetStatistics***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Power/Oem/Huawei/Actions/Power.SetPsuSupplySource***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/power/Oem/Huawei/Actions/Power.CollectHistoryData***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Sensors***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/ThresholdSensors***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/DiscreteSensors***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Controls***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Thermal(规范已废弃)***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem/Fans***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem/Fans/{FanId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/ThermalSubsystem/ThermalMetrics***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Thermal/InletHistoryTemperature***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Thermal/Oem/Huawei/Actions/Thermal.ClearInletHistoryTemperature***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/EnvironmentMetrics***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/BackupBatteryUnits***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/BackupBatteryUnits/backupbattery_id***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Switches***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Switches/{SwitchId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Switches/{SwitchId}/Ports***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/Switches/{SwitchId}/Ports/{PortId}***None
-Chassis***/redfish/v1/Chassis/{ChassisId}/SetDeviceInstalledStatus***None
-DataAcquisitionService***/redfish/v1/DataAcquisitionService***None
-DataAcquisitionService***/redfish/v1/DataAcquisitionService/Actions/HwDataAcquisitionService.ExportAcquisitionData***None
-DataAcquisitionService***/redfish/v1/DataAcquisitionService/Actions/HwDataAcquisitionService.ClearHistoryData***None
-DataAcquisitionService***/redfish/v1/DataAcquisitionService/Actions/HwDataAcquisitionService.DataFiltering***None
-DataAcquisitionService***/redfish/v1/DataAcquisitionService/DataAcquisitionReport?ComponentType=component&MetricType=metric&StartTime=start_time&EndTime=end_time***该部分需要补齐CCAE的需求范围进行补齐
-DataAcquisitionService***/redfish/v1/DataAcquisitionService/RackDataAcquisitionConfiguration***None
-EventService***/redfish/v1/EventService***None
-EventService***/redfish/v1/EventService/Actions/EventService.SubmitTestEvent***None
-EventService***/redfish/v1/EventService/Subscriptions***None
-EventService***/redfish/v1/EventService/Subscriptions/{EventDestinationId}***None
-EventService***/redfish/v1/EventService/Actions/Oem/Huawei/EventService.Rearm***None
-EventService***/redfish/v1/EventService/Actions/Oem/Huawei/EventService.MockPreciseAlarm***None
-EventService***/redfish/v1/EventService/Actions/Oem/Huawei/EventService.ShieldSystemAlert***None
-Facility***/redfish/v1/Facilities***None
-Fabrics***/redfish/v1/Fabrics***None
-Fabrics***/redfish/v1/Fabrics/{FabricId}***None
-Fabrics***/redfish/v1/Fabrics/{FabricId}/Endpoints***None
-Fabrics***/redfish/v1/Fabrics/{FabricId}/Endpoints/{EndpointId}***None
-Fabrics***/redfish/v1/Fabrics/{FabricId}/Zones***None
-Fabrics***/redfish/v1/Fabrics/{FabricId}/Zones/{ZoneId}***None
-Fabrics***/redfish/v1/Fabrics/PCIe/Actions/Oem/Huawei/Fabric.ConfigCompositionMode***None
-Managers***/redfish/v1/Managers***None
-Managers***/redfish/v1/Managers/{ManagerId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Manager.Reset***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Manager.RollBack***None
-Managers***/redfish/v1/Managers/{ManagerId}/EthernetInterfaces***None
-Managers***/redfish/v1/Managers/{ManagerId}/EthernetInterfaces/{EthernetInterfaceId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/EthernetInterfaces/{EthernetInterfaceId}/VLANs***None
-Managers***/redfish/v1/Managers/{ManagerId}/EthernetInterfaces/{EthernetInterfaceId}/VLANs/{VLanNetworkInterfaceId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/LogServices***None
-Managers***/redfish/v1/Managers/{ManagerId}/LogServices/{LogServiceId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/LogServices/{LogServiceId}/Actions/LogService.ClearLog***None
-Managers***/redfish/v1/Managers/{ManagerId}/LogServices/{LogServiceId}/Entries***None
-Managers***/redfish/v1/Managers/{ManagerId}/LogServices/{LogServiceId}/Entries/{LogEntryId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/LogServices/{LogServiceId}/Actions/Oem/Huawei/LogService.ExportLog***None
-Managers***/redfish/v1/Managers/{ManagerId}/NICs***None
-Managers***/redfish/v1/Managers/{ManagerId}/NICs/{NICId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/NetworkProtocol***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/Actions/SecurityService.UpdateMasterKey***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/HttpsCert***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/HttpsCert/Actions/HttpsCert.GenerateCSR***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/HttpsCert/Actions/HttpsCert.ExportCSR***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/HttpsCert/Actions/HttpsCert.ImportServerCertificate***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/HttpsCert/Actions/HttpsCert.ImportCustomCertificate***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/DiceCert***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/DiceCert/Actions/DiceCert.ExportDiceCSR***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/DiceCert/Actions/DiceCert.ImportDiceCertificate***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/DiceCert/Actions/DiceCert.ExportDiceCertficateChain***None
-Managers***/redfish/v1/Managers/{ManagerId}/SerialInterfaces***None
-Managers***/redfish/v1/Managers/{ManagerId}/SerialInterfaces/{SerialInterfaceId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/VirtualMedia***None
-Managers***/redfish/v1/Managers/{ManagerId}/VirtualMedia/{VirtualMediaId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/VirtualMedia/CD***None
-Managers***/redfish/v1/Managers/{ManagerId}/VirtualMedia/CD/Oem/Huawei/Actions/VirtualMedia.VmmControl***None
-Managers***/redfish/v1/Managers/{ManagerId}/VirtualMedia/USBStick***None
-Managers***/redfish/v1/Managers/{ManagerId}/VirtualMedia/USBStick/Oem/Huawei/Actions/VirtualMedia.USBStickControl***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.SetFusionPartition***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.DeleteLanguage***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.RestoreFactory***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.Dump***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.ImportConfiguration***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.ExportConfiguration***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.PowerOnPermit***None
-Managers***/redfish/v1/Managers/{ManagerId}/Actions/Oem/Huawei/Manager.GeneralDownload***None
-Managers***/redfish/v1/Managers/{ManagerId}/SnmpService***None
-Managers***/redfish/v1/Managers/{ManagerId}/SnmpService/Actions/SnmpService.ConfigSnmpV3PrivPasswd***None
-Managers***/redfish/v1/Managers/{ManagerId}/SnmpService/Actions/SnmpService.SubmitTestEvent***None
-Managers***/redfish/v1/Managers/{ManagerId}/LldpService***None
-Managers***/redfish/v1/Managers/{ManagerId}/EnergySavingService***None
-Managers***/redfish/v1/Managers/{ManagerId}/KvmService***None
-Managers***/redfish/v1/Managers/{ManagerId}/KvmService/Actions/KvmService.SetKvmKey***None
-Managers***/redfish/v1/Managers/{ManagerId}/KvmService/Actions/KvmService.ExportKvmStartupFile***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/WorkRecord***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/WorkRecord/Actions/WorkRecord.AddRecord***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/WorkRecord/Actions/WorkRecord.DeleteRecord***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/WorkRecord/Actions/WorkRecord.ModifyRecord***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/DiagnosticService.StopVideoPlayback***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/Actions/DiagnosticService.ExportVideo***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/Actions/DiagnosticService.ExportVideoPlaybackStartupFile***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/Actions/DiagnosticService.CaptureScreenShot***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/Actions/DiagnosticService.DeleteScreenShot***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/Actions/DiagnosticService.ExportBlackBox***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/Actions/DiagnosticService.ExportSerialPortData***None
-Managers***/redfish/v1/Managers/{ManagerId}/DiagnosticService/Actions/DiagnosticService.ExportNPULog***None
-Managers***/redfish/v1/Managers/{ManagerId}/SmsService***None
-Managers***/redfish/v1/Managers/{ManagerId}/NtpService***None
-Managers***/redfish/v1/Managers/{ManagerId}/NtpService/Actions/NtpService.ImportNtpKey***None
-Managers***/redfish/v1/Managers/{ManagerId}/SmtpService***None
-Managers***/redfish/v1/Managers/{ManagerId}/SmtpService/SmtpService.SubmitTestEvent***None
-Managers***/redfish/v1/Managers/{ManagerId}/SyslogService***None
-Managers***/redfish/v1/Managers/{ManagerId}/SyslogService/Actions/SyslogService.ImportRootCertificate***None
-Managers***/redfish/v1/Managers/{ManagerId}/SyslogService/Actions/SyslogService.ImportClientCertificate***None
-Managers***/redfish/v1/Managers/{ManagerId}/SyslogService/Actions/SyslogService.SubmitTestEvent***None
-Managers***/redfish/v1/Managers/{ManagerId}/SyslogService/Actions/SyslogService.ImportCrl***None
-Managers***/redfish/v1/Managers/{ManagerId}/VncService***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/Actions/SPService.DeleteFile***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/Actions/SPService.ExportSPRAIDConfigurations***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/Actions/SPService.UpdateSchemaFiles***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPRAIDCurrentConfigurations***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPRAIDCurrentConfigurations/{RaidId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/DeviceInfo***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPResult***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPResult/{ResultId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPCfg***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPCfg/{CfgId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPFWUpdate***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPFWUpdate/{UpdetaId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPFWUpdate/{UpdetaId}/Actions/SPFWUpdate.SimpleUpdate***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPRAID***None
-Managers***/redfish/v1/Managers/{ManagerId}/SPService/SPDiagnose***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPRAID/{RaidId}***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPOSInstallPara/osid***None
-Managers***/redfish/v1/Managers/{ManagerId}/LicenseService***None
-Managers***/redfish/v1/Managers/{ManagerId}/LicenseService/Actions/LicenseService.InstallLicense***None
-Managers***/redfish/v1/Managers/{ManagerId}/LicenseService/Actions/LicenseService.ExportLicense***None
-Managers***/redfish/v1/Managers/{ManagerId}/LicenseService/Actions/LicenseService.RevokeLicense***None
-Managers***/redfish/v1/Managers/{ManagerId}/LicenseService/Actions/LicenseService.DeleteLicense***None
-Managers***/redfish/v1/Managers/{ManagerId}/FDMService***None
-Managers***/redfish/v1/Managers/{ManagerId}/FDMService/{DeviceNodeId}/EventReports***None
-Managers***/redfish/v1/Managers/{ManagerId}/FDMService/Actions/FDMService.ReGenerate***None
-Managers***/redfish/v1/Managers/{ManagerId}/FDMService/Actions/FDMService.RemoveAlarm***None
-Managers***/redfish/v1/Managers/{ManagerId}/FPCService***None
-Managers***/redfish/v1/Managers/{ManagerId}/FPCService/Memory***None
-Managers***/redfish/v1/Managers/{ManagerId}/USBMgmtService***None
-Managers***/redfish/v1/Managers/{ManagerId}/WirelessService***None
-SessionService***/redfish/v1/SessionService***None
-SessionService***/redfish/v1/SessionService/Sessions***None
-SessionService***/redfish/v1/SessionService/Sessions/{SessionId}***None
-Systems***/redfish/v1/Systems***None
-Systems***/redfish/v1/Systems/{SystemId}***None
-Systems***/redfish/v1/Systems/{SystemId}/Actions/ComputerSystem.Reset***None
-Systems***/redfish/v1/Systems/{SystemId}/Actions/Oem/Huawei/ComputerSystem.FruControl***None
-Systems***/redfish/v1/Systems/{SystemId}/Actions/Oem/Huawei/ComputerSystem.ClearNetworkHistoryUsageRate***None
-Systems***/redfish/v1/Systems/{SystemId}/Bios***None
-Systems***/redfish/v1/Systems/{SystemId}/Bios/Settings***None
-Systems***/redfish/v1/Systems/{SystemId}/Bios/Actions/Bios.ResetBios***None
-Systems***/redfish/v1/Systems/{SystemId}/Bios/Actions/Bios.ChangePassword***None
-Systems***/redfish/v1/Systems/{SystemId}/Bios/Settings/Actions/Oem/Huawei/Settings.Revoke***None
-Systems***/redfish/v1/Systems/{SystemId}/DigitalWarranty***None
-Systems***/redfish/v1/Systems/{SystemId}/EthernetInterfaces***None
-Systems***/redfish/v1/Systems/{SystemId}/EthernetInterfaces/{EthernetInterfaceId}***None
-Systems***/redfish/v1/Systems/{SystemId}/EthernetInterfaces/{EthernetInterfaceId}/Actions/Oem/Huawei/EthernetInterface.Configure***None
-Systems***/redfish/v1/Systems/{SystemId}/EthernetInterfaces/{EthernetInterfaceId}/VLANs***None
-Systems***/redfish/v1/Systems/{SystemId}/EthernetInterfaces/{EthernetInterfaceId}/VLANs/{VLanId}***None
-Systems***/redfish/v1/Systems/{SystemId}/EthernetInterfaces/{EthernetInterfaceId}/VLANs/{VlanId}/Actions/Oem/Huawei/VLanNetworkInterface.Configure***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkBondings***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkBondings/{BondingId}***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkBondings/{BondingId}/Actions/NetworkBonding.Configure***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkBridge/{BridgeId}***None
-Systems***/redfish/v1/Systems/{SystemId}/InfiniBandInterfaces***None
-Systems***/redfish/v1/Systems/{SystemId}/InfiniBandInterfaces/{InfiniBandId}***None
-Systems***/redfish/v1/Systems/{SystemId}/MemoryView***None
-Systems***/redfish/v1/Systems/{SystemId}/Memory***None
-Systems***/redfish/v1/Systems/{SystemId}/Memory/{MemoryId}***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkInterfaces***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkInterfaces/{InterfacesId}***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkInterfaces/{InterfacesId}/NetworkPorts***None
-Systems***/redfish/v1/Systems/{SystemId}/LogServices***None
-Systems***/redfish/v1/Systems/{SystemId}/LogServices/{LogServiceId}***None
-Systems***/redfish/v1/Systems/{SystemId}/LogServices/{LogServiceId}/Actions/LogService.ClearLog***None
-Systems***/redfish/v1/Systems/{SystemId}/LogServices/{LogServiceId}/Entries***None
-Systems***/redfish/v1/Systems/{SystemId}/LogServices/{LogServiceId}/Entries/{LogEntryId}***None
-Systems***/redfish/v1/Systems/{SystemId}/LogServices/{LogServiceId}/Actions/Oem/Huawei/LogService.QuerySelLogEntries***None
-Systems***/redfish/v1/Systems/{SystemId}/LogServices/{LogServiceId}/Actions/Oem/Huawei/LogService.CollectSel***None
-Systems***/redfish/v1/Systems/{SystemId}/Processors***None
-Systems***/redfish/v1/Systems/{SystemId}/Processors/{ProcessorId}***None
-Systems***/redfish/v1/Systems/{SystemId}/ProcessorsHistoryUsageRate***None
-Systems***/redfish/v1/Systems/{SystemId}/MemoryHistoryUsageRate***None
-Systems***/redfish/v1/Systems/{SystemId}/NetworkHistoryUsageRate***None
-Systems***/redfish/v1/Systems/{SystemId}/ProcessorView***None
-Systems***/redfish/v1/Systems/{SystemId}/SecureBoot***None
-Systems***/redfish/v1/Systems/{SystemId}/SecureBoot/SecureBootDatabases***None
-Systems***/redfish/v1/Systems/{SystemId}/Storage***None
-Systems***/redfish/v1/Systems/{SystemId}/Storage/{StorageId}***None
-Systems***/redfish/v1/Systems/{SystemId}/Storages/storage_id/Actions/Oem/Huawei/Storage.RestoreStorageControllerDefaultSettings***None
-Systems***/redfish/v1/Systems/{SystemId}/Storages/storage_id/Actions/Oem/Huawei/Storage.ImportForeignConfig***None
-Systems***/redfish/v1/Systems/{SystemId}/Storage/{StorageId}/Volumes***None
-Systems***/redfish/v1/Systems/{SystemId}/Storage/{StorageId}/Volumes/{VolumeId}***None
-Systems***/redfish/v1/Systems/{SystemId}/Storages/SDStorage***None
-Systems***/redfish/v1/Systems/{SystemId}/GraphicsControllers***None
-Systems***/redfish/v1/Systems/{SystemId}/USBControllers***None
-TaskService***/redfish/v1/TaskService***None
-TaskService***/redfish/v1/TaskService/Tasks***None
-TaskService***/redfish/v1/TaskService/Tasks/{TaskId}***None
-TaskService***/redfish/v1/TaskService/Tasks/{TaskId}/Monitor***None
-UpdateService***/redfish/v1/UpdateService***None
-UpdateService***/redfish/v1/UpdateService/Actions/UpdateService.SimpleUpdate***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/{SoftwareInventoryId}***None
-Sms***/redfish/v1/Sms/1/UpdateService***None
-Sms***/redfish/v1/Sms/1/UpdateService/Progress***None
-Sms***/redfish/v1/Sms/1/UpdateService/SoftwareInventory***None
-Sms***/redfish/v1/Sms/1/UpdateService/SoftwareInventory/{SoftwareId}***None
-Sms***/redfish/v1/Sms/1/UpdateService/FirmwareInventory***None
-Sms***/redfish/v1/Sms/1/UpdateService/FirmwareInventory/{FirmwareId}***None
-Sms***/redfish/v1/Sms/1/UpdateService/Actions/UpdateService.SimpleUpdate***None
-Sms***/redfish/v1/Sms/1/UpdateService/Actions/UpdateService.AsynchronousUpdate***None
-Sms***/redfish/v1/Sms/1/UpdateService/Actions/UpdateService.EffectiveUpdate***None
-Sms***/redfish/v1/Sms/1/UpdateService/Actions/UpdateService.UploadFile***None
-Sms***/redfish/v1/Sms/1/TaskService***None
-Sms***/redfish/v1/Sms/1/TaskService/Tasks***None
-Sms***/redfish/v1/Sms/1/TaskService/Tasks/{TaskId}***None
-Sms***/redfish/v1/Sms/1/Systems/1/LogServices/iBMA/Actions/LogService.CollectLog***None
-Managers***/redfish/v1/Managers/{ManagerId}/SpService/SPOSInstallPara***None
-Managers***/redfish/v1/Managers/manager_id/NtpService***None
-Managers***/redfish/v1/Managers/manager_id/SPService***None
-Systems***/redfish/v1/Systems/system_id/DigitalWarranty***None
-Systems***/redfish/v1/Systems/system_id/Processors***None
-Systems***/redfish/v1/Systems/system_id/Storages***None
-Systems***/redfish/v1/Systems/system_id/Storages/storage_id***None
-Systems***/redfish/v1/Systems/system_id/Storages/storage_id/Volumes***None
-Systems***/redfish/v1/Systems/system_id/Storages/storage_id/Volumes/volume_id***None
-Systems***/redfish/v1/Systems/system_id/Memory***None
-Systems***/redfish/v1/Systems/system_id/Memory/memory_id***None
-Systems***/redfish/v1/Systems/system_id/EthernetInterfaces***None
-Chassis***/redfish/v1/Chassis/chassis_id/Boards***None
-Chassis***/redfish/v1/Chassis/chassis_id/Boards/board_id***None
-Chassis***/redfish/v1/Chassis/chassis_id/Drives/drive_id***None
-Chassis***/redfish/v1/Chassis/chassis_id/NetworkAdapters***None
-Chassis***/redfish/v1/Chassis/chassis_id/NetworkAdapters/NetworkAdapters_id***None
-Chassis***/redfish/v1/Chassis/chassis_id/NetworkAdapters/NetworkAdapters_id/NetworkPorts/NetworkPorts_id***None
-Chassis***/redfish/v1/Chassis/chassis_id/ThresholdSensors***None
-Systems***/redfish/v1/Systems/system_id/Actions/ComputerSystem.Reset***None
-Chassis***/redfish/v1/Chassis/chassis_id/Oem/Huawei/Actions/Chassis.ControlIndicatorLED***None
-Managers***/redfish/v1/Managers/manager_id/EthernetInterfaces/ethernetinterface_id***None
-Systems***/redfish/v1/Systems/system_id/Power***None
-Systems***/redfish/v1/Systems/system_id***None
-Chassis***/redfish/v1/Chassis/chassis_id/Power***None
-Chassis***/redfish/v1/Chassis/chassis_id***None
-Chassis***/redfish/v1/Chassis/chassis_id/Thermal***None
-Systems***/redfish/v1/Systems/system_id/EthernetInterfaces/ethernetinterface_id***None
-Systems***/redfish/v1/Systems/system_id/Processors/processor_id***None
-Systems***/redfish/v1/Chassis/chassis_id/PCIeDevices/PCIeDevices_id***None
-EventService***/redfish/v1/EventService/Subscriptions/subscription_id***None
-Managers***/redfish/v1/Managers/manager_id/SecurityService***None
-Managers***/redfish/v1/Managers/manager_id/SecurityService/Actions/SecurityService.ImportRemoteHttpsServerRootCA***None
-Managers***/redfish/v1/Managers/manager_id/SecurityService/Actions/SecurityService.DeleteRemoteHttpsServerRootCA***None
-Systems***/redfish/v1/Systems/system_id/LogServices/Log1***None
-Managers***/redfish/v1/Managers/{ManagerId}/SecurityService/Actions/SecurityService.ImportRemoteHttpsServerRootCA***None
-Chassis***/redfish/v1/Chassis/chassis_id/Drives***None
-Chassis***/redfish/v1/Chassis/chassis_id/PCIeDevices***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/ActiveBMC***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/BackupBMC***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/AvailableBMC***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/Bios***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/xxxCPLD***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/xxxMCU***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/xxxHWSR***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/xxxVRD***None
-Chassis***/redfish/v1/Chassis/chasssis_id/PCIeDevices/PCIeCardxxx***None
-UpdateService/***/redfish/v1/UpdateService/FirmwareInventory/xxxPSU***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/xxxBBU***None
-UpdateService***/redfish/v1/UpdateService/FirmwareInventory/ECU***None
-UpdateService***/redfish/v1/UpdateService/Actions/Oem/Huawei/UpdateService.ActivateBios***None
-Managers***/redfish/v1/Managers/1/SPService/SPFWUpdate/1/Actions/SPFWUpdate.SimpleUpdate***None
-Managers***/redfish/v1/Managers/1/SPService/SPFWUpdate/1***None
-Systems***redfish/v1/Systems/1/Processors/Npu****None
-Chassis***/redfish/v1/Chassis/1/NetworkAdapters/NPUBoardFLEXIOB*/NetworkPorts/*/OpticalModule***None
+SheetTitle=reviews
+SheetRow=44, Col=12
+SheetRowHeight=18.75***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0
+SheetColWidth=25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0
+检视人***合并请求***检视意见***状态***检视日期***严重程度***指派人***意见模块***意见分类***Commit提交人***检视意见行***检视文件
+huangliang WX1223276***#199***确认下 i2c地址，一个9545预留，另外2个9545 8nvme使用[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-03-04 12:18:33***建议***makun WX1238188*********makun WX1238188***32***'application/src/resource/profile/rack_server_01/Tianchi/BM320/1406G002_VF_30343234.xml'
+huangliang WX1223276***#202***未使用，删除[严重程度] 提示[问题根因] 软件结构[二级分类] 冗余重复代码***未解决***2024-03-04 12:15:35***建议***makun WX1238188*********makun WX1238188***729***'application/src/resource/profile/rack_server_01/Tianchi/BM320/SW_32343832.xml'
+huangliang WX1223276***#202***是否使用[严重程度] 提示[问题根因] 业务功能[二级分类] 其他功能问题***未解决***2024-03-04 12:10:05***建议***makun WX1238188*********makun WX1238188***527***'application/src/resource/profile/rack_server_01/Tianchi/BM320/SW_32343832.xml'
+huangliang WX1223276***#202***9545 chip没有传递下去，后面的每个XML单独添加，冗余[严重程度] 提示[问题根因] 编程规范(代码级)[二级分类] 注释/可读性 ***已解决***2024-03-04 12:06:59***建议***makun WX1238188*********makun WX1238188***12***'application/src/resource/profile/rack_server_01/Tianchi/BM320/SW_00.xml'
+huangliang WX1223276***#198***直通M.2 9545地址确认下[严重程度] 提示[问题根因] 编程规范(代码级)[二级分类] 注释/可读性 ***未解决***2024-03-04 11:59:34***建议***makun WX1238188*********makun WX1238188***129***'application/src/resource/profile/rack_server_01/Tianchi/BM320/14140130_38393936.xml'
+huangliang WX1223276***#197***Check  nvme pcieaddrinfo  加载有关[严重程度] 提示[问题根因] 业务功能[二级分类] 其他功能问题***未解决***2024-03-04 11:50:18***建议***makun WX1238188*********makun WX1238188***2511***'application/src/resource/profile/rack_server_01/Tianchi/BM320/1406G002_VF_31343639.xml'
+huangliang WX1223276***#197***确认内置8盘升级 jtag是否正常[严重程度] 提示[问题根因] 业务功能[二级分类] 其他功能问题***未解决***2024-03-04 11:43:50***建议***makun WX1238188*********makun WX1238188***2485***'application/src/resource/profile/rack_server_01/Tianchi/BM320/1406G002_VF_31343639.xml'
+huangliang WX1223276***#197***UID 按照实际情况填写[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-03-04 11:39:45***建议***makun WX1238188*********makun WX1238188***1263***'application/src/resource/profile/rack_server_01/Tianchi/BM320/1406G002_VF_31343639.xml'
+huangliang WX1223276***#196***check下是否需要乘上系数：120[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求遗漏***未解决***2024-03-04 11:31:20***建议***makun WX1238188*********makun WX1238188***529***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_6056.xml'
+huangliang WX1223276***#195***后期修改，正式版本[严重程度] 提示[问题根因] 编程规范(代码级)[二级分类] 排版/命名***未解决***2024-03-04 11:10:38***建议***makun WX1238188*********makun WX1238188***1291***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_34343434.xml'
+huangliang WX1223276***#195***check下，web显示switch板[严重程度] 提示[问题根因] 业务功能[二级分类] 其他功能问题***未解决***2024-03-04 11:07:11***建议***makun WX1238188*********makun WX1238188***249***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_34343434.xml'
+huangliang WX1223276***#195***多余，删除[严重程度] 提示[问题根因] 编程规范(代码级)[二级分类] 排版/命名***未解决***2024-03-04 10:59:12***建议***makun WX1238188*********makun WX1238188***413***'application/src/resource/board/BM320/profile.txt'
+huangliang WX1223276***#195***应该未使用，删掉[严重程度] 提示[问题根因] 编程规范(代码级)[二级分类] 注释/可读性 ***未解决***2024-03-04 10:55:44***建议***makun WX1238188*********makun WX1238188***122***'application/src/resource/board/BM320/profile.txt'
+huangliang WX1223276***#196***风扇板2 78910，配置错误[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-03-01 18:23:16***建议***makun WX1238188*********makun WX1238188***1365***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_8080.xml'
+huangliang WX1223276***#196***风扇板1上风扇异常，不应该影响风扇板2的调速[严重程度] 提示[问题根因] 业务类问题[二级分类] 场景考虑不全或者错误***已解决***2024-03-01 18:22:31***建议***makun WX1238188*********makun WX1238188***1983***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_6056.xml'
+huangliang WX1223276***#196***临时规避，后续修改lua识别风扇代码后 将 风扇0->10[严重程度] 提示[问题根因] 业务类问题[二级分类] 场景考虑不全或者错误***未解决***2024-03-01 18:12:11***建议***makun WX1238188*********makun WX1238188***347***'application/src/resource/board/BM320/cfgfs/profile/COOLING_00.xml'
+huangliang WX1223276***#196***确认下风扇partnum[严重程度] 提示[问题根因] 编程规范(代码级)[二级分类] 注释/可读性 ***未解决***2024-03-01 18:09:41***建议***makun WX1238188*********makun WX1238188***51***'application/src/resource/board/BM320/cfgfs/profile/COOLING_00.xml'
+huangliang WX1223276***#195***UID错误，可能导致升级异常[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***已解决***2024-03-01 17:58:49***建议***makun WX1238188*********makun WX1238188***1440***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_34343434.xml'
+huangliang WX1223276***#195***注释错误，风扇板2为 4个风扇[严重程度] 提示[问题根因] 编程规范(代码级)[二级分类] 注释/可读性 ***已解决***2024-03-01 16:28:39***建议***makun WX1238188*********makun WX1238188***875***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_34343434.xml'
+sunguoqing WX1310119***#183***8080没有fan5、6***未解决***2024-02-01 11:40:04***一般***makun WX1238188*********makun WX1238188***1480***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_01.xml'
+sunguoqing WX1310119***#183***8080没有fan5、6***未解决***2024-02-01 11:39:53***一般***makun WX1238188*********makun WX1238188***1420***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_01.xml'
+sunguoqing WX1310119***#183***8080没有fan5、6***未解决***2024-02-01 11:37:39***一般***makun WX1238188*********makun WX1238188***1148***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_01.xml'
+sunguoqing WX1310119***#183***8080没有fan5、6***未解决***2024-02-01 11:37:27***一般***makun WX1238188*********makun WX1238188***970***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_01.xml'
+sunguoqing WX1310119***#183***8080没有fan5、6***未解决***2024-02-01 11:37:14***建议***makun WX1238188*********makun WX1238188***856***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_01.xml'
+sunguoqing WX1310119***#183***8080没有fan5、6***未解决***2024-02-01 11:36:57***建议***makun WX1238188*********makun WX1238188***500***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FAN_01.xml'
+sunguoqing WX1310119***#183***两个FanBoard都去找的FAN_00，FAN_01是由谁连***未解决***2024-01-25 15:56:41***一般***makun WX1238188*********makun WX1238188***17***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FanBoard_34323933.xml'
+sunguoqing WX1310119***#183***两个FanBoard都去找的FAN_00，FAN_01是由谁连***未解决***2024-01-25 15:44:40***一般***makun WX1238188*********makun WX1238188***17***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FanBoard_34323933_01.xml'
+huangliang WX1223276***#183***内置硬盘背板i2c 通道错误[严重程度] 一般[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-24 19:13:27***一般***makun WX1238188*********makun WX1238188***222***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***Type 修改为前置硬盘背板[严重程度] 提示[问题根因] 业务类问题[二级分类] 场景考虑不全或者错误***未解决***2024-01-24 16:24:47***建议***makun WX1238188*********makun WX1238188***157***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***Type 后期修改[严重程度] 提示[问题根因] 业务类问题[二级分类] 场景考虑不全或者错误***未解决***2024-01-24 16:23:50***建议***makun WX1238188*********makun WX1238188***234***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+makun WX1238188***#183***已修改***--***2024-01-23 19:17:35***建议***makun WX1238188*********makun WX1238188******
+sunguoqing WX1310119***#183***拼写错误Connect***未解决***2024-01-23 18:03:04***一般***makun WX1238188*********makun WX1238188***436***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_37393933.xml'
+sunguoqing WX1310119***#183***拼写错误Connect***未解决***2024-01-23 17:57:28***一般***makun WX1238188*********makun WX1238188***436***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***遗留，需要按照实际的修改[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-22 21:13:09***建议***makun WX1238188*********makun WX1238188***1509***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FanBoard_34323933_01.xml'
+huangliang WX1223276***#183***需要区分风扇版1和2，实现错误[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求遗漏***未解决***2024-01-22 21:12:45***建议***makun WX1238188*********makun WX1238188***1505***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FanBoard_34323933_01.xml'
+huangliang WX1223276***#183***i2c错误[严重程度] 一般[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-22 21:11:59***一般***makun WX1238188*********makun WX1238188***1405***'application/src/resource/profile/rack_server_01/Tianchi/BM320/FanBoard_34323933_01.xml'
+huangliang WX1223276***#183***postion 重复[严重程度] 一般[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-22 20:52:03***一般***makun WX1238188*********makun WX1238188***865***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***逻辑错误[严重程度] 一般[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-22 20:41:18***一般***makun WX1238188*********makun WX1238188***1788***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***为什么这么修改，修改依据贴图[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-22 20:37:53***建议***makun WX1238188*********makun WX1238188***1816***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***冗余[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-22 20:36:19***建议***makun WX1238188*********makun WX1238188***1807***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***i2c配置错误[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求没有正确实现***未解决***2024-01-22 16:44:15***建议***makun WX1238188*********makun WX1238188***270***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+haoxuguo WX1310120***#183***内置硬盘背板使用的i2c6下pca9545的channel3，原先的配置无需修改***已解决***2024-01-22 16:30:05***一般***makun WX1238188*********makun WX1238188***244***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+huangliang WX1223276***#183***前置25盘位 在位和ID  这里有没有确认过[严重程度] 提示[问题根因] 业务功能[二级分类] 功能需求遗漏***未解决***2024-01-18 14:37:42***建议***makun WX1238188*********makun WX1238188***95***'application/src/resource/profile/rack_server_01/Tianchi/BM320/ExpBoard_32323933.xml'
+
+
+SheetTitle=merge_requests
+SheetRow=32, Col=18
+SheetRowHeight=18.75***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0
+SheetColWidth=25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0***25.0
+标题***iid***描述***源项目***源分支***目标项目***目标分支***预合并人***实际合并人***创建人***状态***创建时间***更新时间***合入时间***添加行数***删除行数***评论数***标签
+【修改描述】A+K项目对外发布第二个正式版本iBMC V2 1.10.40.12***#236***【修改描述】A+K项目对外发布第二个正式版本iBMC V2 1.10.40.12【DTS/CR/AR单号】无【合入版本】1.10.41.12【说明】2024.03.22 TR4版本***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-03-22 19:40:02***2024-03-22 19:40:26***2024-03-22 19:40:26***4***4***0***
+【修改描述】新增 AplusPower 2000W电源适配，当前厂商和序列号字段有多余‘#’字符，部件编码未获取到***#233***【修改描述】新增 AplusPower 2000W电源适配，当前厂商和序列号字段有多余‘#’字符，部件编码未获取到【DTS/CR/AR单号】无【合入版本】1.10.41.12***sWX1310119/V2R2_trunk***LocalAplusPSU2000W***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-22 17:10:49***2024-03-22 19:33:39***2024-03-22 19:33:38***172***2***0***
+【修改描述】版本信息显示raid信息修复***#235***【修改描述】版本信息显示raid信息修复【DTS/CR/AR单号】无【合入版本】1.10.41.11***hWX1310120/V2R2_trunk_hl***new_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K******huangliang WX1223276***haoxuguo WX1310120***merged***2024-03-22 19:31:46***2024-03-22 19:32:28***2024-03-22 19:32:27***0***30***0***
+【修改描述】M.2 fru信息修改，SATA盘重复显示修复***#234***【修改描述】M.2 fru信息修改，SATA盘重复显示修复【DTS/CR/AR单号】无【合入版本】1.10.41.10***hWX1310120/V2R2_trunk_hl***new_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K******huangliang WX1223276***haoxuguo WX1310120***merged***2024-03-22 19:19:35***2024-03-22 19:20:28***2024-03-22 19:20:28***92***248***0***
+【修改内容】修复 风扇板 数量显示接口***#225***【修改内容】修复 风扇板 数量显示接口【DTS/CR/AR单号】无【合入版本】1.10.41.10【自验截图】![自验截图.png](/uploads/09e9f508-511d-4bba-a957-1459cbb61ddf/自验截图.png '自验截图.png')***mWX1238188/V2R2_makun_local***AT9508G3_A+K_debug***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-03-20 20:45:22***2024-03-22 19:14:16***2024-03-22 19:14:15***45***8***0***
+【修改描述】自研A+K调速策略适配初版(暂未适配NVME盘调速) ***#228***【修改描述】自研A+K调速策略适配初版【DTS/CR/AR单号】无【合入版本】iBMC V2 3.11.00.11(1.10.41.10)【说明】本次调速基于：调速策略1.1 ，兼容性列表v1.1版本1、进风口：修改进风口关联的传感器，新增进风口二 （6*6056风扇 +4*8080 风扇） 出风口：暂未修改 （6*6056风扇 +4*8080 风扇）2、CPU 3、Mem 4、VRD：cpu1(456) cpu2(123)5、硬盘 （hdd sdd ） 4*8080 风扇   NVME盘：所有华为已适配的NVME盘  4*8080 风扇6、硬盘背板（适配前置8盘和内置8盘） 4*8080 风扇9、NIC灵活插卡：所有的灵活插卡 6*6056风扇 +4*8080 风扇10、raid卡 9560-8i 9560-16i  6*6056风扇11、PSU进风口   6*6056风扇12、switch板：  4*8080 风扇7、pcie卡调速：MCX623106AN-CDAT 、MCX512A-ACUT 、Atlas 300I A2 、Atlas 300T A2、Atlas 300I Duo、512C、332A  SP681适配   4*8080 风扇***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-03-21 14:11:37***2024-03-22 19:09:27***2024-03-22 19:09:27***618***250***0***
+【修改描述】前置8盘修改4*trimode+4*nvme模式***#229***【修改描述】前置8盘修改4*trimode+4*nvme模式【DTS/CR/AR单号】无【合入版本】1.10.41.10***hWX1310120/V2R2_trunk_hl***new_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***haoxuguo WX1310120***merged***2024-03-21 19:00:15***2024-03-21 19:14:45***2024-03-21 19:14:45***2253***2086***0***
+【修改描述】适配332A 512C网卡packageid，解决512C网卡ncsi命令不通***#227***【修改描述】适配332A 512C网卡packageid，解决512C网卡ncsi命令不通【DTS/CR/AR单号】无【合入版本】iBMC V2 3.11.00.11(1.10.41.10)【说明】移植其他版本，已验证***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-03-21 11:47:07***2024-03-21 11:49:12***2024-03-21 11:49:12***41***2***0***
+【修改描述】修改A+K项目PCIE设备资源归属写死，避免获取失败直接退出导致BMC网页不显示资源归属***#226***【修改描述】修改A+K项目PCIE设备资源归属写死，避免获取失败直接退出导致BMC网页不显示资源归属【DTS/CR/AR单号】无【合入版本】iBMC V2 3.11.00.11(1.10.41.10)【说明】已出包验证，解决https://codehub-y.huawei.com/hWX1223276/V2R2_trunk/merge_requests/214 问题***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-03-21 11:45:19***2024-03-21 11:45:38***2024-03-21 11:45:38***2***1***0***
+【修改描述】修复 电源&功率 页面电源槽位顺序错误的问题***#224***【修改描述】修复 电源&功率 页面电源槽位顺序错误的问题(机框丝印和硬件配的槽位号不一致，硬件修改需要软件也配合修改)【DTS/CR/AR单号】无【合入版本】1.10.41.11***sWX1310119/V2R2_trunk***LocalPSUInfo***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-20 14:46:13***2024-03-20 19:56:15***2024-03-20 19:56:15***8***8***0***
+【修改描述】支持redfish接口查询修改fru0-fru80的信息***#223***【修改描述】修改redfish fru接口有关宏定义fru长度【DTS/CR/AR单号】无【合入版本】iBMC V2 3.11.00.11(1.10.41.10)【修改描述】按照客户要求，Redfish修改FRU功能， 可以修改 FRU0~FRU80的fru信息，而不只是FRU0的信息【DTS/CR/AR单号】DTS2023092517424【合入版本】iBMC V2 3.11.3.1.B011,【修改描述】redfish设置Product域product extra，设置251字符长度内容，redfish接口返回200，日志记录成功，实际未写入product extra,以及设置部分属性失败【DTS/CR/AR单号】DTS2023091817872【合入版本】iBMC V2 1.04.10,【修改描述】支持FRU信息修改【DTS/CR/AR单号】AR20230704809807【合入版本】iBMC V2 3.11.0.4,【修改描述】支持Redfish查看FRU信息【DTS/CR/AR单号】AR20230704809806【合入版本】iBMC V2 3.11.03【说明】查询fru: https://51.2.0.90/redfish/v1/Systems/1/Oem/Huawei/FRU![image](/uploads/e87fbeb9-3102-45ea-976a-cd9e14dbdfa3/1710909363382.png '1710909363382.png')修改fru:https://51.2.0.90/redfish/v1/Systems/1/Oem/Huawei/FRU/```json{    "FRU": {        "FRU1": {            "Product Part Number": "ABCD1234"        }    }}```![image](/uploads/e94ce9a5-784f-4036-b188-e8423f1a0174/1710909407915.png '1710909407915.png')***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-03-20 12:35:16***2024-03-20 12:56:35***2024-03-20 12:56:35***1203***9***0***
+【修改描述】前端switch板显示、Switch板xml优化、cableriser增加FRU、增加Atlas 300T板卡加载***#222***【修改描述】前端switch板显示、Switch板xml优化、cableriser增加FRU、增加Atlas 300T板卡加载【DTS/CR/AR单号】8336;8360【合入版本】1.10.41.11![image](/uploads/4ab785ff-c505-493b-91b1-87b88f6efec2/1710856121862.png '1710856121862.png')***fWX1269985/V2R2_trunk***dhs_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***fanjiaming WX1269985***merged***2024-03-19 21:47:33***2024-03-19 21:54:00***2024-03-19 21:54:00***567***556***0***
+【修改描述】A+K项目对外发布第一个正式版本iBMC V2 1.10.40.10***#220***【修改描述】A+K项目配置一第一版转测版本【DTS/CR/AR单号】无【合入版本】1.10.41.10【说明】1.拓展版、电源、前置8盘、switch板、直通M.2、内置8盘 基础功能未合入：调速策略、switch web显示、dpu卡后电管理、 逻辑升级、switch芯片升级、switch芯片温度、前置25盘、cable riser raid***sWX1310119/V2R2_trunk***LocalFanbrdInfo***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-14 16:27:50***2024-03-14 16:33:21***2024-03-14 16:33:20***4***4***0***
+【修改描述】解决Web上两个风扇板都显示CLU1的问题，固件升级界面有两个FanBoard1 CPLD的问题，解决风扇前后转速显示反的问题，解决fan7-9异常告警问题***#218***【修改描述】解决Web上两个风扇板都显示CLU1的问题，固件升级界面有两个FanBoard1 CPLD的问题，解决风扇前后转速显示反的问题，解决fan7-9异常告警问题【DTS/CR/AR单号】无【合入版本】1.10.41.10***sWX1310119/V2R2_trunk***LocalFanbrdInfo***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-14 14:55:57***2024-03-14 16:11:52***2024-03-14 16:11:52***32***30***0***
+【修改描述】修改单板UID和PartNum, 修改CableRiser槽位为21***#219***【修改描述】修改单板UID和PartNum, 修改CableRiser槽位为21【DTS/CR/AR单号】无【合入版本】iBMC V2 3.11.00.11(1.10.41.10)***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-03-14 14:57:36***2024-03-14 16:10:44***2024-03-14 16:10:43***16***12***0***
+【修改描述】A+K项目修复编译时XML检查Error和优化XML***#217***【修改描述】修复编译时XML检查Error和优化XML【DTS/CR/AR单号】无【合入版本】iBMC V2 3.11.00.11(1.10.41.10)【说明】1.删除profile.txt中多余的XML配置和删除未使用到的XML文件2.适配332A 512C网卡3.直通M.2删除LogicalConnector4.fanboard修改CLU_power_exp.Value类型从q->u5.删除switch板中的错误的升级动作XML检查结果：![image](/uploads/fba2826e-68a6-42e5-9824-6c6e96c2a2e2/1710319447954.png '1710319447954.png')第一个错误不能修改第二个错误为华为原有报错***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-03-13 16:49:27***2024-03-13 17:21:10***2024-03-13 17:21:09***2523***1524***0***
+【修改描述】解决Web上传感器读取不到转速值的错误***#215***【修改描述】解决Web上传感器读取不到6056风扇转速值的错误【DTS/CR/AR单号】无【合入版本】3.11.00.12【说明】和硬件对齐，获取到的转速为0.5s内的转数次数，需要乘以系数120转为每分钟的转数***sWX1310119/V2R2_trunk***SGQ_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-12 20:40:07***2024-03-13 16:39:16***2024-03-13 16:39:16***12***12***0***
+【修改描述】解决pcie_card_update_resId_info编译错误***#214***【修改描述】解决pcie_card_update_resId_info编译错误【DTS/CR/AR单号】无【合入版本】3.11.00.12***sWX1310119/V2R2_trunk***DHSswitch***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-12 19:01:44***2024-03-12 19:18:29***2024-03-12 19:18:28***2***3***0***
+【修改描述】A+K项目对外测试发布第一个版本从iBMC V2 3.11.00.11 更新到iBMC V2 1.10.41.10***#212***【修改描述】A+K项目对外测试发布第一个版本从iBMC V2 3.11.00.11 更新到iBMC V2 1.10.41.10【DTS/CR/AR单号】无【合入版本】3.11.00.11***sWX1310119/V2R2_trunk***AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-12 17:49:02***2024-03-12 17:50:12***2024-03-12 17:50:12***9***9***0***
+【修改描述】M.2载板显示信息修改；前置8盘和内置8盘BDF信息修改***#209***【修改描述】2024.03.06 M.2载板显示信息修改；前置8盘和内置8盘BDF信息修改【DTS/CR/AR单号】【合入版本】3.11.00.12【说明】  1406G002_VF_31343639.xml  	内置8盘，删除Cpu1Ubcdd1DiskPcie等加载PcieAddrinfo的Connector  1406G002_VF_32333933.xml  	前置8盘，槽位4-11 改成0-7  14140130_38393936.xml		修改直通M.2 描述信息  DISKBP_VF_31343639.xml  	添加内置8盘pcieaddrinfo  DISKBP_VF_32333933.xml 		修改前置8盘pcieaddrinfo  PCIeAddrInfo_ff.xml  		修改前置8盘和内置8盘 Connector ID读取方式***sWX1310119/V2R2_trunk***SGQ_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-06 19:14:53***2024-03-12 17:15:27***2024-03-12 17:15:27***6972***10053***0***
+【修改描述】1.Switch板pcie设备资源归属写死；2.删除配置1机型switch下出来的pcieaddrinfo，由BIOS写死上报***#211***【修改描述】1.Switch板pcie设备资源归属写死；2.删除配置1机型switch下出来的pcieaddrinfo，由BIOS写死上报【DTS/CR/AR单号】无【合入版本】3.11.00.12***sWX1310119/V2R2_trunk***DHSswitch***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-12 16:03:30***2024-03-12 16:24:50***2024-03-12 16:24:49***16***245***0***
+【修改描述】2024.03.12 风扇点灯功能：关联硬件accessor；风扇根据异常Health状态直接点灯，忽略先前状态***#210***【修改描述】2024.03.12 风扇点灯功能：关联硬件accessor；风扇根据异常Health状态直接点灯，忽略先前状态【DTS/CR/AR单号】无【合入版本】3.11.00.12***sWX1310119/V2R2_trunk***LocalFanLed***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-12 11:29:37***2024-03-12 14:30:07***2024-03-12 14:30:07***68***19***0***
+【修改内容】修改风扇功率获取表达式、修正fan10命名不正确、支持fan10的自动调速***#205***【修改描述】2024.03.05 修改风扇功率获取表达式、修正fan10命名不正确、支持fan10的自动调速【DTS/CR/AR单号】【合入版本】3.11.00.12***sWX1310119/V2R2_trunk***SGQ_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***sunguoqing WX1310119***merged***2024-03-05 17:36:40***2024-03-06 18:44:56***2024-03-06 18:44:56***102***102***0***
+【修改内容】 新增 SW背板 xml配置***#202***【修改内容】 新增 SW背板 配置【DTS/CR/AR单号】【合入版本】***mWX1238188/V2R2_makun_local***commit_ak_swbrd***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-03-01 16:52:22***2024-03-04 14:34:50***2024-03-04 14:34:49***3283***1***3***
+【修改内容】新增 M.2 配置文件***#198***【修改内容】新增 M.2 配置文件【DTS/CR/AR单号】【合入版本】***mWX1238188/V2R2_makun_local***commit_ak_m2***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-02-29 20:03:23***2024-03-04 12:01:33***2024-03-04 12:01:33***2454***0***1***
+【修改内容】A+K项目 新增 前置8盘背板信息***#201***【修改内容】A+K项目 新增 前置8盘背板信息【DTS/CR/AR单号】【合入版本】***mWX1238188/V2R2_makun_local***commit_ak_8frtbrd***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-03-01 14:47:26***2024-03-04 11:56:45***2024-03-04 11:56:45***48***48***0***
+【修改内容】新增 内置8盘nvme背板 配置文件***#197***【修改内容】新增 内置8盘nvme背板 配置文件【DTS/CR/AR单号】【合入版本】***mWX1238188/V2R2_makun_local***commit_ak_bacbrd***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-02-29 19:55:03***2024-03-04 11:51:51***2024-03-04 11:51:51***2852***0***3***
+【修改内容】A+K项目 新增 风扇板配置***#196***【修改内容】新增 6056、8080 风扇板配置， 新增对应风扇板风扇配置【DTS/CR/AR单号】【合入版本】***mWX1238188/V2R2_makun_local***commit_ak_fanbrd***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-02-29 17:22:00***2024-03-04 11:32:55***2024-03-04 11:32:55***7533***27***5***
+【修改内容】新增 电源修改***#200***【修改内容】新增 2700/2400电源功率适配 【DTS/CR/AR单号】【合入版本】***mWX1238188/V2R2_makun_local***commit_ak_power***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-03-01 10:40:53***2024-03-04 11:17:09***2024-03-04 11:17:09***316***16***0***
+【修改内容】新增 Expbrd 配置，修改baseboard、profile***#195***【修改内容】新增 扩展板 配置【DTS/CR/AR单号】【合入版本】***mWX1238188/V2R2_makun_local***commit_ak_expbrd***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***makun WX1238188***merged***2024-02-29 17:11:31***2024-03-04 11:12:20***2024-03-04 11:12:20***2090***1***6***
+【修改描述】 【V2R2_trunk】同步主干仓库1130发布节点代码，对应commitid:b58849b7584af17c5dc0fb5ad7dc04a595f4c2a6***#187***【修改描述】 【V2R2_trunk】同步主干仓库1130发布节点代码，对应commitid:b58849b7584af17c5dc0fb5ad7dc04a595f4c2a6【DTS/CR/AR单号】AR20230904658779【合入版本】iBMC V2 3.11.0.11【说明】合入MR：https://codehub-y.huawei.com/iBMC/partner/V2R2_trunk_partners/merge_requests/23 修复场外构建的只读包升级问题;合入MR：https://codehub-y.huawei.com/iBMC/partner/V2R2_trunk_partners/merge_requests/25  同步主干仓库1130发布节点代码，对应commitid:b58849b7584af17c5dc0fb5ad7dc04a595f4c2a6合入MR：https://codehub-y.huawei.com/iBMC/partner/V2R2_trunk_partners/merge_requests/26  iBMC构建变更，token过期***hWX1223276/V2R2_trunk***tmp_AT9508G3_A+K***hWX1223276/V2R2_trunk***AT9508G3_A+K***huangliang WX1223276***huangliang WX1223276***huangliang WX1223276***merged***2024-01-18 14:25:53***2024-01-18 14:26:36***2024-01-18 14:26:36***48646***12723***0***
