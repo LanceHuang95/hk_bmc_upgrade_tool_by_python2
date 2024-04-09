@@ -1,208 +1,293 @@
-SheetTitle=redfish & web
-SheetRow=166, Col=7
-SheetRowHeight=17.25***17.25***17.25***17.25***17.25***17.25***16.5***17.25***17.25***15.0***17.25***17.25***17.25***27.0***17.25***17.25***17.25***17.25***20.25***17.25***15.0***15.0***15.0***20.25***15.0***17.25***17.25***15.0***15.0***15.0***17.25***17.25***17.25***17.25***15.0***15.0***15.0***15.0***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***15.0***17.25***17.25***18.0***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***15.0***15.0***17.25***17.25***17.25***17.25***17.25***17.25***17.25***15.0***17.25***17.25***18.0***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***15.0***15.0***17.25***17.25***17.25***15.0***17.25***15.0***17.25***17.25***17.25***17.25***17.25***17.25***17.25***15.0***17.25***17.25***17.25***17.25***17.25***15.0***15.0***15.0***15.0***15.0***17.25***17.25***17.25***15.0***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***17.25***15.0***42.75***17.25***17.25***17.25***17.25***17.25***15.0***17.25***17.25***17.25***17.25***17.25***17.25***71.25***17.25***17.25
-SheetColWidth=14.875***56.875***37.25***26.875***33.125***43.875***123.25
-None***URL***redfish字段***web呈现***字段名***Atlas800 9000 A2 redfish返回结果***WEB显示
-NPU信息***/redfish/v1/Systems/1/Processors/NPU***Name***是***指定处理器资源的名称***NPUx***NPU信息
-None***None***Model***是***指定处理器资源的型号***Ascend 910B***None
-None***None***PowerWatts***是***功耗***146***None
-None***None***FirmwareVersion***是***固件版本***"6.11.31.0.b295"***None
-None***None***SerialNumber***是***SN号***"E7DD1FB481002E1D2A0C2D51A67A7B05100301E2"***None
-None***None***Status***是***指定处理器的状态***    "State": "Enabled",    "Oem": {      "Huawei": {        "Severity": "Informational"      }    },    "Health": "OK"***None
-None***None***Manufacturer***是***指定处理器资源的制造商***"HiSilicon"***None
-None***None***ComputeCapability***否***算力规格***"256 TFLOPS"***None
-None***None***Id***否***指定处理器在iBMC系统中的唯一标识***"Npu1"***None
-None***None***ProcessorType***否***指定处理器资源的类型***"NPU"***None
-None***None***ProcessorArchitecture***否***指定处理器资源的架构***"ARM"***None
-None***None***InstructionSet***否***指定处理器资源的指令集*** "ARM-A64"***None
-None***None***ProcessorId***否***指定处理器资源的序列号***删除***None
-None***None***MaxSpeedMHz***否***指定处理器资源的最大主频***删除***None
-None***None***TotalCores***否***指定处理器资源的总核数***删除***None
-None***None***TotalThreads***否***指定处理器资源的总线程数***删除***None
-None***None***Socket***否***指定处理器资源的插槽号***删除***None
-None***None***EthernetInterface***否***指定处理器资源的网口信息***删除***None
-None***None***PowerOn***否***运行状态***True***None
-None***None***AiCoreTempCelsius***否***Ai核温度，单位：摄氏度***80***None
-None***None***HBMTempCelsius***否***HBM温度，单位：摄氏度***71***None
-None***None***NimBusTempCelsius***否***NimBus温度，单位：摄氏度***74***None
-None***None***MemoryOnChip***否***指定处理器资源的内存信息***删除***None
-None***None***AiCoreMaxSpeedMHz***否***Ai Core主频，单位：MHz***1650***None
-None***None***DeviceLocator***否***指定处理器资源的丝印***删除***None
-None***None***Position***否***指定处理器资源的容器***删除***None
-None***None***CtrlCPUUsagePercent***否***ctrl CPU占用率，单位：百分比***删除***None
-None***None***AiCoreUsagePercent***否***Ai Core占用率，单位：百分比***删除***None
-None***None***MemoryUsagePercent***否***已用内存大小，单位：kB***删除***None
-None***None***HBMUsagePercent***否***HBM占用率***删除***None
-None***None***MemoryBandwidthUsagePercent***否***内存带宽占用率***删除***None
-None***None***HBMBandwidthUsagePercent***否***HBM带宽占用率***删除***None
-None***None***AiCPUUsagePercent***否***Ai CPU占用率***删除***None
-None***None***TotalMemoryKiB***否***总内存大小，单位：kB***删除***None
-None***None***MemoryUsageKiB***否***已用内存大小，单位：kB***删除***None
-None***None***MemoryFreeKiB***否***剩余内存大小，单位：kB***删除***None
-None***None***MACAddress***否***网口的当前MAC地址***删除***None
-None***None***Address***否***IPv4地址***删除***None
-None***None***SubnetMask***否***子网掩码***删除***None
-None***None***Gateway***否***网关***删除***None
-None***None***PacketsReceived***否***接收到的数据包总数***删除***None
-None***None***PacketsTransmitted***否***发送的数据包总数***删除***None
-None***None***PacketsDropped***否***丢包总数***删除***None
-NPU集合信息***/redfish/v1/Systems/1/ProcessorView***同XPU资源，用于一次性获取NPU整体信息***NA***同XPU资源，用于一次性获取NPU整体信息***同上***None
-xPU载板***/redfish/v1/Systems/1/Chassis/1/Boards/mainboardNPUBoard***BoardName***是***指定扩展板卡单板名称***IT21SD8A***None
-None***None***CardNo***是***指定扩展板卡编号***1***None
-None***None***BoardId***是***指定扩展板卡单板Id***0x00bf***None
-None***None***PCBVersion***是***指定扩展板卡PCB版本***.A***None
-None***None***CPLDVersion***是***指定扩展板卡CPLD版本***"0.02"***None
-None***None***Id***否***指定扩展板卡资源ID***mainboardNPUBoard***None
-None***None***Description***否***指定扩展板卡描述信息***GPUBoard***NPU载板信息
-None***None***Name***否***指定扩展板卡资源名称***mainboardNPUBoard***None
-None***None***Status***否***指定扩展板卡的状态***  "Status": {    "State": "Enabled",    "Severity": "Informational",    "Health": "OK"  },***None
-None***None***DeviceLocator***否***指定扩展板卡的丝印***NPUBoard***None
-None***None***DeviceType***否***指定扩展板卡的类型***PCIeCardCarrierBoard***None
-None***None***Location***是***指定扩展板卡的容器***mainboard***None
-None***None***Manufacturer***是***指定扩展板卡生产厂商***Huawei***None
-None***None***ProductName***否***指定扩展板卡产品名称***电子标签***None
-None***None***SerialNumber***是***指定扩展板卡序列号***电子标签***None
-None***None***PartNumber***是***指定扩展板卡部件号***电子标签***None
-None***None***AssetTag***否***指定扩展板卡资产标签***电子标签***None
-None***None***ManufactureDate***否***指定扩展板卡制造日期*** "1996/01/01 Mon 00:00:00"***None
-None***None***PositionId***否***指定扩展板卡的位号***删除***None
-None***None***PowerWatts***否***指定扩展板卡的功率***删除***None
-None***None***SupportedRAIDLevels***否***Raid卡支持的raid级别***删除***None
-None***None***PchModel***否***当前主板PCH型号***不支持***None
-None***None***LinkWidthAbility***否***指定扩展板卡的带宽规格***删除***None
-None***None***LinkSpeedAbility***否***指定扩展板卡的连接速率规格***删除***None
-None***None***LinkWidth***否***指定扩展板卡的当前带宽***删除***None
-None***None***LinkSpeed***否***指定扩展板卡的当前速率***删除***None
-None***None***WorkMode***否***指定拓展板卡的工作模式***"AMP"***None
-None***None***M2Device1Presence***否***备电资源的M.2盘槽位1在位情况***删除***None
-None***None***M2Device2Presence***否***备电资源的M.2盘槽位2在位情况***删除***None
-None***None***RetimerVersion***否***指定扩展板卡上的Retimer芯片固件版本号***删除***None
-None***None***ComponentUniqueID***否***指定扩展板卡的组件唯一标识***不强制***None
-None***None***AssociatedResource***否***指定扩展板卡的归属资源***删除***None
-模组板***/redfish/v1/Systems/1/Chassis/1/Boards/NpuBoardHiAMx***BoardName***否***指定扩展板卡单板名称***DboardHiAM1***None
-None***None***CardNo***是***指定扩展板卡编号***1***None
-None***None***BoardId***是***指定扩展板卡单板Id***0x0061***None
-None***None***PCBVersion***是***指定扩展板卡PCB版本***".A"***None
-None***None***CPLDVersion***是***指定扩展板卡CPLD版本***1.13***None
-None***None***Id***否***指定扩展板卡资源ID***DboardHiAM1***None
-None***None***Description***否***指定扩展板卡描述信息***"Ascend 910B"***None
-None***None***Name***否***指定扩展板卡资源名称***NpuBoardHiAM1***None
-None***None***Status***否***指定扩展板卡的状态***  "Status": {    "State": "Enabled",    "Severity": "Informational",    "Health": "OK"  },***模组板信息
-None***None***DeviceLocator***否***指定扩展板卡的丝印***"HiAM1"***None
-None***None***DeviceType***否***指定扩展板卡的类型*** "HiAM"***None
-None***None***Location***是***指定扩展板卡的容器***"NpuBoard"***None
-None***None***Manufacturer***是***指定扩展板卡生产厂商***"Huawei"***None
-None***None***ProductName***是***指定扩展板卡产品名称*** "IT21HMDA"***None
-None***None***SerialNumber***否***指定扩展板卡序列号***电子标签***None
-None***None***PartNumber***否***指定扩展板卡部件号***电子标签***None
-None***None***AssetTag***否***指定扩展板卡资产标签***电子标签***None
-None***None***ManufactureDate***否***指定扩展板卡制造日期*** "1996/01/01 Mon 00:00:00"***None
-None***None***PositionId***是***指定扩展板卡的位号***删除***None
-None***None***PowerWatts***是***指定扩展板卡的功率***删除***None
-None***None***MCUVersion***是***指定扩展板卡MCU版本***1.02***None
-None***None***SupportedRAIDLevels***否***Raid卡支持的raid级别***删除***None
-None***None***PchModel***否***当前主板PCH型号***删除***None
-None***None***LinkWidthAbility***否***指定扩展板卡的带宽规格***删除***None
-None***None***LinkSpeedAbility***否***指定扩展板卡的连接速率规格***删除***None
-None***None***LinkWidth***否***指定扩展板卡的当前带宽***删除***None
-None***None***LinkSpeed***否***指定扩展板卡的当前速率***删除***None
-None***None***WorkMode***否***指定拓展板卡的工作模式***删除***None
-None***None***M2Device1Presence***否***备电资源的M.2盘槽位1在位情况***删除***None
-None***None***M2Device2Presence***否***备电资源的M.2盘槽位2在位情况***删除***None
-None***None***RetimerVersion***否***指定扩展板卡上的Retimer芯片固件版本号***删除***None
-None***None***ComponentUniqueID***否***指定扩展板卡的组件唯一标识***不强制***None
-None***None***AssociatedResource***否***指定扩展板卡的归属资源***删除***None
-网卡***/redfish/v1/Chassis/1/NetworkAdapters/NPUBoardFLEXIOBx***Name***是***网络适配器资源名称***FLEX IO B1***None
-None***None***BoardId***是***指定网络适配器的单板ID***131***None
-None***None***CardManufacturer***是***指定网络适配器的厂商***Huawei***None
-None***None***RootBDF***是***指定网络适配器的root port BDF***删除***None
-None***None***Model***是***指定网络适配器的型号***删除***None
-None***None***Manufacturer***是***指定网络适配器的芯片制造商***Huawei***None
-None***None***CardModel***是***指定网络适配器的型号***2*200GE***None
-None***None***HotPlugAttention***否***知会硬件热拔插信息***删除***None
-None***None***HotPlugSupported***否***指定网络适配器是否支持热拔插***删除***网卡信息
-None***None***OrderlyHotplugCtrlStatus***否***通知式热拔插状态***删除***None
-None***None***DriverVersion***否***指定网络适配器的驱动版本***删除***None
-None***None***PcieSlotId***否***指定网络适配器的PCIe 槽位（只有PCIe 标卡才有此属性）***删除***None
-None***None***DeviceLocator***否***指定网络适配器的丝印***FLEX IO B1***None
-None***None***SlotNumber***否***物理盘所在背板的槽位号***删除***None
-None***None***Position***否***指定网络适配器的容器***NPU Board***None
-None***None***NetworkTechnology***否***指定网络适配器的网络协议***删除***None
-None***None***FirmwareVersion***否***指定网络适配器的固件版本***删除***None
-None***None***VenderID***否***指定网络适配器的厂商ID***删除***None
-None***None***DeviceID***否***指定网络适配器的设备ID***删除***None
-None***None***SubsystemVenderID***否***指定网络适配器的厂商子ID***删除***None
-None***None***SubsystemDeviceID***否***指定网络适配器的设备子ID***删除***None
-None***None***BoardIdHex***否***指定网络适配器单板ID的十六进制数***0x0083***None
-None***None***Configuration***否***描述适配器配置信息***删除***None
-None***None***ComponentUniqueID***否***指定网络适配器的组件唯一标识***不强制***None
-None***None***PCBVersion***否***指定网络适配器的PCB版本***.A***None
-None***None***MctpEnabled***否***指定网络适配器的MCTP开启使能***删除***None
-None***None***AssociatedResource***否***指定网络适配器的资源归属***删除***None
-None***None***VirtualEthernetInterfaces***否***指定网络适配器的虚拟网口列表***删除***None
-None***None***DriverName***否***指定网络适配器的驱动名称***删除***None
-None***None***FirmwarePackageVersion***否***指定网络适配器的固件版本***删除***None
-None***None***ControllerCapabilities***否***描述适配器控制器功能的信息***删除***None
-None***None***Controllers***否***描述适配器控制器的信息***删除***None
-None***None***NetworkPorts***否***指定网络适配器的相关网络端口对象集合***None***None
-网口***/redfish/v1/Chassis/1/NetworkAdapters/NPUBoardFLEXIOBx/NetworkPorts/x***PhysicalPortNumber***是***指定网络端口的物理丝印***1***None
-None***None***LinkStatus***是***指定网络端口的连接状态***Down***None
-None***None***VirtualEthernetInterfaces***否***网口类型***删除***None
-None***None***PortType***是***指定网络端口的网口类型***OpticalPort***端口信息
-None***None***FirmwarePackageVersion***是***指定网络端口的固件版本***删除***None
-None***None***Name***否***网络端口资源名称***1***None
-None***None***Id***否***网络端口资源ID***1***None
-None***None***Status***否***指定网络端口的状态***{    "State": "Enabled"  },***None
-None***None***AssociatedNetworkAddresses***是***指定网络端口的网络地址***删除***None
-None***None***ActiveLinkTechnology***是***指定网络端口的网络协议***Ethernet***None
-None***None***PortMaxSpeed***否***指定网络端口的接口类型***200GE***None
-None***None***PortName***否***指定网络端口的名称***删除***None
-None***None***InterfaceType***否***指定网络端口的接口类型***删除***None
-None***None***BDF***是***指定网络端口的BDF***删除***None
-None***None***LldpService***否***LLDP资源访问路径***删除***None
-None***None***DriverVersion***否***指定网络端口的驱动版本***删除***None
-None***None***DriverName***否***指定网络端口的驱动名称***删除***None
-None***None***PortTechnology***否***指定网络端口的网络协议***删除***None
-None***None***FCId***否***FC卡的ID***删除***None
-None***None***LinkSpeedGbps***否***指定网络端口的速率***删除***None
-None***None***RelatedPort***否***指定网络端口关联的以太网口资源链接***{        "@odata.id": "/redfish/v1/Systems/1/EthernetInterfaces/NPUBoardFLEXIOB1Port1"      },***None
-None***None***StatisticInfo***否***指定HBA卡网络端口的统计信息***删除***None
-None***None***None***None***None***None***None
-SheetTitle=命令行
-SheetRow=3, Col=2
-SheetRowHeight=17.25***147.75***57.0
-SheetColWidth=27.25***76.75
-None***None
-FRU信息显示***FRU Device Description : Builtin FRU Device (FRUID 1, NPU Board) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 13, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 14, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 15, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 16, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 17, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 18, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 19, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26FRU Device Description : Builtin FRU Device (FRUID 20, Ascend 910B) Board Mfg. Date       : 1996/01/01 Mon 00:00:00 Board Manufacturer    : Huawei Board FRU File ID     : 3.08.02.26 Product Manufacturer  : Huawei Product FRU File ID   : 3.08.02.26
-版本信息显示***NPUBoard1    BoardName:           IT21SD8BNPUBoard1      BoardID:           0x00bfNPUBoard1          PCB:           .ANPUBoard1 CPLD Version:           (U5)0.02
-SheetTitle=传感器
-SheetRow=9, Col=18
-SheetRowHeight=14.25***17.25***16.5***16.5***16.5***16.5***16.5***16.5***16.5
-SheetColWidth=18.375***13.875***14.75***13.0***13.0***13.0***13.0***10.75***48.125***20.5***11.125***11.25***11.75***14.0***12.875***13.0***43.625***22.125
-传感器***传感器类型***Event/Reading Type***offset#***告警***None***None***记录SEL***描述***扫描条件***紧急低门限***严重低门限***一般低门限***一般高门限***严重高门限***紧急高门限***备注***None
-None***None***None***None***一般    ***严重   *** 紧急***None***None***None***None***None***None***None***None***None***None***None
-NB# NPU AI_Tj***0x01***0x01***NA***NA***NA***NA***None***NPU模组板NPU AI Core温度***None***NA***NA***NA***105***NA***NA***NB1~NB8***NPU相关 IPMB获取
-NB# NPU HBM_Tj ***0x01***0x01***NA***NA***NA***NA***None***NPU模组板NPU HBM温度***None***NA***NA***NA***95***NA***NA***NB1~NB8***NPU相关 IPMB获取
-NB# NPU Nim_Tj***0x01***0x01***NA***NA***NA***NA***None***NPU模组板NPU NiM bus温度***None***NA***NA***NA***105***NA***NA***NB1~NB8***NPU相关 IPMB获取
-NB# NPU VRD_Tj ***0x01***0x01***NA***NA***NA***NA***None***NPU模组板NPU VRD 温度***None***NA***NA***NA***118***NA***NA***NB1~NB8***NPU相关 IPMB获取
-NPUBoard Temp***0x01***0x01***NA***NA***NA***NA***None***NPU载板温度***None***NA***NA***NA***NA***NA***NA***None***LM75
-NIC# CDR Tj***0x01***0x01***NA***NA***NA***NA***None***NIC卡CDR温度***None***NA***NA***NA***105***NA***NA***NIC1~NIC4***NPU相关 IPMB获取
-NIC# Inlet Temp***0x01***0x01***NA***NA***NA***NA***None***NIC卡进风口温度***None***NA***NA***NA***105***NA***NA***NIC1~NIC4***LM75
-SheetTitle=精细化告警
-SheetRow=14, Col=6
-SheetRowHeight=36.0***64.5***64.5***64.5***64.5***64.5***64.5***64.5***64.5***64.5***64.5***64.5***64.5***64.5
-SheetColWidth=20.375***37.5***99.75***41.625***54.25***49.0
-告警码***告警事件***告警解释***告警属性***告警参数***对系统影响、可能原因、处理步骤
-None***NPU核心温度过高（NPU，轻微告警）***告警描述：NPU Boardarg1 NPUarg2 arg3 temperature (arg4°C) exceeds the overtemperature threshold (arg5°C).当NPU核心温度高于告警门限温度时，产生此告警。产生此告警的主体类型为：NPU***告警ID 告警级别 可自动清除0x56000001 轻微 是***参数名称 参数含义arg1 NPU板的编号。arg2 NPU芯片的ID号。arg3 NPU板的主要内部部件，例如“HBM”、“AICORE”或“NIMBUS”。arg4 对应传感器的当前读数。arg5 告警门限。***对系统的影响NPU核心温度过高会导致NPU性能下降，设备运行不稳定。可能原因 环境温度过高。 进风口或出风口有异物堵塞。 存在空槽位或间隔。 进风口传感器所在部件故障。处理步骤步骤 1 检查风扇模块是否存在告警。 是 => 步骤2 否 => 步骤3步骤 2 更换产生告警的风扇模块，5min后检查告警是否清除。 是 => 处理完毕 否 => 步骤3步骤 3 检查机房环境温度是否超出设备运行环境要求的温度。 是 => 步骤4 否 => 步骤5步骤 4 将机房环境温度降低至设备运行环境要求的温度。5min后检查告警是否清除。 是 => 处理完毕 否 => 步骤5步骤 5 检查服务器进风口或出风口是否有异物堵塞。 是 => 步骤6 否 => 步骤7步骤 6 清除异物，5min后检查告警是否清除。 是 => 处理完毕 否 => 步骤7步骤 7 更换NPU芯片，检查告警是否清除。 是 => 处理完毕 否 => 步骤8步骤 8 请联系技术支持处理。----结束
-None***NPU过热关机（NPU，紧急告警）***告警描述：The OS was shut down due to NPU Boardarg1 NPUarg2 overheating.当NPU温度过高导致系统下电时，产生此告警。产生此告警的主体类型为：NPU***告警ID 告警级别 可自动清除0x56000009 紧急 是***参数名称 参数含义arg1 NPU板的编号。arg2 NPU芯片的ID号。***对系统的影响可能导致系统异常下电。可能原因 环境温度过高。 进风口/出风口堵塞。 存在空槽位或间隔。 风扇模块故障。 未安装导风罩。 散热器接触不良或液冷装置故障。 NPU故障。处理步骤步骤 1 检查服务器是否同时存在风扇告警。 是 => 步骤2 否 => 步骤3步骤 2 按照风扇告警的处理建议清除告警后，检查本节所述告警是否清除。 是 => 处理完毕 否 => 步骤3步骤 3 检查机房环境温度是否超出设备运行环境要求的温度。 是 => 步骤4 否 => 步骤5步骤 4 将机房环境温度降低至设备运行环境要求的温度。5min后检查告警是否清除。 是 => 处理完毕 否 => 步骤5步骤 5 检查服务器进风口或出风口是否有异物堵塞。 是 => 步骤6 否 => 步骤7步骤 6 清除异物，5min后检查告警是否清除。 是 => 处理完毕 否 => 步骤7步骤 7 检查服务器之间的空槽位或间隔是否已加假面板或挡板。 是 => 步骤9 否 => 步骤8步骤 8 为服务器之间的空槽位或间隔安装假面板或挡板，检查告警是否清除。 是 => 处理完毕 否 => 步骤9步骤 9 将服务器下电后，检查服务器内部的导风罩是否已正确安装。 是 => 步骤11 否 => 步骤10步骤 10 正确安装导风罩后，将服务器上电，检查告警是否清除。 是 => 处理完毕 否 => 步骤11步骤 11 将服务器下电后，检查NPU散热器或液冷装置是否安装正确。 是 => 步骤13 否 => 步骤12步骤 12 正确安装NPU散热器或液冷装置后，将服务器上电，检查告警是否清除。 是 => 处理完毕 否 => 步骤13步骤 13 更换产生告警的NPU，检查告警是否清除。 是 => 处理完毕 否 => 步骤14步骤 14 请联系技术支持处理。----结束 
-None***xPU载板温度读取失败（xPU Carrier Board，轻微告警）***告警描述：Failed to obtain the temperature at arg1 detection point on the xPU carrier board arg2.当xPU载板监测点温度读取失败时，产生此告警。产生此告警的主体类型为：xPU Carrier Board***告警ID 告警级别 可自动清除0x40000009 轻微 是***参数名称 参数含义arg1 检测点名称，例如“8053_sas”。arg2 “1”、“2”。***对系统的影响无法正常监控温度，如果温度异常时无法及时告警。可能原因xPU载板温度传感器失效或者I2C链路通信异常。处理步骤步骤 1 下电后检查xPU载板与其插槽是否存在损坏或接触不良现象。 是 => 步骤2 否 => 步骤3步骤 2 重新插拔线缆，待服务器上电后，检查告警是否清除。 是 => 处理完毕 否 => 步骤3步骤 3 更换告警的xPU载板，待服务器上电后，检查告警是否清除。 是 => 处理完毕 否 => 步骤4步骤 4 请联系技术支持处理。----结束
-None***SoC主板电压读取失败（SoC Board，轻微告警）***告警描述：Failed to obtain voltage at the arg4 detection point on the arg1 SoC board arg2 (arg3).[arg5] [arg6]当SoC主板电压读取失败时，产生此告警。产生此告警的主体类型为：SoC Board***告警ID 告警级别 可自动清除0x5C000001 轻微 是***参数名称 参数含义arg1 SoC主板位置。arg2 SoC主板槽位号。arg3 SoC主板的类型。arg4 电压监测点名称。arg5 告警相关的附加描述。arg6 告警相关的故障码。***对系统的影响无法正常监控电压，如果电压异常时无法及时告警，或硬件自我保护功能失效。可能原因I2C通道异常或SoC主板故障。处理步骤步骤 1 重启iBMC，检查告警是否清除。 是 => 处理完毕 否 => 2步骤 2 拔插电源线缆或拔插单板，检查告警是否清除。 是 => 处理完毕 否 => 3步骤 3 更换产生告警的板卡，检查告警是否清除。 是 => 处理完毕 否 => 4步骤 4 请联系技术支持处理。----结束 
-None***xPU载板时钟丢失（xPU Carrier Board，严重告警）***告警描述：xPU carrier boardarg3 arg1 arg2 clock signals lost.当xPU载板时钟丢失时，产生此告警。产生此告警的主体类型为：xPU Carrier Board***告警ID 告警级别 可自动清除0x4000000B 严重 是***参数名称 参数含义arg1 载板槽位号。arg2 时钟名称和频率，例如“DB1901_1 100MHz“、“DB1901_2 100MHz“、“CK420 100MHz”。arg3 载板类型，例如“Riser Board”。***对系统的影响可能导致系统运行异常。可能原因xPU载板故障。处理步骤步骤 1 下电后，更换产生告警的xPU载板，检查告警是否清除。 是 => 处理完毕 否 => 2步骤 2 请联系技术支持处理。----结束
-None***xPU载板CPLD自检状态（xPU Carrier Board，严重告警）***告警描述：xPU carrier boardarg2 arg1 CPLD self-check error. xPU载板CPLD自检结果异常时，产生此告警。产生此告警的主体类型为：xPU Carrier Board***告警ID 告警级别 可自动清除0x4000000D 严重 是***参数名称 参数含义arg1 告警相关的Riser卡的槽位号，例如“Riser1”或“ PCIe Slot1”。arg2 载板类型，例如“Riser Board”。***对系统的影响可能导致服务器无法正常启动。可能原因xPU载板故障。处理步骤步骤 1 重启iBMC，检查告警是否清除。 是 => 处理完毕 否 => 步骤2步骤 2 更换产生告警的xPU载板，检查告警是否清除。 是 => 处理完毕 否 => 步骤3步骤 3 请联系技术支持处理。----结束
-None***NPU芯片健康状态紧急告警（NPU，紧急告警）***告警描述：NPU Boardarg1 NPUarg2 has a critical problem.当NPU芯片健康状态出现紧急问题时，产生此告警。产生此告警的主体类型为：NPU***告警ID 告警级别 可自动清除0x56000003 紧急 是***参数名称 参数含义arg1 NPU板的编号。arg2 NPU芯片的ID号。***对系统的影响DDR访问异常，出现NPU低温复位或高温复位现象。可能原因 芯片温度过高，可能是散热异常、环境温度过高或进风口/出风口阻塞。 地址异常或内存泄露等软件问题。处理步骤步骤 1 检查芯片温度是否过热。 是 => 步骤2 否 => 步骤3步骤 2 检查芯片散热是否正常。 是 => 步骤9 否 => 步骤3步骤 3 检查机房环境温度是否超出设备运行环境要求的温度。 是 => 步骤4 否 => 步骤5步骤 4 将机房环境温度降低至设备运行环境要求的温度。5min后检查告警是否清除。 是 => 处理完毕 否 => 步骤5步骤 5 检查服务器进风口或出风口是否有异物堵塞。 是 => 步骤6 否 => 步骤7步骤 6 清除异物，5min后检查告警是否清除。 是 => 处理完毕 否 => 步骤7步骤 7 将服务器下电后，检查NPU散热器或液冷装置是否安装正确。 是 => 步骤9 否 => 步骤8步骤 8 正确安装NPU散热器或液冷装置后，将服务器上电，检查告警是否清除。 是 => 处理完毕 否 => 步骤9步骤 9 立即重启OS，检查黑匣子日志。步骤 10 请联系技术支持处理。----结束
-None***NPU芯片健康状态严重告警（NPU，严重告警）***告警描述：NPU Boardarg1 NPUarg2 has a major problem.当NPU芯片健康状态出现严重问题时，产生此告警。产生此告警的主体类型为：NPU***告警ID 告警级别 可自动清除0x56000005 严重 是***参数名称 参数含义arg1 NPU板的编号。arg2 NPU芯片的ID号。***对系统的影响可能引起系统业务异常，导致系统出现过温复位现象。可能原因 AICORE、HBM等器件初始化失败。 NPU心跳获取异常。处理步骤步骤 1 重启NPU，检查告警是否清除。 是 => 处理完毕 否 => 步骤2步骤 2 请联系技术支持处理。----结束
-None***NPU芯片健康状态降级（NPU，轻微告警）***告警描述：NPU Boardarg1 NPUarg2 health state is degraded.当NPU芯片健康状态降级时，产生此告警。产生此告警的主体类型为：NPU***告警ID 告警级别 可自动清除0x56000007 轻微 是***参数名称 参数含义arg1 NPU板的编号。arg2 NPU芯片的ID号。***对系统的影响系统仍能正常运行，但可靠性有所降低。可能原因 计算存在死锁。 内存耗尽。处理步骤步骤 1 无需处理。芯片负载降低后，将自动恢复。----结束
-None***NPU ECC历史计数超门限（NPU，严重告警）***告警描述：The historical ECC count of NPU Boardarg1 NPUarg2 reaches the threshold.当NPU ECC历史计数超门限时，产生此告警。产生此告警的主体类型为：NPU***告警ID 告警级别 可自动清除0x5600001B 严重 是***参数名称 参数含义arg1 NPU板的编号。arg2 NPU芯片的ID号。***对系统的影响可能影响NPU业务功能。可能原因 软件引起的故障。 NPU板损坏。处理步骤步骤 1 在主机操作系统执行npu-smi clear -t ecc-info -i dev_id -c 0命令后，重启操作系统。检查告警是否清除。 是 => 处理完毕 否 => 步骤2步骤 2 更换NPU板，检查告警是否清除。 是 => 处理完毕 否 => 步骤3步骤 3 请联系技术支持处理。----结束
-None***NPU MCE/AER错误（NPU，紧急告警）***告警描述：NPU arg2 on NPU Board arg1 has triggered an uncorrectable error.当NPU MCE/AER错误时，产生此告警。产生此告警的主体类型为：NPU***告警ID 告警级别 可自动清除0x5600001F 紧急 是***参数名称 参数含义arg1 NPU板的编号。arg2 NPU芯片的ID号。***对系统的影响可能导致系统停止响应。可能原因 NPU故障 NPU板故障处理步骤步骤 1 下电后，更换产生告警的NPU板，检查告警是否清除。 是 => 处理完毕 否 => 2步骤 2 请联系技术支持处理。----结束
-None***SoC主板电压过高（SoC Board，严重告警）***告警描述：The arg1 SoC board arg2 (arg3) voltage is too high. [arg4] [arg5]当检测到SoC主板电压过高时，产生此告警。产生此告警的主体类型为：SoC Board***告警ID 告警级别 可自动清除0x5C000009 严重 是***参数名称 参数含义arg1 SoC主板的位置。arg2 SoC主板的槽位号。arg3 SoC主板的名称。arg4 告警相关的附加描述。arg5 告警相关的故障码。***对系统的影响可能导致SoC主板运行不稳定，系统运行异常。可能原因SoC主板故障。处理步骤步骤 1 检查SoC主板是否上电正常。 是 => 步骤3 否 => 步骤2步骤 2 重新上电SoC主板，检查告警是否清除。 是 => 处理完毕 否 => 步骤3步骤 3 更换产生告警的SoC主板，检查告警是否清除。 是 => 处理完毕 否 => 步骤4步骤 4 请联系技术支持处理。----结束
-None***SoC主板电压过低（SoC Board，严重告警）***告警描述：The arg1 SoC board arg2 (arg3) voltage is too low. [arg4] [arg5]当检测到SoC主板电压过低时，产生此告警。产生此告警的主体类型为：SoC Board***告警ID 告警级别 可自动清除0x5C00000B 严重 是***参数名称 参数含义arg1 SoC主板的位置。arg2 SoC主板的槽位号。arg3 SoC主板的名称。arg4 告警相关的附加描述。arg5 告警相关的故障码。***对系统的影响可能导致SoC主板运行不稳定或故障，系统运行异常。可能原因SoC主板故障。处理步骤步骤 1 检查SoC主板是否上电正常。 是 => 步骤3 否 => 步骤2步骤 2 重新上电SoC主板，检查告警是否清除。 是 => 处理完毕 否 => 步骤3步骤 3 更换产生告警的SoC主板，检查告警是否清除。 是 => 处理完毕 否 => 步骤4步骤 4 请联系技术支持处理。----结束 
+guint8 all_sw_chip_temp_get(void);
+DECLARATION_CLASS(CLASS_PXE89104_SWITCH)
+
+#define CLASS_PXE89104_SWITCH              "PXE89104Switch"
+#define PROPERTY_PXE89104_SWITCH_TEMP      "Temp"
+
+<!-- Switch芯片 -->
+<CLASS NAME="PXE89104Switch">
+	<!-- Switch芯片关联的Chip -->
+	<PROPERTY NAME="RefChip" TYPE="ro">	</PROPERTY>
+	<!-- Switch芯片的温度 -->
+	<PROPERTY NAME="Temp" TYPE="y">		</PROPERTY>
+</CLASS>
+
+
+
+<!-- Switch芯片I2c地址 0x6c左移一位0xd8 -->
+    <OBJECT NAME="SwitchChip1" CLASS="Chip" TYPE="Physical">
+        <PROPERTY NAME="Addr" TYPE="u">	<VALUE>0xd8</VALUE>	</PROPERTY>
+        <PROPERTY NAME="AddrWidth" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+        <PROPERTY NAME="OffsetWidth" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="PrevChip" TYPE="ro">	<VALUE>i2c1_pca9545_chip2</VALUE>	</PROPERTY>
+        <PROPERTY NAME="Index" TYPE="u">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="Level" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+        <PROPERTY NAME="LBusType" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="RBusType" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="LBus" TYPE="ro">	<VALUE>pca9545_chan4</VALUE>	</PROPERTY>
+    </OBJECT>
+    <OBJECT NAME="SwitchChip2" CLASS="Chip" TYPE="Physical">
+        <PROPERTY NAME="Addr" TYPE="u">	<VALUE>0xd8</VALUE>	</PROPERTY>
+        <PROPERTY NAME="AddrWidth" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+        <PROPERTY NAME="OffsetWidth" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="PrevChip" TYPE="ro">	<VALUE>i2c3_pca9545_chip2</VALUE>	</PROPERTY>
+        <PROPERTY NAME="Index" TYPE="u">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="Level" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+        <PROPERTY NAME="LBusType" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="RBusType" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="LBus" TYPE="ro">	<VALUE>pca9545_chan4</VALUE>	</PROPERTY>
+    </OBJECT>
+ 
+    <OBJECT NAME="PXE89104Switch1" CLASS="PXE89104Switch" TYPE="Physical">
+        <PROPERTY NAME="RefChip" TYPE="ro">	<VALUE>SwitchChip1</VALUE>	</PROPERTY>
+        <PROPERTY NAME="Temp" TYPE="y">	    <VALUE>0x00</VALUE>	        </PROPERTY>
+    </OBJECT>
+ 
+    <OBJECT NAME="PXE89104Switch2" CLASS="PXE89104Switch" TYPE="Physical">
+        <PROPERTY NAME="RefChip" TYPE="ro">	<VALUE>SwitchChip1</VALUE>	</PROPERTY>
+        <PROPERTY NAME="Temp" TYPE="y">	    <VALUE>0x00</VALUE>	        </PROPERTY>
+    </OBJECT>
+ 
+    <!-- Switch芯片温度传感器 -->
+    	<OBJECT NAME="SwitchChip1_Temp" CLASS="ThresholdSensor" TYPE="Logical">
+		<PROPERTY NAME="InnerName" TYPE="s">	<VALUE>SwitchChip1TEMP</VALUE>	</PROPERTY>
+		<PROPERTY NAME="OwnerId" TYPE="y">	<VALUE>0x20</VALUE>	</PROPERTY>
+		<PROPERTY NAME="OwnerLun" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Number" TYPE="y">	<VALUE>0xFF</VALUE>	</PROPERTY>
+		<PROPERTY NAME="EntityId" TYPE="rp">	<VALUE>EntitySWBoard.Id</VALUE>	</PROPERTY>
+		<PROPERTY NAME="EntityInstance" TYPE="rp">	<VALUE>EntitySWBoard.Instance</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Initialization" TYPE="y">	<VALUE>0x7F</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Capabilities" TYPE="y">	<VALUE>0x68</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorType" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorTypeStr" TYPE="s">	<VALUE>Temperature</VALUE>	</PROPERTY>
+		<PROPERTY NAME="EventReadingType" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AssertionMask" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DeassertionMask" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DiscreteReadingMask" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorUnit" TYPE="y">	<VALUE>0x80</VALUE>	</PROPERTY>
+		<PROPERTY NAME="BaseUnit" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ModifierUnit" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Function" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="M" TYPE="y">	<VALUE>0x64</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Tolerance" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="B" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Accuracy" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AccuracyExp" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="RBExp" TYPE="y">	<VALUE>0xE0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AnalogFlags" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NominalReading" TYPE="y">	<VALUE>0x19</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NormalMax" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NormalMin" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="MaxReading" TYPE="y">	<VALUE>0x7F</VALUE>	</PROPERTY>
+		<PROPERTY NAME="MinReading" TYPE="y">	<VALUE>0x80</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNonrecoverable" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperCritical" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNoncritical" TYPE="y">	<VALUE>105</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNonrecoverable" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerCritical" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNoncritical" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="PositiveHysteresis" TYPE="y">	<VALUE>0x02</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NegativeHysteresis" TYPE="y">	<VALUE>0x02</VALUE>	</PROPERTY>
+		<PROPERTY NAME="TypeLengthCode" TYPE="y">	<VALUE>0xFF</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorName" TYPE="s">	<VALUE>Switch Chip1 Temp</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorUnitStr" TYPE="s">	<VALUE>unspecified</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ReadingRaw" TYPE="rp">	<VALUE>SwitchChip1_temp_monitor.MonSenValue</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ReaddingConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNonrecoverableConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperCriticalConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNoncriticalConvert" TYPE="d">	<VALUE>105.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNonrecoverableConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerCriticalConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNoncriticalConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="PositiveHysteresisConvert" TYPE="d">	<VALUE>2.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NegativeHysteresisConvert" TYPE="d">	<VALUE>2.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Health" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ReadingStatus" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AssertStatus" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DeassertStatus" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+	</OBJECT>
+	<!-- Switch芯片温度 -->
+	<OBJECT NAME="SwitchChip1_temp_monitor" CLASS="TempMonitor" TYPE="Logical">
+		<PROPERTY NAME="SelfTestObject" TYPE="ro">	<VALUE>::succ_dev_test_pwrgd</VALUE>	</PROPERTY>
+		<PROPERTY NAME="MonSenValue" TYPE="q">	<VALUE>60</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DebouncedCfg" TYPE="ro">	<VALUE>::dbd_midavg_s6</VALUE>	</PROPERTY>
+		<PROPERTY NAME="TempValue" TYPE="rp"> <VALUE>PXE89104Switch1.Temp</VALUE>	</PROPERTY>
+	</OBJECT>
+ 
+    <OBJECT NAME="SwitchChip2_Temp" CLASS="ThresholdSensor" TYPE="Logical">
+		<PROPERTY NAME="InnerName" TYPE="s">	<VALUE>SwitchChip2TEMP</VALUE>	</PROPERTY>
+		<PROPERTY NAME="OwnerId" TYPE="y">	<VALUE>0x20</VALUE>	</PROPERTY>
+		<PROPERTY NAME="OwnerLun" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Number" TYPE="y">	<VALUE>0xFF</VALUE>	</PROPERTY>
+		<PROPERTY NAME="EntityId" TYPE="rp">	<VALUE>EntitySWBoard.Id</VALUE>	</PROPERTY>
+		<PROPERTY NAME="EntityInstance" TYPE="rp">	<VALUE>EntitySWBoard.Instance</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Initialization" TYPE="y">	<VALUE>0x7F</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Capabilities" TYPE="y">	<VALUE>0x68</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorType" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorTypeStr" TYPE="s">	<VALUE>Temperature</VALUE>	</PROPERTY>
+		<PROPERTY NAME="EventReadingType" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AssertionMask" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DeassertionMask" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DiscreteReadingMask" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorUnit" TYPE="y">	<VALUE>0x80</VALUE>	</PROPERTY>
+		<PROPERTY NAME="BaseUnit" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ModifierUnit" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Function" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="M" TYPE="y">	<VALUE>0x64</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Tolerance" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="B" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Accuracy" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AccuracyExp" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="RBExp" TYPE="y">	<VALUE>0xE0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AnalogFlags" TYPE="y">	<VALUE>0x01</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NominalReading" TYPE="y">	<VALUE>0x19</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NormalMax" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NormalMin" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="MaxReading" TYPE="y">	<VALUE>0x7F</VALUE>	</PROPERTY>
+		<PROPERTY NAME="MinReading" TYPE="y">	<VALUE>0x80</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNonrecoverable" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperCritical" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNoncritical" TYPE="y">	<VALUE>105</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNonrecoverable" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerCritical" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNoncritical" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="PositiveHysteresis" TYPE="y">	<VALUE>0x02</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NegativeHysteresis" TYPE="y">	<VALUE>0x02</VALUE>	</PROPERTY>
+		<PROPERTY NAME="TypeLengthCode" TYPE="y">	<VALUE>0xFF</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorName" TYPE="s">	<VALUE>Switch Chip2 Temp</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorUnitStr" TYPE="s">	<VALUE>unspecified</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ReadingRaw" TYPE="rp">	<VALUE>SwitchChip2_temp_monitor.MonSenValue</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ReaddingConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNonrecoverableConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperCriticalConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="UpperNoncriticalConvert" TYPE="d">	<VALUE>105.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNonrecoverableConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerCriticalConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="LowerNoncriticalConvert" TYPE="d">	<VALUE>0.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="PositiveHysteresisConvert" TYPE="d">	<VALUE>2.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="NegativeHysteresisConvert" TYPE="d">	<VALUE>2.0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Health" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ReadingStatus" TYPE="y">	<VALUE>0x00</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AssertStatus" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DeassertStatus" TYPE="q">	<VALUE>0x0000</VALUE>	</PROPERTY>
+	</OBJECT>
+	<!-- Switch芯片温度 -->
+	<OBJECT NAME="SwitchChip2_temp_monitor" CLASS="TempMonitor" TYPE="Logical">
+		<PROPERTY NAME="SelfTestObject" TYPE="ro">	<VALUE>::succ_dev_test_pwrgd</VALUE>	</PROPERTY>
+		<PROPERTY NAME="MonSenValue" TYPE="q">	<VALUE>60</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DebouncedCfg" TYPE="ro">	<VALUE>::dbd_midavg_s6</VALUE>	</PROPERTY>
+		<PROPERTY NAME="TempValue" TYPE="rp"> <VALUE>PXE89104Switch2.Temp</VALUE>	</PROPERTY>
+	</OBJECT>
+	
+	
+	
+guint8 swchiptemp_offset_writedata_tbl [12][8] = {
+    {0x03, 0x7C, 0x3C, 0x40, 0xFF, 0xE0, 0x00, 0x04},
+    {0x03, 0x7C, 0x3C, 0x41, 0x00, 0x21, 0x4C, 0x0B},
+    {0x03, 0x7C, 0x3C, 0x42, 0x00, 0x00, 0x00, 0x01},
+    {0x03, 0x7C, 0x3C, 0x40, 0xFF, 0xE0, 0x00, 0x08},
+    {0x03, 0x7C, 0x3C, 0x41, 0x00, 0x01, 0x00, 0x07},
+    {0x03, 0x7C, 0x3C, 0x42, 0x00, 0x00, 0x00, 0x01},
+    {0x03, 0x7C, 0x3C, 0x40, 0xFF, 0xE0, 0x00, 0x0C},
+    {0x03, 0x7C, 0x3C, 0x41, 0x00, 0x22, 0x4C, 0x14},
+    {0x03, 0x7C, 0x3C, 0x42, 0x00, 0x00, 0x00, 0x01},
+    {0x03, 0x7C, 0x3C, 0x40, 0xFF, 0xE0, 0x00, 0x10},
+    {0x03, 0x7C, 0x3C, 0x42, 0x00, 0x00, 0x00, 0x02},
+    {0x04, 0x7C, 0x3C, 0x41},
+};
+ 
+guint8 all_sw_chip_temp_get(void)
+{
+    gint32 ret = RET_ERR;
+    guint8 read_data[4] = {0};
+    guint8 sw_real_temp = 0;
+    gint32 sw_origin_temp = 0;
+    GSList *obj_list = NULL;
+    GSList *node = NULL;
+    OBJ_HANDLE pxe89104_switch_handle = 0;
+    OBJ_HANDLE switch_chip_handle = 0;
+    const gchar *switch_chip_name = NULL;
+    guint8 offset_writedata_tbl_row = 0;
+    guint8 offset_writedata_tbl_col = 0;
+ 
+    ret = dfl_get_object_list(CLASS_PXE89104_SWITCH, &obj_list);
+    if (ret != RET_OK) {
+        debug_log(DLOG_ERROR, "%s : get pxe89104 switch list failed, ret=%d", __FUNCTION__, ret);
+        return RET_ERR;
+    }
+ 
+    for (node = obj_list; node; node = node->next) {
+        pxe89104_switch_handle = (OBJ_HANDLE)node->data;
+        ret = dfl_get_referenced_object(pxe89104_switch_handle, PROPERTY_REF_CHIP_OBJECT, &switch_chip_handle);
+        if (ret != DFL_OK) {
+            debug_log(DLOG_ERROR, "%s get the reference switch chip fail, ret=%d",dfl_get_object_name(pxe89104_switch_handle) , ret);
+            continue;
+        }
+ 
+        switch_chip_name = dfl_get_object_name(switch_chip_handle);
+        offset_writedata_tbl_row = sizeof(swchiptemp_offset_writedata_tbl)/sizeof(swchiptemp_offset_writedata_tbl[0]);
+        offset_writedata_tbl_col = sizeof(swchiptemp_offset_writedata_tbl[0])/sizeof(swchiptemp_offset_writedata_tbl[0][0]);
+ 
+        for (guint8 i = 0; i < offset_writedata_tbl_row; i++) {
+            if (i == (offset_writedata_tbl_row-1)) {
+                // *(swchiptemp_offset_writedata_tbl + i) + 0 等价于 &swchiptemp_offset_writedata_tbl[i][0]
+                ret = dfl_chip_blkwrite(switch_chip_name, 0, offset_writedata_tbl_col-4, (gpointer)(&swchiptemp_offset_writedata_tbl[i][0]));  
+            } else {
+                ret = dfl_chip_blkwrite(switch_chip_name, 0, offset_writedata_tbl_col, (gpointer)(&swchiptemp_offset_writedata_tbl[i][0]));
+            }
+            if (ret != DFL_OK) {
+                debug_log(DLOG_ERROR, "[%s] write swchiptemp_offset_writedata_tbl[%d] failed with result:%d", switch_chip_name, i+1, ret);
+                break;
+            }
+        }
+ 
+        ret = dfl_chip_blkread(dfl_get_object_name(switch_chip_handle), 0, 4, read_data);
+        if (ret != DFL_OK) {
+            debug_log(DLOG_ERROR, "read swchip temp failed, ret=%d", ret);
+            continue;
+        }
+        debug_log(DLOG_INFO, "read %s temp raw data=%d,%d,%d,%d", switch_chip_name, read_data[0], read_data[1], read_data[2], read_data[3]); 
+ 
+        sw_origin_temp = (read_data[2] << 8) | (read_data[3]);
+        sw_origin_temp &= 0x07FF;
+        sw_real_temp = (guint8)(366.812 - ((float)sw_origin_temp)*0.2454);
+        debug_log(DLOG_INFO, "boardcom pxe89104 sw_real_temp=%d", sw_real_temp);
+ 
+        ret = dal_set_property_value_byte(pxe89104_switch_handle, PROPERTY_PXE89104_SWITCH_TEMP, sw_real_temp, DF_NONE);
+        if (ret != RET_OK) {
+            debug_log(DLOG_ERROR, "set boardcom pxe89104 sw_real_temp to xml failed, ret=%d", ret);
+            continue;
+        }
+    }
+ 
+    g_slist_free(obj_list);
+    return RET_OK;
+}
+ 
+ 
+LOCAL void sw_chip_temp_get_task(void)
+{
+    const guint32 sw_scan_time = 3000;
+ 
+    (void)prctl(PR_SET_NAME, (unsigned long)"SwTempGetTask");
+ 
+    for (;;) {
+        vos_task_delay(sw_scan_time);
+        (void)all_sw_chip_temp_get();
+    }
+}
+
+
+gint32 sw_board_start(void)
+{
+    TASKID task_id_sw_temp = 0;
+    gint32 ret;
+ 
+    ret = vos_task_create(&task_id_sw_temp, "SwTempGet", (TASK_ENTRY)sw_chip_temp_get_task, NULL, DEFAULT_PRIORITY);
+    if (ret != VOS_OK) {
+        debug_log(DLOG_ERROR, "%s : create sw temp get task thread failed(%d).", __FUNCTION__, ret);
+    }
+ 
+    debug_log(DLOG_INFO, "%s:switch board info start", __FUNCTION__);
+    return RET_OK;
+}
