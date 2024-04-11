@@ -1,209 +1,41 @@
-SheetTitle=Sheet1
-SheetRow=197, Col=3
-SheetRowHeight=15.0***82.5***28.5***15.0***82.5***15.0***15.0***204.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***55.5***15.0***15.0***55.5***15.0***15.0***15.0***55.5***55.5***55.5***55.5***55.5***55.5***55.5***55.5***15.0***15.0***15.0***15.0***15.0***15.0***204.0***55.5***55.5***15.0***55.5***55.5***55.5***15.0***15.0***15.0***15.0***15.0***55.5***55.5***55.5***15.0***55.5***55.5***55.5***55.5***217.5***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***204.0***55.5***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***177.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***15.0***55.5***15.0***55.5***204.0***15.0***15.0***15.0***15.0***15.0***55.5***15.0***15.0***15.0***15.0***15.0***15.0
-SheetColWidth=13.0***55.875***255.625
-IR***CPU高可靠RAS***CPU高可靠RAS
-SR***支持芯片挂死检测***支持芯片挂死检测，主要功能描述如下：1）支持内部关键总线模块Timeout检错，包含CPU core、总线、IIO2）BIOS支持芯片挂死检测功能配置和挂死后故障信息收集3）硬件支持CPU no commit信号到CPLD4）BMC支持挂死后收集故障信息
-AR***【BMC】支持对IMU的挂死检测和修复***【BMC】支持对IMU的挂死检测和修复
-AR***【BMC】支持芯片rst_out检测和故障信息收集***【BMC】支持芯片rst_out检测和故障信息收集
-SR***支持CPU核在线指令检测和隔离***支持CPU核在线指令检测和隔离，主要功能描述如下：1、OS支持用户巡检策略配置、巡检结果查询、核隔离的用户接口，供用户选择不同的巡检和隔离方式。2、OS对对整个检测周期进行切片，确保一次检测时间尽可能的短，减少对业务性能影响，OS调用BIOS接口执行核指令巡检。3、BIOS执行核指令检测，检测完成将执行结果返回给OS，将故障信息持久化保存，并上报BMC记录日志。4、OS将检测结果汇总后上报给用户，用户通过OS接口对故障核进行隔离。
-AR***【BMC】支持在线核指令检测的信息记录***【BMC】支持将BIOS上报的在线核指令检测的开始和结束，检测到的核故障信息记录日志
-IR***【920F】支持FDM智能故障管理系统-DDR5故障预测自愈***【简要说明】【920F】支持FDM智能故障管理系统-DDR5故障预测自愈价值：提前识别DDR5介质故障，并采取分级RAS措施进行容错修复，提升业务可用性。
-SR***【920F】支持DDR5容错自愈(FPC)特性开关默认使能***【简要说明】计算产品侧要求所有对性能无影响的系统可靠/可用/可维RAS特性默认开启，让产品商用后能真正受益，发挥出RAS价值【系统用户】客户【前置条件】NA【主成功场景】默认开启部分PageOffline、ACLS、PPR、ADDDC选项能力，这样可以实现只需要调整BMC侧的配置即可开启或关闭某个RAS功能，无需客户调整BIOS设定后再生效，可以最大限度简化生效控制【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***DDR5容错自愈(FPC)特性开关默认使能ACLS配置***【简要说明】BMC侧默认开启ACLS容错能力【输入】csr配置容错能力默认值【输出】FPC容错能力开关
-SR***【920F】支持DDR5内存自适应巡检识别硬失效故障模式***【简要说明】业界Patrol Scrubbing通常默认按照全空间24小时巡检一次，但从现网的实际情况来看，有较大部分从CE演变为UCE的时间在24h以内，24小时一次的全空间扫描在这种场景下效果不佳；对于发生的CE错误，能动态地调整巡检的周期和地址范围，及时准确的识别硬失效故障模式，并通过其他RAS手段进行规避潜在硬失效风险。【系统用户】自动触发【前置条件】系统上电【主成功场景】通过CE信息触发主动巡检压测，根据压测CE计数值和巡检CE地址分布结果识别硬失效的故障模式【扩展场景(含异常场景)】巡检压测，可能导致触发CE风暴【约束】需要BIOS(IMU)版本配套支持【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：完整的功能验证依赖DDR5故障内存条，部分故障模式需要打桩验证（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：无（6）安全要求：NA（7）韧性要求：NA
-AR***支持通过自适应巡检压测识别硬失效故障模式***【简要说明】针对DDR5内存，当检测到内存CE错误时，通过给IMU下发指定区域内存巡检命令，获取巡检计数、地址等信息，加速准确识别硬失效故障模式，并调整对接容错策略【输入】内存CE错误【输出】硬失效的故障模式，调用硬失效的容错策略
-AR***支持redfish接口查询/设置"巡检压测识别硬故障"功能开关***【简要说明】支持redfish接口，查询/设置"巡检压测识别硬失效故障模式"功能开关【输入】redfish接口【输出】DDR5内存硬失效模式判断方式(巡检识别硬失效模式、规则识别硬失效模式)
-SR***【920F】支持FPC内存容错模式配置***【简要说明】内存容错模式，默认模式为BMC按自定义算法在检测故障后自动触发容错，业务或网管侧无法干预，无法与业务联动；当前带内业务及维护有诉求，期望在做完业务迁移或调整后，再触发内存故障容错自愈，降低减少容错自愈对业务系统的影响。内存容错提供多种模式可配置，支持网管参与内存容错策略联动调度。【系统用户】网管或用户，通过redfish接口【前置条件】BMC正常启动【主成功场景】Redfish接口提供资源属性——内存容错自愈模式，模式1：BMC自决策模式（默认模式）；模式2：联动模式--BMC识别容错模式，由第三方（redfish接口）进行策略下发，触发策略执行【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：通过redfish接口测试（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***提供内存容错模式资源树接口***【简要说明】提供内存容错模式资源树接口属性，支持可配置模式1: BMC自决策模式(默认模式)，BMC直接自动控制RAS容错策略执行模式2: 联动模式，BMC识别容错模式，由第三方(redfish接口)控制容错策略执行时机【输入】资源树接口属性【输出】持久化保存内存容错模式
-AR***[redfish]支持内存容错模式配置***【简要说明】支持通过北向redfish接口配置内存容错模式【输入】北向redfish接口请求【输出】内存容错模式的资源树接口
-SR***【920F】支持FPCService资源***【简要说明】FPCService服务资源，资源URL：https://device_ip/redfish/v1/Managers/manager_id/FPCService，包括此资源的子资源【系统用户】运维人员【前置条件】RAS子系统正常运行【主成功场景】根据业务场景需要（如金融场景高可靠性诉求），查询服务器当前FPC内存健康状态信息【扩展场景(含异常场景)】网管FD查询内存健康分值和隔离状态做预告警等处理，呈现预告警结果【约束】FPCService资源受高级License控制【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***[redfish]支持查询FPCService集合资源***【简要说明】redfish接口，支持FPCService集合资源；资源URL：https://device_ip/redfish/v1/Managers/manager_id/FPCService；资源访问受高级License控制【输入】北向Redfish请求【输出】FPCService资源集合
-AR***[redfish]支持查询FPCService资源内存健康状态信息***【简要说明】redfish接口，支持FPCService集合资源；资源URL：https://device_ip/redfish/v1/Managers/manager_id/FPCService/Memory；资源访问受高级License控制【输入】北向Redfish请求【输出】FPCService内存资源健康状态信息，包括HealthScore、IsolationStatus
-AR***提供内存健康状态信息到资源树接口***【简要说明】提供查询内存健康状态信息属性或方法到资源树接口【输入】FPC输出【输出】内存健康状态资源树接口
-SR***【920F】支持FPC内存容错开关配置***【简要说明】支持FPC容错开关配置【系统用户】运维人员【前置条件】RAS子系统正常运行【主成功场景】根据业务场景需要（如金融场景高可靠性诉求），可通过Redfish或IPMI接口配置内存容错自愈开关，使能FPC的内存RAS容错能力，从而提升系统的可靠性【扩展场景(含异常场景)】NA【约束】内存FPC容错开关，为容错功能总开关，与各内存RAS容错能力开关存在联动关系【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***【redfish】支持FPC功能开关配置***【简要说明】支持北向接口查询、设置FPC容错功能开关；FPC容错功能开关与各容错能力开关存在联动关系【输入】Redfish/IPMI接口消息【输出】FPC容错功能开关状态
-SR***【920F】支持内存UCE Error Log日志记录***【简要说明】BIOS/IMU在检测到内存UCE错误时通过走步法可定位出具体出错bit，BMC需要记录内存UCE的详细信息。【系统用户】维护人员【前置条件】BMC上电正常运行【主成功场景】内存UCE【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要IMU配合（6）安全要求：NA（7）韧性要求：NA
-AR***接收IMU上报内存UCE Error Log并格式化记录日志***【简要说明】BMC接收IMU上报内存UCE Error Log并格式化记录日志【输入】IMU上报内存DDRC UCE错误【输出】DDRC错误上报接口的DeviceMask、BurstErrorDataMask字段解析格式化记录
-SR***【920F】支持DDR5内存容错RAS策略决策***【简要说明】以提升业务系统的可靠性为目标，DDR5内存容错RAS策略决策：以内存故障失效模式作为输入，结合DDR5内存隔离自愈修复能力(PageOffline/ACLS/Bank替换/sPPR/hPPR)和隔离资源使用情况，输出最优容错修复措施；并触发执行RAS容错策略流程。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】内存条故障按RAS容错策略决策触发DDR5内存容错RAS措施【扩展场景(含异常场景)】DDR5内存容错RAS能力受相应能力RAS容错开关控制【约束】内存容错RAS能力资源有限制【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：内存RAS策略调度框架要求具备可测试性（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要与IMU配合（6）安全要求：NA（7）韧性要求：NA
-AR***支持DDR5内存row故障模式次优先级执行PageOffline容错RAS策略***【简要说明】支持DDR5内存Row故障模式次优先级执行PageOffline容错RAS策略【输入】Page故障模式【输出】触发执行PageOffline容错RAS策略流程
-AR***支持DDR5内存Bank故障模式执行SR/MR容错RAS策略***【简要说明】支持DDR5内存Bank故障模式执行SR/MR容错RAS策略【输入】Bank故障模式【输出】触发执行SR/MR容错RAS策略流程
-AR***支持DDR5内存Col故障模式执行SR/MR容错RAS策略***【简要说明】支持DDR5内存Col故障模式执行SR/MR容错RAS策略【输入】Col故障模式【输出】触发执行SR/MR容错RAS策略流程
-AR***支持DDR5内存row故障模式执行sPPR容错RAS策略***【简要说明】支持DDR5内存Row故障模式执行sPPR容错RAS策略【输入】Page故障模式【输出】触发执行sPPR容错RAS策略流程
-AR***支持DDR5内存cell故障模式次优先级执行PageOffline、sPPR容错RAS策略***【简要说明】支持DDR5内存cell故障模式次优先级执行PageOffline、sPPR容错RAS策略【输入】cell故障模式【输出】触发执行PageOffline、sPPR容错RAS策略流程
-AR***支持DDR5内存cell故障模式执行ACLS容错RAS策略***【简要说明】支持DDR5内存cell故障模式执行ACLS容错RAS策略【输入】cell故障模式【输出】触发执行ACLS容错RAS策略流程
-SR***【920F】支持DDR5内存故障模式识别***【简要说明】通过内存CE时间维度和空间维度的分布，计算特征值识别内存硬失效的故障模式(如:Page/Row/Col/Bank/Device/Rank/链路等)。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】内存条故障，产生内存CE错误【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：每种故障模式需要有开发者测试覆盖（3）可测试性要求：内存故障模式输出需要有明确格式化的日志记录（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***支持识别DDDR5内存Page故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Page故障模式【输入】内存CE错误记录【输出】是否Page故障模式
-AR***支持识别DDDR5内存Cell故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Cell故障模式【输入】内存CE错误记录【输出】是否Cell故障模式
-AR***支持识别DDDR5内存Row故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Row故障模式【输入】内存CE错误记录【输出】是否Row故障模式
-AR***支持识别DDDR5内存Col故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Col故障模式【输入】内存CE错误记录【输出】是否Col故障模式
-AR***支持识别DDDR5内存Bank故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Bank故障模式【输入】内存CE错误记录【输出】是否Bank故障模式
-AR***支持识别DDDR5内存Device故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Device故障模式【输入】内存CE错误记录【输出】是否Device故障模式
-AR***支持识别DDDR5内存Rank故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Rank故障模式【输入】内存CE错误记录【输出】是否Rank故障模式
-AR***支持识别DDDR5内存DIMM故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存DIMM故障模式【输入】内存CE错误记录【输出】是否DIMM故障模式
-AR***支持识别DDDR5内存Channel故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存Channel故障模式【输入】内存CE错误记录【输出】是否Channel故障模式
-AR***支持识别DDDR5内存CPU_Link故障模式***【简要说明】通过IFMM 分级阈值算法，识别DDR5内存与CPU之间Link故障模式(CPU_Link)【输入】内存CE错误记录【输出】是否CPU_Link故障模式
-SR***【920F】支持DDR5内存RAS容错资源管理***【简要说明】DDR5内存的硬隔离容错(hPPR/sPPR/ACLS/Bank替换)资源受限，BMC进行DDR5容错策略调度时，需要考虑资源可用度。容错资源管理，需按资源粒度考虑：总资源、当前剩余资源。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】接收BIOS POST上报RAS容错资源(hPPR/sPPR/ACLS/Bank替换资源；总资源、当前剩余资源)，BMC接收后进行保存（复位持久化）。【扩展场景(含异常场景)】隔离成功时，更新容错资源【约束】容错资源有限【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：提供Debug接口查询容错资源信息，提升可测试性（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要BIOS配合（6）安全要求：NA（7）韧性要求：NA
-AR***接收BIOS POST阶段上报内存RAS容错资源信息***【简要说明】BIOS POST阶段，接收IMU上报内存RAS (hPPR/sPPR/ACLS/Bank替换)容错资源信息，包括：总资源、当前剩余可用资源【输入】IMU上报RAS容错资源消息【输出】存储RAS容错资源信息
-AR***隔离成功时更新RAS容错资源信息***【简要说明】当IMU/iBMA执行RAS容错成功时，更新存储的RAS容错资源信息【输入】RAS容错结果【输出】更新存储RAS容错资源信息
-AR***提供Debug接口查询当前RAS容错资源信息***【简要说明】提供Debug接口查询当前RAS容错资源信息【输入】存储的RAS容错资源信息【输出】Debug接口可查询显示RAS容错资源
-SR***【920F】支持DDR5内存PageOffline容错RAS策略***【简要说明】OS提供Online Page页隔离能力，BMC可以通过IMU或iBMA调用接口触发Page页隔离。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】软隔离容错，IMU/iBMA提供内存RAS 在线PageOffline容错隔离接口，BMC调用接口触发IMU/iBMA执行PageOffline容错。【扩展场景(含异常场景)】NA【约束】容错资源有限【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：BMC需要支持调试接口触发指定地址PageOffline容错，提升可测试性。（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要与IMU/iBMA配合（6）安全要求：NA（7）韧性要求：NA
-AR***[redfish]支持查询/设置PageOffline容错能力上限值***【简要说明】支持redfish接口，查询/设置PageOffline容错能力上限值；在执行PageOffline隔离容错次数时受此上限值限制。【输入】redfish查询/设置PageOffline容错能力上限值请求【输出】PageOffline容错能力上限值配置(持久化)，在执行PageOffline隔离容错次数时受此上限值限制
-AR***[redfish]提供查询/设置PageOffline容错功能开关***【简要说明】Redfish接口支持提供查询/设置PageOffline容错功能开关【输入】北向Redfish GET/PATCH消息【输出】资源树PageOffline容错功能开关状态
-AR***实现触发IMU执行PageOffline容错接口***【简要说明】定义并实现BMC与IMU通信触发PageOffline RAS容错策略功能的IPMI消息接口【输入】NA【输出】实现PageOffline容错IPMI消息接口
-AR***接收并记录IMU上报的PageOffline容错结果***【简要说明】定义并实现IMU返回PageOffline RAS容错策略结果的IPMI消息接口，隔离结果记录日志【输入】NA【输出】PageOffline容错隔离结果记录日志
-AR***实现触发iBMA执行PageOffline容错接口***【简要说明】定义并实现BMC与iBMA通信触发PageOffline RAS容错策略功能的消息接口【输入】NA【输出】实现PageOffline容错消息接口
-AR***接收并记录iBMA上报的PageOffline容错结果***【简要说明】定义并实现iBMA返回PageOffline RAS容错策略结果的消息接口，隔离结果记录日志【输入】NA【输出】PageOffline容错隔离结果记录日志
-SR***【920F】支持DDR5内存SR/MR容错RAS策略***【简要说明】ADC(SR)、ADDDC(MR),支持自适应的虚拟lockstep模式，以bank或者rank为粒度，每个DDR通道支持两个region，提供bank spare copy、DDEC sparing机制。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】适用BANK级容错，IMU提供内存RAS SR/MR容错隔离接口，BMC调用接口触发IMU执行SR/MR容错。【扩展场景(含异常场景)】系统启动阶段，BMC提供接口，支持BIOS查询隔离信息，按查询信息执行SR/MR隔离。【约束】容错资源有限【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：BMC需要支持调试接口触发指定地址SR/MR容错，提升可测试性。（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要与BIOS配合（6）安全要求：NA（7）韧性要求：NA
-AR***[redfish]提供查询/设置SR/MR容错功能开关***【简要说明】Redfish接口支持提供查询/设置SR/MR容错功能开关【输入】北向Redfish GET/PATCH消息【输出】资源树SR/MR容错功能开关状态
-AR***实现触发IMU执行SR/MR容错接口***【简要说明】定义并实现BMC与IMU通信触发SR/MR RAS容错策略功能的IPMI消息接口【输入】NA【输出】实现SR/MR容错IPMI消息接口
-AR***接收并记录IMU上报的SR/MR容错结果***【简要说明】定义并实现IMU返回SR/MR RAS容错策略结果的IPMI消息接口，隔离结果记录日志【输入】NA【输出】SR/MR容错隔离结果记录日志
-SR***【920F】支持DDR5内存sPPR容错RAS策略***【简要说明】sPPR（Soft Package Repair）,利用颗粒厂商提供的行冗余资源进行临时修复，修复时间短，不需要重启，可用于在线修复。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】IMU提供内存RAS sPPR容错隔离接口，BMC调用接口触发IMU执行sPPR容错。【扩展场景(含异常场景)】系统启动阶段，BMC提供接口，支持BIOS查询隔离信息，按查询信息执行sPPR隔离。【约束】sPPR资源有限【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：BMC需要支持调试接口触发指定地址sPPR容错，提升可测试性。（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要与BIOS配合（6）安全要求：NA（7）韧性要求：NA
-AR***[redfish]提供查询/设置sPPR容错功能开关***【简要说明】Redfish接口支持提供查询/设置sPPR容错功能开关【输入】北向Redfish GET/PATCH消息【输出】资源树sPPR容错功能开关状态
-AR***实现触发IMU执行sPPR容错接口***【简要说明】定义并实现BMC与IMU通信触发sPPR RAS容错策略功能的IPMI消息接口【输入】NA【输出】实现sPPR容错IPMI消息接口
-AR***接收并记录IMU上报的sPPR容错结果***【简要说明】定义并实现IMU返回sPPR RAS容错策略结果的IPMI消息接口，隔离结果记录日志【输入】NA【输出】sPPR容错隔离结果记录日志
-SR***【920F】支持DDR5内存hPPR容错RAS策略***【简要说明】hPPR（Hard Post Package Repair）,利用颗粒厂商提供的行冗余资源进行永久修复，修复时间长，需要重启生效。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】BIOS启动阶段自检测行失效时，自动执行hPPR；容错隔离结果上报给BMC。【扩展场景(含异常场景)】BMC提供接口，支持BIOS查询隔离信息，按查询信息执行hPPR容错隔离。【约束】hPPR资源有限【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：BMC需要支持调试接口触发指定地址ACLS策略，提升可测试性。（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要与BIOS配合（6）安全要求：NA（7）韧性要求：NA
-AR***支持BIOS POST阶段查询hPPR待隔离地址执行hPPR容错***【简要说明】提供IPMI接口，支持BIOS POST阶段向BMC查询待隔离的hPPR地址，并返回隔离结果【输入】提供Debug接口设置待隔离的hPPR地址【输出】IPMI查询待隔离的hPPR地址
-AR***[redfish]提供查询/设置hPPR容错功能开关***【简要说明】Redfish接口支持提供查询/设置hPPR容错功能开关【输入】北向Redfish GET/PATCH消息【输出】资源树hPPR容错功能开关状态
-AR***实现触发IMU执行hPPR容错接口***【简要说明】定义并实现BMC与IMU通信触发hPPR RAS容错策略功能的IPMI消息接口【输入】NA【输出】实现hPPR容错IPMI消息接口
-AR***接收并记录IMU上报的hPPR容错结果***【简要说明】定义并实现IMU返回hPPR RAS容错策略结果的IPMI消息接口，隔离结果记录日志【输入】NA【输出】hPPR容错隔离结果记录日志
-SR***【920F】支持DDR5内存ACLS容错RAS策略***【简要说明】ACLS：DDRC控制器内部预留一些SRAM空间，当发现到某个连续地址范围（Cache Line）内且被故障预测诊断为硬失效时，可以用这些预留空间以Cache Line粒度替换对应内存。定义BMC与IMU通信触发ACLS RAS容错策略的IPMI消息接口，BMC内封装实现触发ACLS容错的接口供RAS策略调度框架使用。【系统用户】Timer【前置条件】业务系统上电正常运行【主成功场景】BMC给IMU下发命令触发指定内存地址执行ACLS RAS容错。【扩展场景(含异常场景)】BIOS在启动阶段从BMC查询隔离信息，主动执行ACLS策略。【约束】替换次数32个/DDRC控制器【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：BMC需要支持调试接口触发指定地址ACLS策略，提升可测试性（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要与BIOS配合（6）安全要求：NA（7）韧性要求：NA
-AR***[redfish]提供查询/设置ACLS容错功能开关***【简要说明】支持Redfish接口支持提供查询/设置ACLS容错功能开关【输入】北向Redfish GET/PATCH消息【输出】资源树ACLS容错功能开关状态
-AR***接收并记录IMU上报的ACLS容错结果***【简要说明】定义并实现IMU返回ACLS RAS容错策略结果的IPMI消息接口，隔离结果记录日志【输入】NA【输出】ACLS容错隔离结果记录日志
-AR***实现触发IMU执行ACLS容错接口***【简要说明】定义并实现BMC与IMU通信触发ACLS RAS容错策略功能的IPMI消息接口【输入】NA【输出】实现ACLS容错IPMI消息接口
-SR***【920F】支持DDR5内存RAS错误数据采集***【简要说明】根据《iBMC数据收集范围定义v1.0.0.xlsx》，完成920B平台内存RAS错误数据采集，采集数据保存到数据库，北向Redfish接口可以查询【系统用户】Redfish北向接口【前置条件】系统正常启动【主要场景（包括异常场景）】网管FD周期性从BMC 数据采集服务导出内存RAS错误数据以及其它内存信息，支持在网管侧进行内存故障预测业务【对应非功能性需求】约束：NA规格：采集周期见《iBMC数据收集范围定义v1.0.0.xlsx》定义接口兼容性(和以前版本及周边配套)：数据采集服务通用接口可靠性：NA性能：NA安全：NA韧性：NA
-AR***实现数据采集通用接口，采集920B芯片平台的内存RAS错误数据***【简要说明】实现数据采集通用接口，采集920B芯片平台的内存RAS错误数据；数据采集项名称:memory.dimmerrorlog，数据采集项ID:0x00050009【输入】数据采集通用接口【输出】内存RAS错误数据采集到数据采集数据库
-SR***【920F】支持北向接口下发RAS策略调度***【简要说明】执行容错措施时，有可能会对系统产生一定的性能等潜在影响，期望在业务系统空闲时执行触发执行容错策略，在可靠性及对业务系统影响方面做权衡；当容错模式配置为联动模式时，FPC检测识别到内存故障模式(row/col/bank等故障模式)时不直接触发执行相应的容错策略(ACLS/sPPR/ADDDC等)，而是缓存待执行的容错策略，供北向接口查询，并在业务合适时间（空闲或运行非关键业务时）下发触发容错策略调度执行。【系统用户】网管或带内的管理引擎【前置条件】容错模式配置为:联动模式【主成功场景】网管或带内管理引擎，在检测到需要做容错动作时，先执行迁移业务，然后再执行触发容错策略。【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***支持北向接口下发调度内存RAS容错策略***【简要说明】支持按北向redfish接口下发内存RAS容错策略执行，BMC接收请求后，向IMU发送缓存的容错策略，触发执行【输入】通过北向接品下发容错策略，通过容错策略ID标识【输出】根据北向接口请求执行容错策略，下发给IMU执行
-AR***支持北向Redfish接口查询待执行的容错策略***【简要说明】支持北向Redfish接口查询待执行的容错策略，详细信息包括但不限于:容错ID、触发时间、容错类型、FRU位置(容错地址对应的FRU)、容错执行状态【输入】北向Redfish GET请求，参考资源URL:FPCService/Memory/Isolation【输出】北向接口返回
-SR***【920F】支持DDR5内存PoorContact类故障检测告警***【简要说明】支持DDR5内存PoorContact故障检测优化算法，当检测算法识别到内存DQ链路故障或DRAM颗粒故障时，此时的产生超级CE风暴故障时触发产生PoorContact告警，告警码:0x0100005B【系统用户】维护人员【前置条件】业务系统上电，BMC正常运行【主成功场景】内存DQ链路故障或DRAM颗粒故障时产生告警【扩展场景(含异常场景)】PoorContact告警支持开关控制，开关支持Redfish接口配置【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***[Redfish]支持配置PoorContact告警开关***【简要说明】Redfish接口支持查询/修改FDMService资源MemPoorContactAlarmEnabled属性【输入】Redfish的GET/PATCH操作【输出】PoorContact告警开关状态值（需要掉电持久化）
-AR***支持PoorContact告警配置***【简要说明】支持PoorContact告警CSR配置，告警码:0x0100005B【输入】NA【输出】CSR配置
-AR***支持内存PoorContact故障检测算法***【简要说明】通过内存CE错误分布特征，实现PoorContact告警检测算法；算法规则：相同DIMM中10个CE/10s的前提下(①|②) ：①这10个CE里存在至少一个Device中报错BG≥2，且该Device内累计报错Bank数量≥3；②这10个CE里存在至少2个Rank同号Device报错，且该同号的Device内累计报错Bank数量≥3。【输入】内存错误【输出】资源树属性指示PoorContact故障
-IR***【920F】支持FDM智能故障管理系统-故障诊断定位***【简要说明】920F首芯片/产品支持FDM带外故障诊断定位系统：包括故障检测、故障记录、错误解析、故障诊断/定位/告警等功能模块。
-SR***[920F]支持生产装备阶段清除FDM日志***【简要说明】支持生产装备阶段，清除装备阶段产生的FDM日志(包括组件运行态产生的日志，包括fdm_log、fdm_output、imu_log, cpux_m7_log及其转存备份文件等)【系统用户】北向接口【前置条件】NA【主成功场景】生产阶段在出厂前调用接口执行恢复出厂日志，避免生产加工阶段的错误日志上网，已知客户上网后会工具巡检FDM日志。【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***支持生产阶段清除FDM日志***【简要说明】支持生产装备出厂时清除FDM日志，包括但不限于/var/log/fault_diagnosis/目录下的fdm_log, fdm_output, imu日志、m7日志及其转存日志；以及数据采集数据库内容【输入】装备流程中升级装备白牌包(wbdimage.hpm)【输出】白牌包脚本afteraction.sh中执行FDM日志删除动作（manifest/build/manufacture/wbd-packet/afteraction.sh）
-SR***[920F]支持故障收集及记录日志***【简要说明】接收带内通过IPMI上报的错误信息，格式化记录到FDM日志【系统用户】带内BIOS、IMU【前置条件】支持带内与BMC通过IPMI BT/IPMB通信【主要场景（包括异常场景）】1、RunTime错误收集场景；2、宕机错误收集场景；3、BIOS BOOT错误收集场景。【对应非功能性需求】 约束：NA 规格：NA 接口兼容性(和以前版本及周边配套)： 可靠性：NA 性能：NA 安全：NA 韧性：NA
-AR***支持接收ARER模块的错误信息***【简要说明】支持接收ARER模块的错误信息，记录fdm日志：1、记录ARER模块错误发生时间、错误记录序号、错误收集主体、错误记录有效标识等基本信息格式化记录FDM日志2、ARER模块收集的寄存器信息按寄存器名称和寄存器值记录FDM日志【输入】IPMI接口【输出】fdm_log日志
-AR***支持接收Non-ARER模块的错误信息***【简要说明】支持接收Non-ARER模块的错误信息，记录fdm日志：1、解析Non-ARER模块错误发生时间、错误记录序号、错误收集主体、错误记录有效标识等基本信息格式化记录FDM日志2、Non-ARER模块收集的寄存器信息按寄存器名称和寄存器值记录FDM日志【输入】通过IPMI接口上报Non-ARER模块RAS错误信息【输出】fdm_log日志
-AR***支持接收PCIe AER模块的错误信息***【简要说明】支持接收PCIe AER模块的错误信息，记录fdm日志：1、解析PCIe AER模块错误发生时间、错误记录序号、错误收集主体、错误记录有效标识等基本信息格式化记录FDM日志2、PCIeAER模块收集的寄存器信息按寄存器名称和寄存器值记录FDM日志【输入】通过IPMI接口上报PCIe AER RAS错误信息【输出】fdm_log日志
-AR***支持接收PCIe LOCAL模块的错误信息***【简要说明】支持接收PCIe LOCAL模块(PCIe Local AP/Port)的错误信息，记录fdm日志：1、解析PCIe LOCAL模块错误发生时间、错误记录序号、错误收集主体、错误记录有效标识等基本信息格式化记录FDM日志2、PCIeLOCAL模块收集的寄存器信息按寄存器名称和寄存器值记录FDM日志【输入】通过IPMI接口上报RAS错误信息【输出】fdm_log日志
-AR***支持接收PCIe BER模块的错误信息***【简要说明】支持接收PCIe BER模块(SAS/SATA/NIC等PCIe集成化设备控制器)的错误信息，记录fdm日志：1、解析PCIe BER模块错误发生时间、错误记录序号、错误收集主体、错误记录有效标识等基本信息格式化记录FDM日志2、PCIeBER模块收集的寄存器信息按寄存器名称和寄存器值记录FDM日志【输入】通过IPMI接口上报PCIe BER RAS错误信息【输出】fdm_log日志
-AR***支持接收风暴错误信息***【简要说明】支持接收风暴错误信息，记录fdm日志，包括ARER、PCIe、MEM类风暴【输入】通过IPMI接口上报风暴类错误信息【输出】fdm_log日志
-SR***[920F]支持ARER模块错误解析***【简要说明】ARER各子模块关键错误寄存器解析和格式化FDM日志记录，包括IFU/LSU/MMU/L2C/DDRC/MATA/L3D/HLLC/PA/SMMU/DISP/PE等模块【系统用户】带内BIOS、IMU【前置条件】支持带内与BMC通过IPMI BT/IPMB通信【主要场景（包括异常场景）】错误收集的关键寄存器Bit位解析，故障记录可视化，提升可定位性。【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持IFU模块错误解析***【简要说明】支持IFU模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER IFU模块的错误【输出】fdm_log日志
-AR***支持LSU模块错误解析***【简要说明】支持LSU模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER LSU模块的错误【输出】fdm_log日志
-AR***支持MMU模块错误解析***【简要说明】支持MMU模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER MMU模块的错误【输出】fdm_log日志
-AR***支持L2C模块错误解析***【简要说明】支持L2C模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER L2C模块的错误【输出】fdm_log日志
-AR***支持L3D模块错误解析***【简要说明】支持L3D模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER L3D模块的错误【输出】fdm_log日志
-AR***支持SMMU模块错误解析***【简要说明】支持SMMU模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER SMMU模块的错误【输出】fdm_log日志
-AR***支持MATA模块错误解析***【简要说明】支持MATA模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER MATA模块的错误【输出】fdm_log日志
-AR***支持PA模块错误解析***【简要说明】支持PA模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER PA模块的错误【输出】fdm_log日志
-AR***支持HLLC模块错误解析***【简要说明】支持HLLC模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER HLLC模块的错误【输出】fdm_log日志
-AR***支持DDRC模块错误解析***【简要说明】支持DDRC模块关键寄存器、Code码解析【输入】接收IPMI消息上报的ARER DDRC模块的错误【输出】fdm_log日志
-AR***支持内存DQ信息解析***【简要说明】支持DDRC模块错误时，解析内存CE DQ信息【输入】DDRC的CE错误的DQ信息解析【输出】fdm_log日志
-AR***支持DISP模块错误解析***【简要说明】支持DISP模块关键寄存器、Code码解析【输入】接收IPMI消息上报的DISP模块的错误【输出】fdm_log日志
-AR***支持PCS模块错误解析***【简要说明】支持PCIE PCS模块关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIE PCS模块的错误【输出】fdm_log日志
-AR***支持内存CE错误时的温度值和CE计数值记录***【简要说明】支持内存CE错误内存温度值和CE计数记录【输入】内存CE RAS错误【输出】FDM日志记录内存温度、CE计算值
-AR***支持其它ARER模块错误信息解析***【简要说明】支持按920F-FDM错误上报接口文档实现ARER模块错误信息解析【输入】920F FDM BMC-BIOS错误上报接口文档定义【输出】ARER模块的错误信息解析，记录到fdm_log日志
-SR***[920F]支持Non-ARER模块错误解析***【简要说明】Non-ARER各子模块关键错误寄存器解析和格式化FDM日志记录，包括SLLC、SIOE、MN、PLL、AA、CS、Tsensor、Scheduler、HiLink等模块【系统用户】带内BIOS、IMU【前置条件】支持带内与BMC通过IPMI BT/IPMB通信【主要场景（包括异常场景）】带内检测上报RAS错误信息【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持SLLC模块错误解析***【简要说明】支持SLLC模块关键寄存器、状态码解析【输入】接收IPMI消息上报的SLLC模块的错误【输出】fdm_log日志
-AR***支持SIOE模块错误解析***【简要说明】支持SIOE模块关键寄存器、状态码解析【输入】接收IPMI消息上报的SIOE模块的错误【输出】fdm_log日志
-AR***支持MN模块错误解析***【简要说明】支持MN模块关键寄存器、状态码解析【输入】接收IPMI消息上报的MN模块的错误【输出】fdm_log日志
-AR***支持PLL模块错误解析***【简要说明】支持PLL模块关键寄存器、状态码解析【输入】接收IPMI消息上报的PLL模块的错误【输出】fdm_log日志
-AR***支持AA模块错误解析***【简要说明】支持AA模块关键寄存器、状态码解析【输入】接收IPMI消息上报的AA模块的错误【输出】fdm_log日志
-AR***支持CS模块错误解析***【简要说明】支持CS模块关键寄存器、状态码解析【输入】接收IPMI消息上报的CS模块的错误【输出】fdm_log日志
-AR***支持Tsensor模块错误解析***【简要说明】支持Tsensor模块关键寄存器、状态码解析【输入】接收IPMI消息上报的Tsensor模块的错误【输出】fdm_log日志
-AR***支持GIC模块错误解析***【简要说明】支持GIC模块关键寄存器、状态码解析【输入】接收IPMI消息上报的GIC模块的错误【输出】fdm_log日志
-AR***支持AVSBUS模块错误解析***【简要说明】支持AVSBUS模块关键寄存器、状态码解析【输入】接收IPMI消息上报的AVSBUS模块的错误【输出】fdm_log日志
-AR***支持ITS模块错误解析***【简要说明】支持ITS模块关键寄存器、状态码解析【输入】接收IPMI消息上报的ITS模块的错误【输出】fdm_log日志
-AR***支持PPU模块错误解析***【简要说明】支持PPU模块关键寄存器、状态码解析【输入】接收IPMI消息上报的PPU模块的错误【输出】fdm_log日志
-SR***[920F]支持PCIe AER错误解析***【简要说明】支持PCIe AER各子模块的关键错误寄存器解析和格式化FDM日志记录【系统用户】带内BIOS、IMU【前置条件】支持带内与BMC通过IPMI BT/IPMB通信【主要场景（包括异常场景）】带内检测到PCIe设备报错【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持PCIe AER错误解析***【简要说明】支持PCIe AER错误关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe AER错误【输出】fdm_log日志
-SR***[920F]支持PCIeLocal模块错误解析***【简要说明】PCIe Local Core、PCIe Local AP子模块关键错误寄存器解析、格式化FDM日志记录【系统用户】带内BIOS、IMU【前置条件】支持带内与BMC通过IPMI BT/IPMB通信【主要场景（包括异常场景）】带内检测上报PCIe Local Core、PCIe Local AP错误信息【对应非功能性需求】约束：NA规格：NA接口兼容性(和以前版本及周边配套)：可靠性：NA性能：NA安全：NA韧性：NA
-AR***支持PCIeLocal Core模块错误解析***【简要说明】支持PCIe Loacl Core子模块(Port_TL/DL/MAC/CXLDL、PCS、HiLink、TL_CORE)关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe Loacl Core子模块的错误【输出】参考FDM接口文档解析记录fdm_log日志
-AR***支持PCIeLocal AP模块错误解析***【简要说明】支持PCIe Loacl AP模块关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe Loacl AP模块的错误【输出】fdm_log日志
-SR***[920F]支持BER模块错误解析***【简要说明】PCIe BER各子模块关键错误寄存器解析和格式化FDM日志记录【系统用户】带内BIOS、IMU【前置条件】支持带内与BMC通过IPMI BT/IPMB通信【主要场景（包括异常场景）】带内检测上报错误信息【对应非功能性需求】约束：NA规格：NA接口兼容性(和以前版本及周边配套)：可靠性：NA性能：NA安全：NA韧性：NA
-AR***支持PCIe Integrated NIC控制器错误解析***【简要说明】支持PCIe Integrated NIC控制器关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe Integrated NIC控制器的错误【输出】fdm_log日志
-AR***支持PCIe Integrated SATA控制器错误解析***【简要说明】支持PCIe Integrated SATA控制器关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe Integrated SATA控制器的错误【输出】fdm_log日志
-AR***支持PCIe Integrated SAS控制器错误解析***【简要说明】支持PCIe Integrated SAS控制器关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe Integrated SAS控制器的错误【输出】fdm_log日志
-AR***支持PCIe Integrated ZIP控制器错误解析***【简要说明】支持PCIe Integrated ZIP控制器关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe Integrated ZIP控制器的错误【输出】fdm_log日志
-AR***支持PCIe Integrated ROH控制器错误解析***【简要说明】支持PCIe Integrated ROH控制器关键寄存器、Code码解析【输入】接收IPMI消息上报的PCIe Integrated ROH控制器的错误【输出】fdm_log日志
-SR***[920F]支持收集芯片DFX寄存器***【简要说明】支持宕机收集芯片DFX寄存器，记录到相应的日志文件【系统用户】Timer【前置条件】带内上电【主要场景（包括异常场景）】宕机场景，增加DFX寄存器收集，增强异常场景的可定位性【对应非功能性需求】NA	约束：NA	规格：DFX日志大小，参考V2基线	接口兼容性(和以前版本及周边配套)：涉及与PMU交互	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持收集DFX寄存器信息***【简要说明】宕机收场景触发收集DFX寄存器记录日志，记录fdm dfx日志【输入】IPMI消息【输出】DFX日志文件
-SR***[920F]支持风暴故障精确诊断***【简要说明】支持风暴故障精确诊断，诊断结果记录fdm_output日志【系统用户】NA【前置条件】系统正常上电【主要场景（包括异常场景）】系统RunTime场景产生大量高频CE RAS错误【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：涉及BIOS，默认已支持	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***[920F]支持风暴故障精确诊断***【简要说明】接收IMU/BIOS上报的CPU/内存/PCIe等模块可纠正错误风暴抑制策略，记录抑制信息到fdm_output日志【输入】CE错误【输出】fdm_output诊断结果日志
-SR***[920F]支持RunTime故障精确诊断***【简要说明】系统运行态检测到芯片RAS错误（非CE），触发RunTime故障诊断流程，在错误记录集中分析故障根因，定位到故障部件，诊断结果记录到日志【系统用户】NA【前置条件】NA【主要场景（包括异常场景）】运行阶段UCE故障场景，未造成或者未立即造成系统CATERR.【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持RunTime BER PCIe化设备诊断***【简要说明】PCIe化设备为920B/C 芯片内设备，当发生Fatal级别故障时，诊断到PCIe设备， 并输出诊断结果记录日志【输入】RunTime上报PCIe化设备错误【输出】诊断结果输出fdm_output日志
-AR***支持RunTime CPU单点故障诊断***【简要说明】当CPU内部模块发生内部严重故障时诊断到CPU，并输出到诊断日志【输入】CPU内存模块RAS错误【输出】诊断结果记录fdm_output日志
-AR***支持RunTime诊断告警保持***【简要说明】RunTime诊断过程中是否出现重启或下电后上电场景，产生诊断结果告警保持5s后消除【输入】RunTime诊断过程出现重启或下电【输出】诊断结果记录fdm_output日志
-AR***支持RunTime AER PCIe Fatal故障诊断***【简要说明】当PCIe(含PCIE5、PCIE4设备)设备发生Fatal级别故障时，诊断到PCIe设备， 并输出到诊断日志【输入】PCIe(含PCIE5、PCIE4设备)设备发生Fatal级别错误信息【输出】诊断结果记录fdm_output日志
-AR***支持RunTime ARER MATA故障诊断***【简要说明】当MATA SERR:0x12(UER)发生严重故障时诊断到相应的poison故障源，内存（包含DDR5、DDR4）；诊断结果告警及录日志【输入】MATA模块RAS错误【输出】诊断结果记录fdm_output日志
-SR***[920F]支持宕机故障精确诊断***【简要说明】支持宕机故障诊断，在错误记录集中分析故障根因，定位到故障部件，记录诊断结果到日志【系统用户】NA【前置条件】NA【主要场景（包括异常场景）】系统宕机场景（芯片输出宕机信号），宕机场景故障根因诊断【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持宕机CPU单点故障诊断***【简要说明】CPU内部模块发生内部严重故障时，故障诊断根因为CPU设备，并输出到诊断日志【输入】CPU内部模块RAS错误【输出】诊断结果记录fdm_output日志
-AR***支持宕机ARER MATA故障诊断***【简要说明】当MATA SERR:0x12(UER)发生严重故障时诊断到相应的poison故障源，内存（包含DDR5、DDR4）；诊断结果记录日志【输入】MATA模块RAS错误【输出】诊断结果记录fdm_output日志
-AR***支持宕机AER PCIe Fatal故障诊断***【简要说明】当PCIe(含PCIE5、PCIE4设备)设备发生Fatal级别故障时，诊断到PCIe设备， 并输出到诊断日志【输入】PCIe(含PCIE5、PCIE4设备)设备发生Fatal级别错误信息【输出】诊断结果记录fdm_output日志
-AR***支持优先以CATERR诊断为准***【简要说明】1、当RunTime故障诊断发生后，FDM诊断成功时不立即输出，将诊断结果信息缓存；2、如果10秒内有CATERR产生，则进行CATERR诊断，若CATERR诊断成功，则以CATERR诊断结果为准，并丢弃缓存的RunTime诊断结果；若CATERR诊断失败，则以缓存的RunTime诊断结果为准【输入】RunTime与CATERR场景相继发生【输出】诊断结果记录fdm_output日志
-AR***宕机诊断失败结果记录日志***【简要说明】宕机CATERR流程诊断失败时，记录诊断失败结果【输入】宕机诊断失败【输出】诊断结果记录fdm_output日志
-SR***[920F]支持故障告警***【简要说明】故障诊断成功时产生告警【系统用户】NA【前置条件】NA【主要场景（包括异常场景）】故障根因诊断成功触发告警，重启下电场景需要消除告警【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持诊断失败记录事件***【简要说明】支持诊断失败记录事件(0x2C00002F)；重启或下电场景消除【输入】宕机故障诊断失败【输出】产生诊断失败事件
-AR***支持CPU设备故障诊断结果告警***【简要说明】当CPU设备CE预故障、UCE严重故障诊断成功时，产生相关的事件和告警；重启或下电场景消除【输入】FDM诊断成功结果【输出】CPU设备的CE预故障事件、UCE告警
-AR***支持内存设备故障诊断结果告警***【简要说明】当内存设备CE预故障、UCE严重故障诊断成功时，产生相关的事件和告警；重启或下电场景消除【输入】FDM诊断成功结果【输出】内存设备的CE预故障事件、UCE告警
-AR***支持PCIe设备故障诊断结果告警***【简要说明】当PCIe设备CE预故障、UCE严重故障诊断成功时，产生相关的事件和告警；重启或下电场景消除【输入】FDM诊断成功结果【输出】PCIe设备的CE预故障事件、UCE告警
-AR***【BIOS/BMC】CPU支持故障隔离***在正常运行中，对CPU进行检测，如异常，则记录标志。在下次上电时，BIOS读取异常标志，并对故障CPU进行故障隔离，隔离的粒度为核/CPU；BIOS同时通过BMC上报告警。【产品说明】：继承现有功能
-AR***【BIOS/BMC】CPU支持降拓扑启动和告警***对于多CPU系统，在上电时，BIOS对CPU进行自检，发现CPU严重故障则启动降拓扑，隔离故障CPU，并进行告警。【产品说明】：继承现有功能
-SR***[920F]支持故障部件定位丝印***【简要说明】支持错误记录解析故障部件的丝印，CPU/内存/PCIe/内存通道【系统用户】NA【前置条件】NA【主要场景（包括异常场景）】故障触发【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持内存丝印解析***【简要说明】支持内存丝印解析，与整机丝印一致（各产品根据配置文件决定）【输入】内存 FRU参数【输出】从资源树获取Memory资源的丝印
-AR***支持CPU丝印解析***【简要说明】支持CPU丝印解析，与整机丝印一致（各产品根据配置文件决定）【输入】CPU FRU参数【输出】从资源树获取Cpu资源的丝印
-AR***支持PCIe设备的丝印解析***【简要说明】支持PCIe设备的丝印解析，如PCIe卡，NVMe硬盘，Raid卡等，与整机丝印一致（各产品根据配置文件决定）【输入】PCIe设备FRU参数【输出】PCIe设备丝印
-SR***[920F]支持故障硬件信号检测***【简要说明】系统发生严重故障时，会发生硬件信号，FDM检测故障硬件信号，并记录日志【系统用户】NA【前置条件】自发现功能正常【主要场景（包括异常场景）】系统故障时发出硬件信号，配置SMC检测记录到FDM日志【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持宕机信号检测***【简要说明】整机宕机硬件信号置位时记录日志，包括各CPU的Totem RstOut、系统总线异常、IMU与TF心跳丢失【输入】硬件信号【输出】实时检测记录宕机硬件信号到fdm_output日志
-AR***支持IMU异常检测***【简要说明】实时监测IMU异常硬件信号，记录fdm日志【输入】IMU异常硬件信号【输出】记录fdm_output日志
-SR***[920F]支持宕机信号触发主动故障收集***【简要说明】检测宕机硬件信号触发BMC带外宕机收集流程（两种场景：IMU主动检测挂死后上报或BMC触发收集）【系统用户】NA【前置条件】BMC与IMU通信正常【主要场景（包括异常场景）】系统发生严重故障，发出了宕机指示信号【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持宕机诊断状态机***【简要说明】支持宕机诊断状态机，根据系统上下电状态变化、故障收集状态、诊断结果状态，更新宕机诊断状态机状态【输入】系统宕机信号、上下电状态变化、故障收集状态、诊断结果状态【输出】宕机诊断状态机状态管理
-AR***支持接收BIOS BOOT阶段上报的起始和结束信息***【简要说明】接收BIOS BOOT阶段上报的起始和结束信息，用于识别BOOT阶段上报【输入】BIOS BOOT阶段上报的起始和结束信息【输出】BIOS BOOT上报错误记录日志、触发诊断
-AR***支持宕机收集失败触发系统热复位***【简要说明】宕机收集失败场景，按配置策略触发OS热复位，等待BIOS上报故障信息【输入】宕机收集失败【输出】触发业务系统热复位
-AR***支持宕机信号触发BMC主动发起收集流程***【简要说明】检测宕机CATERR信号，触发BMC宕机收集流程，及对整个宕机收集流程状态控制；执行宕机收集流程、更新状态机状态、处理流程中系统重启下电等状态变化【输入】宕机CATERR信号【输出】宕机收集数据记录日志、维护寄存状态机状态、触发宕机诊断
-SR***[920F]支持设置、查询FDM配置信息***【简要说明】FDM配置信息包括：1、接收启动阶段BIOS上报的带内CPU/内存/PCIe/TF地址段等资源配置；2、FDM功能配置设置及配置查询【系统用户】NA【前置条件】带内与带外通道(BT)可正常通信【主要场景（包括异常场景）】系统启动阶段，带内BIOS上报系统资源及查询FDM功能配置【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持接收CPU平台类型***【简要说明】接收BIOS启动阶段通过IPMI命令上报CPU平台类型【输入】IPMI接口上报FDM功能开关【输出】保存CPU平台类型
-AR***支持FDM功能开关配置***【简要说明】支持FDM功能开关通过IPMI接口配置【输入】IPMI接口上报FDM功能开关【输出】保存FDM功能开关状态，并触发相应处理
-AR***支持查询CATERR处理状态***【简要说明】支持IPMI接口查询CATERR处理状态【输入】IPMI接口查询CATERR处理状态【输出】返回CatErr处理状态值
-AR***支持接收内存交织配置***【简要说明】接收BIOS启动阶段通过IPMI命令上报内存交织配置，用于故障地址解析，并持久化保存【输入】IPMI接口上报内存交织配置【输出】保存内存交织配置
-AR***支持接收TF代码地址段***【简要说明】接收BIOS启动阶段通过IPMI命令上报TF代码地址段信息【输入】IPMI消息上报TF地址段信息【输出】持久化保存TF地址段信息
-AR***支持接收PCIe/CXL设备的MMIO,MMCFG资源配置***【简要说明】接收并保存BIOS启动阶段上报的PCIe/CXL设备的MMIO/MMCFG资源配置信息【输入】接收IPMI消息上报PCIe/CXL资源配置【输出】持久化保存
-AR***支持查询FDM版本号***【简要说明】支持IPMI接口查询FDM版本号【输入】IPMI接口查询FDM版本号【输出】FDM版本号
-AR***[IPMI]支持查询当前故障记录的编号***【简要说明】支持IPMI查询当前错误记录的编号，netfn=0x30, cmd=0x90, filter="data[0]=0x55"【输入】IPMI请求【输出】返回FDM记录的当前的错误记录编号
-AR***支持接口文档定义组件的接口***【简要说明】支持接口文档定义组件的接口，包含redfish、cli、ipmi(装备、定制化)、snmp、web-backend接口【输入】接口文档【输出】接口实现
-SR***[920F]支持错误地址解析***【简要说明】支持通过故障地址解析对应部件FRU，及地址反解析功能【系统用户】NA【前置条件】NA【主要场景（包括异常场景）】ARER模块报错【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持保留内存地址TF地址段反解析***【简要说明】内存故障地址反解析后，若地址落在TF代码段，则在fdm_log日志内存丝印解析后面打印"TF Segment"【输入】接收IPMI消息上报的内存错误信息【输出】fdm_log日志
-AR***支持内存DDR地址反解析物理地址***【简要说明】支持实现内存参数CPU、Channel、Dimm、Rank、Bank、Row、Column反解析到系统物理地址【输入】内存DDR地址【输出】系统物理地址
-AR***支持系统物理地址解析DDR地址***【简要说明】支持ARER记录的地址为物理地址时，需要依据地址解析规则解析到内存的CPU、Channel、Dimm、Rank、Bank、Row、Column信息【输入】接收IPMI消息上报的ARER错误信息【输出】fdm_log日志记录内存错误的详细地址信息
-AR***支持ARER DDRC模块记录的地址解析DDR地址***【简要说明】支持将DDRC模块记录的ARER_ADDR解析成带Skt、Channel、Dimm、Rank、Bank、Row、Column等信息的颗粒物理地址。【输入】接收IPMI消息上报的DDRC错误【输出】fdm_log日志
-AR***支持ARER模块记录的PCIe地址空间的地址解析***【简要说明】支持ARER模块记录的地址指向PCIe空间，则相应的错误地址解析到PCIe设备的rootport bdf；并获取相应的丝印信息【输入】接收IPMI消息上报ARER模块错误【输出】fdm_log日志
-SR***[920F]支持内存RAS事件记录***【简要说明】当满足内存RAS动作触发条件并产生了RAS事件时支持BIOS上报RAS事件到BMC并记录维护日志，根据策略告警【系统用户】NA【前置条件】NA【主要场景（包括异常场景）】SR\\MR\\CE bucket\\PPR\\ACLS等【对应非功能性需求】	约束：NA	规格：NA	接口兼容性(和以前版本及周边配套)：NA	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持内存CE超阈值事件记录***【简要说明】1、BIOS使能CE漏斗超阈值中断功能，当检测到超阈值事件后通知BMC；2、BMC接收RAS事件并记录维护log【输入】接收IPMI消息上报的内存RAS事件【输出】maintenance log日志
-AR***支持内存SR/MR事件记录***【简要说明】1、当SR/MR事件触发时BIOS将对应事件通知BMC；2、BMC接收RAS事件并记录维护log【输入】接收IPMI消息上报的内存RAS事件【输出】maintenance log日志
-AR***支持内存hPPR事件记录***【简要说明】1、当hPPR事件触发时BIOS将对应事件通知BMC；2、BMC接收RAS事件并记录维护log【输入】接收IPMI消息上报的内存RAS事件【输出】maintenance log日志
-AR***支持内存ACLS事件记录***【简要说明】1、当ACLS事件触发时BIOS将对应事件通知BMC；2、BMC接收RAS事件并记录维护log【输入】接收IPMI消息上报的内存RAS事件【输出】maintenance log日志
-AR***支持内存RAS故障记录告警***【简要说明】支持内存RAS故障记录告警，参考实现IPMI OEM命令RAS部分netfn:0x30,cmd:0x92, data[3]=05h,data[4]=04h【输入】BIOS上报内存RAS错误【输出】记录维护日志和产生告警
-SR***支持CPU RAS事件记录***【简要说明】当触发CPU RAS事件（CPU隔离、核隔离、BIST、CacheWay隔离等）时，BMC配合BIOS记录相应的CPU RAS事件，产生的告警和维护日志记录【系统用户】带内BIOS【前置条件】BMC正常启动【主成功场景】系统启动自检及故障场景【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***支持CacheWay隔离告警***【简要说明】芯片内部cache支持故障隔离，在启动时，根据BIST结果，来隔离异常cacheway；BIOS上报BMC记录维护日志并产生告警，0x000000c7【输入】BIOS上报CacheWay隔离【输出】记录CacheWay隔离维护日志和产生告警
-AR***支持CPU RAS事件记录和告警***【简要说明】BIOS根据自检结果上报CPU RAS事件结果，BMC记录维护日志和产生告警；参考IPMI OEM命令定义实现RAS相关的命令：netfn:0x30, cmd=0x92; data[3]=05h,data[4]=01h【输入】BIOS上报CPU RAS事件结果【输出】BMC记录维护日志和产生告警todo。。功能拆分、规格细化
-SR***支持IMU日志收集***【简要说明】支持收集芯片IMU日志，记录到日志文件【系统用户】Timer【前置条件】带内上电【主要场景（包括异常场景）】IMU日志周期轮询收集【对应非功能性需求】NA	约束：NA	规格：IMU日志	接口兼容性(和以前版本及周边配套)：涉及与PMU交互，保持交互IPMI消息接口一致	可靠性：NA	性能：NA	安全：NA	韧性：NA
-AR***支持IMU、M7日志收集***【简要说明】周期性向IMU发送命令收集IMU、M7日志，并记录日志文件【输入】IPMI消息【输出】IMU、M7日志文件
-SR***[920F]支持CPU Exception异常故障管理***【简要说明】CPU核消费了错误数据时，会触发产生SEA/SEI异常中断，在异常中断中收集错误寄存器的数据，增强定位能力。【系统用户】维护人员【前置条件】系统上电，BMC正常启动【主成功场景】核消费了错误数据，BIOS检测到异常中断后进行处理，收集RAS寄存器进行上报。【扩展场景(含异常场景)】当异常类型为Memory Access，触发内存Poison诊断，诊断成功时产生告警，记录FDM诊断结果日志。【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：查看fdm日志（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：NA（6）安全要求：NA（7）韧性要求：NA
-AR***支持CPU Exception异常故障诊断告警***【简要说明】当检测CPU Exception异常故障且为Memoey Access时(通过ESR_EL3寄存器的EC、FS码区分)，遍历查找带Poison标记的内存条，并产生FDM诊断结果告警【输入】CPU Exception异常故障【输出】触发内存Poison诊断告警
-AR***支持解析SEI异常错误解析***【简要说明】SEI异常错误关键寄存器Bit位解析【输入】SEI错误寄存器【输出】SEI错误寄存器Bit位解析，记录fdm_log日志
-AR***支持接收BIOS上报的SEI异常错误***【简要说明】支持接收BIOS上报的SEI异常错误，记录到fdm日志【输入】BIOS通过IPMI接口上报SEI异常错误【输出】SEI异常错误记录fdm_log日志
-AR***支持解析SEA异常错误解析***【简要说明】SEA异常错误关键寄存器Bit位解析【输入】SEA错误寄存器【输出】SEA错误寄存器Bit位解析，记录fdm_log日志
-AR***支持接收BIOS上报的SEA异常错误***【简要说明】支持接收BIOS上报的SEA异常错误，记录到fdm日志【输入】BIOS通过IPMI接口上报SEA异常错误【输出】fdm_log日志记录SEA异常错误日志
-SR***支持天池架构BCU板独立FDM日志记录***【简要说明】天池架构机型主板支持独立日志记录功能，通过IMU下挂EEPROM器件，可以记录下CPU故障时fdm寄存器，主板单独返回后，BMC可以从EEPROM器件收集到历史fdm寄存器信息。【系统用户】装备维修人员【前置条件】正常访问EEPROM【主成功场景】天池架构机型，BCU单独返板【扩展场景(含异常场景)】NA【约束】NA【非功能需求】（1）可靠性要求：NA（2）可维护性要求：NA（3）可测试性要求：NA（4）性能要求：NA（5）兼容性要求(和以前版本及周边配套)：需要与BIOS配套（6）安全要求：NA（7）韧性要求：NA
-AR***支持天池架构BCU板独立FDM日志收集***【简要说明】维修场景，支持收集主板CPLD下挂FLASH中存储的日志信息收集功能。信息包括：1、主板故障时CPLD寄存器信息；2、系统串口信息；3、CPU的故障寄存器信息（EEPROM）；4、功能受限工厂包支持，现网版本不支持【输入】日志收集命令【输出】日志文件
-SheetTitle=Sheet2
-SheetRow=1, Col=1
-SheetRowHeight=17.25
-SheetColWidth=13.0
-SheetTitle=Sheet3
-SheetRow=1, Col=1
-SheetRowHeight=17.25
-SheetColWidth=13.0
+    <!-- SwitchChip1温度获取失败和一般高温事件 -->
+    <OBJECT NAME="SwitchChip1TempFail_exp" CLASS="Expression" TYPE="Logical">
+		<PROPERTY NAME="Value" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
+		<PROPERTY NAME="X" TYPE="rp">	<VALUE>SwitchChip1_temp_monitor.MonSenValue</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Y" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
+		<PROPERTY NAME="Z" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
+		<PROPERTY NAME="Formula" TYPE="s">	<VALUE>((X &gt; 10) &amp;&amp; (X &lt; 255)) ? 0 : 1</VALUE>	</PROPERTY>
+	</OBJECT>
+	<OBJECT NAME="Chip1TempFailDebounce" CLASS="RegMonitor" TYPE="Logical">
+		<PROPERTY NAME="SelfTestObject" TYPE="ro">	<VALUE>::succ_dev_test_pwrgd</VALUE>	</PROPERTY>
+		<PROPERTY NAME="MonSenValue" TYPE="q">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="DebouncedCfg" TYPE="ro">	<VALUE>::dbd_contbin_read_fail</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AutoClr" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="RegValue" TYPE="rp">	<VALUE>SwitchChip1TempFail_exp.Value</VALUE>	</PROPERTY>
+	</OBJECT>
+
+    <OBJECT NAME="SwitchChip1TempFailMntr" CLASS="EventMonitor" TYPE="Logical">
+		<PROPERTY NAME="SubjectObj" TYPE="ro">	<VALUE>ComSWBoard</VALUE>	</PROPERTY>
+		<PROPERTY NAME="InformationObj" TYPE="ro">	<VALUE>::PCIeTempReadFailInfo</VALUE>	</PROPERTY>
+		<PROPERTY NAME="PolicyObj" TYPE="ro">	<VALUE>::PCIeTempReadFailPlcy</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SensorObj" TYPE="ro">	<VALUE>SwitchChip1_Temp</VALUE>	</PROPERTY>
+		<PROPERTY NAME="EventFRU" TYPE="ro">	<VALUE>ComSWBoard</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Mode" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SavedMode" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Time" TYPE="u">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="State" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="ScannedCount" TYPE="u">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Reading" TYPE="rp">	<VALUE>Chip1TempFailDebounce.MonSenValue</VALUE>	</PROPERTY>
+		<PROPERTY NAME="SavedReading" TYPE="q">	<VALUE></VALUE>	</PROPERTY>
+		<PROPERTY NAME="ReadingMask" TYPE="u">	<VALUE>0xFFFFFFFF</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Threshold" TYPE="q">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Hysteresis" TYPE="q">	<VALUE>0</VALUE>	</PROPERTY>
+		<PROPERTY NAME="Operator" TYPE="y">	<VALUE>6</VALUE>	</PROPERTY>
+		<PROPERTY NAME="AddInfo" TYPE="ay">	<VALUE></VALUE>	</PROPERTY>
+		<PROPERTY NAME="DescriptionDynamic" TYPE="as">
+			<VALUE></VALUE>
+			<VALUE>ComSWBoard.DeviceName</VALUE>
+			<VALUE>Chip1</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="SuggestionDynamic" TYPE="as">	<VALUE></VALUE>	</PROPERTY>
+	</OBJECT>
