@@ -1,0 +1,15 @@
+1.天翼云深度定制化
+C代码：5K  XML：11K
+检视意见：46
+问题单数量：121
+涉及模块：BIOS 、Card、BMC_Global Cooling  Fru  MCTP payload sensor upgrade user
+问题数最多模块：Sensor
+
+
+2.紫金山
+代码：C代码：28K  XML：23K
+检视轮数：2轮
+检视意见：180
+问题单数量：324
+涉及模块：BIOS 、Card、BMC_Global Cooling  Fru  MCTP payload sensor upgrade user、redfish、webhost
+问题数最多模块：redfish card
