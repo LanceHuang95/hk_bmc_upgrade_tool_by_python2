@@ -13,3 +13,21 @@ C代码：5K  XML：11K
 问题单数量：324
 涉及模块：BIOS 、Card、BMC_Global Cooling  Fru  MCTP payload sensor upgrade user、redfish、webhost
 问题数最多模块：redfish card
+
+
+进展
+长江：
+R220K 
+适配长城和华为CRPS电源
+
+五舟：
+HCVPX模组  mcu ipmb
+
+神码：
+博通 LPE35002-M2 FC HBA卡
+QLE2772 FC HBA卡
+平安送测Bios
+百度最小运维白牌
+
+百信：
+金刚网卡
