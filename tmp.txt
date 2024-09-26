@@ -1,4 +1,12 @@
-    <!-- SwitchChip1温度获取失败和一般高温事件 -->
+主题: 1620 紫金卡掉卡问题讨论
+时间: 09/26(周四) 19:00-20:45 (UTC+08:00)Beijing
+Host： https://imeeting.huawei.com/meeting/startwelink?id=98291543&pwd=MTIzMTA5&token=XUzgAbNzWqSdgyxVeg6AhcSRYZh8gUpcN&stype=0
+Guest： https://imeeting.huawei.com/meeting/joinwelink?id=98291543&pwd=MzE1Nzkz&token=3fYri6e6vaaIuFkp1Q0EOkTSjRy9Nbw7G&stype=0
+External：https://app.huawei.com/wmeeting/join/98291543/3fYri6e6vaaIuFkp1Q0EOkTSjRy9Nbw7G
+会议ID：98291543
+会议密码：315793
+
+<!-- SwitchChip1温度获取失败和一般高温事件 -->
     <OBJECT NAME="SwitchChip1TempFail_exp" CLASS="Expression" TYPE="Logical">
 		<PROPERTY NAME="Value" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
 		<PROPERTY NAME="X" TYPE="rp">	<VALUE>SwitchChip1_temp_monitor.MonSenValue</VALUE>	</PROPERTY>
