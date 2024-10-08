@@ -7,6 +7,12 @@
 0x0, 0x0, 0x14, 0x1, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x31, 0x30, 0x34, 0x30, 0x33
 0x30, 0x32, 0x30, 0x34, 0x34, 0x34, 0x39, 0x38, 0x0, 0x0, 0x0, 0x0, 0x3e, 0x3, 0x1, 0xce
 
+https://codehub-y.apple.com/hWX1223276/V2R2_trunk/files?ref=AT9508G3_A%2BK
+https://codehub-y.apple.com/hWX1223276/V2R2_trunk/files?ref=TelecomForVD_20230520
+https://codehub-y.apple.com/hWX1223276/V2R2_trunk/files?ref=332A_NetCard_Telecom_test
+https://codehub-y.apple.com/iBMC/partner/V2R2_trunk_partners_private_HKZY/files?ref=br_release_tianyiyun_3.11.3_20230930_for_HKZY_20240730
+https://codehub-y.apple.com/iBMC/partner/V2R2_trunk_partners_private_HKZY/files?ref=tag_br_release_tianyiyun_3.11.3_20230930_for_HKZY_20241230_20240920143348
+
 <!-- SwitchChip1温度获取失败和一般高温事件 -->
     <OBJECT NAME="SwitchChip1TempFail_exp" CLASS="Expression" TYPE="Logical">
 		<PROPERTY NAME="Value" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
