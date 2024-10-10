@@ -13,6 +13,10 @@ https://codehub-y.apple.com/hWX1223276/V2R2_trunk/files?ref=332A_NetCard_Telecom
 https://codehub-y.apple.com/iBMC/partner/V2R2_trunk_partners_private_HKZY/files?ref=br_release_tianyiyun_3.11.3_20230930_for_HKZY_20240730
 https://codehub-y.apple.com/iBMC/partner/V2R2_trunk_partners_private_HKZY/files?ref=tag_br_release_tianyiyun_3.11.3_20230930_for_HKZY_20241230_20240920143348
 
+	busctl --user tree bmc.kepler.hwproxy | grep -o Eeprom_.* | while read line; do if [[ $line != Eeprom_PsuChip* ]]; then busctl --user call bmc.kepler.hwproxy /bmc/kepler/Chip/Eeprom/$line bmc.kepler.Chip.BlockIO Read a{ss}uu 0 0 16384 > /tmp/$line.txt; fi done;chmod 777 /tmp/Eeprom*.txt
+
+mdbctl getprop Component_PSR_01010A bmc.kepler.Systems.Component UniqueId
+
 <!-- SwitchChip1温度获取失败和一般高温事件 -->
     <OBJECT NAME="SwitchChip1TempFail_exp" CLASS="Expression" TYPE="Logical">
 		<PROPERTY NAME="Value" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
