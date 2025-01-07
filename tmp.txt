@@ -1,3 +1,15 @@
+    <OBJECT NAME="CLU_power_exp" CLASS="Expression" TYPE="Logical">
+        <!-- Value原始定义类型为u：32位无符号,但是被ReadingRaw引用，q类型：16位无符号 -->
+        <!-- 此处必须将Value类型修改位q,不然会发生32位转16位，导致ReadingRaw获取不到数据 -->
+        <PROPERTY NAME="Value" TYPE="q">	<VALUE>0</VALUE>	</PROPERTY>
+        <PROPERTY NAME="X" TYPE="rp">	<VALUE>::Cooling.FansPowerConsumption</VALUE>	</PROPERTY>
+        <PROPERTY NAME="Y" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
+        <PROPERTY NAME="Z" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
+        <PROPERTY NAME="Formula" TYPE="s"> <VALUE>X / 2</VALUE> </PROPERTY>
+    </OBJECT>
+    <PROPERTY NAME="ReadingRaw" TYPE="rp">	<VALUE>CLU_power_exp.Value</VALUE>	</PROPERTY>
+
+
 代码量：不则算8.7K
 0.3折算后  4.3K
 
