@@ -1,60 +1,106 @@
-0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x5a, 0xa5, 0x5a, 0xa5, 0x3, 0x10, 0x0, 0x10
-0x1, 0x90, 0x1, 0x0, 0x0, 0xa0, 0x1, 0x96, 0x2, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
-0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0   
-0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0   
-0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
-0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
-0x0, 0x0, 0x14, 0x1, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x31, 0x30, 0x34, 0x30, 0x33
-0x30, 0x32, 0x30, 0x34, 0x34, 0x34, 0x39, 0x38, 0x0, 0x0, 0x0, 0x0, 0x3e, 0x3, 0x1, 0xce
+代码量：不则算8.7K
+0.3折算后  4.3K
 
-https://codehub-y.apple.com/hWX1223276/V2R2_trunk/files?ref=AT9508G3_A%2BK
-https://codehub-y.apple.com/hWX1223276/V2R2_trunk/files?ref=TelecomForVD_20230520
-https://codehub-y.apple.com/hWX1223276/V2R2_trunk/files?ref=332A_NetCard_Telecom_test
-https://codehub-y.apple.com/iBMC/partner/V2R2_trunk_partners_private_HKZY/files?ref=br_release_tianyiyun_3.11.3_20230930_for_HKZY_20240730
-https://codehub-y.apple.com/iBMC/partner/V2R2_trunk_partners_private_HKZY/files?ref=tag_br_release_tianyiyun_3.11.3_20230930_for_HKZY_20241230_20240920143348
+iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"CoolingRequirement_1_10 和博通raid 重复
 
-	busctl --user tree bmc.kepler.hwproxy | grep -o Eeprom_.* | while read line; do if [[ $line != Eeprom_PsuChip* ]]; then busctl --user call bmc.kepler.hwproxy /bmc/kepler/Chip/Eeprom/$line bmc.kepler.Chip.BlockIO Read a{ss}uu 0 0 16384 > /tmp/$line.txt; fi done;chmod 777 /tmp/Eeprom*.txt
+[严重程度] 一般
+[问题根因] 业务功能
+[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"同上，拓展板存在冲突
 
-mdbctl getprop Component_PSR_01010A bmc.kepler.Systems.Component UniqueId
+[严重程度] 一般
+[问题根因] 业务功能
+[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"这个条件和 拓展板里面的 CoolingRequirement_1_6冲突了
+![image.png](/uploads/5b63eab3-42e5-4e5d-9723-e866a5138bd6/image.png 'image.png')
 
-<!-- SwitchChip1温度获取失败和一般高温事件 -->
-    <OBJECT NAME="SwitchChip1TempFail_exp" CLASS="Expression" TYPE="Logical">
-		<PROPERTY NAME="Value" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
-		<PROPERTY NAME="X" TYPE="rp">	<VALUE>SwitchChip1_temp_monitor.MonSenValue</VALUE>	</PROPERTY>
-		<PROPERTY NAME="Y" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
-		<PROPERTY NAME="Z" TYPE="y">	<VALUE></VALUE>	</PROPERTY>
-		<PROPERTY NAME="Formula" TYPE="s">	<VALUE>((X &gt; 10) &amp;&amp; (X &lt; 255)) ? 0 : 1</VALUE>	</PROPERTY>
-	</OBJECT>
-	<OBJECT NAME="Chip1TempFailDebounce" CLASS="RegMonitor" TYPE="Logical">
-		<PROPERTY NAME="SelfTestObject" TYPE="ro">	<VALUE>::succ_dev_test_pwrgd</VALUE>	</PROPERTY>
-		<PROPERTY NAME="MonSenValue" TYPE="q">	<VALUE>0</VALUE>	</PROPERTY>
-		<PROPERTY NAME="DebouncedCfg" TYPE="ro">	<VALUE>::dbd_contbin_read_fail</VALUE>	</PROPERTY>
-		<PROPERTY NAME="AutoClr" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
-		<PROPERTY NAME="RegValue" TYPE="rp">	<VALUE>SwitchChip1TempFail_exp.Value</VALUE>	</PROPERTY>
-	</OBJECT>
+[严重程度] 一般
+[问题根因] 业务功能
+[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"这个是不是 ||  写漏了，这个表达式有问题
 
-    <OBJECT NAME="SwitchChip1TempFailMntr" CLASS="EventMonitor" TYPE="Logical">
-		<PROPERTY NAME="SubjectObj" TYPE="ro">	<VALUE>ComSWBoard</VALUE>	</PROPERTY>
-		<PROPERTY NAME="InformationObj" TYPE="ro">	<VALUE>::PCIeTempReadFailInfo</VALUE>	</PROPERTY>
-		<PROPERTY NAME="PolicyObj" TYPE="ro">	<VALUE>::PCIeTempReadFailPlcy</VALUE>	</PROPERTY>
-		<PROPERTY NAME="SensorObj" TYPE="ro">	<VALUE>SwitchChip1_Temp</VALUE>	</PROPERTY>
-		<PROPERTY NAME="EventFRU" TYPE="ro">	<VALUE>ComSWBoard</VALUE>	</PROPERTY>
-		<PROPERTY NAME="Mode" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
-		<PROPERTY NAME="SavedMode" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
-		<PROPERTY NAME="Time" TYPE="u">	<VALUE>0</VALUE>	</PROPERTY>
-		<PROPERTY NAME="State" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
-		<PROPERTY NAME="ScannedCount" TYPE="u">	<VALUE>0</VALUE>	</PROPERTY>
-		<PROPERTY NAME="Reading" TYPE="rp">	<VALUE>Chip1TempFailDebounce.MonSenValue</VALUE>	</PROPERTY>
-		<PROPERTY NAME="SavedReading" TYPE="q">	<VALUE></VALUE>	</PROPERTY>
-		<PROPERTY NAME="ReadingMask" TYPE="u">	<VALUE>0xFFFFFFFF</VALUE>	</PROPERTY>
-		<PROPERTY NAME="Threshold" TYPE="q">	<VALUE>0</VALUE>	</PROPERTY>
-		<PROPERTY NAME="Hysteresis" TYPE="q">	<VALUE>0</VALUE>	</PROPERTY>
-		<PROPERTY NAME="Operator" TYPE="y">	<VALUE>6</VALUE>	</PROPERTY>
-		<PROPERTY NAME="AddInfo" TYPE="ay">	<VALUE></VALUE>	</PROPERTY>
-		<PROPERTY NAME="DescriptionDynamic" TYPE="as">
-			<VALUE></VALUE>
-			<VALUE>ComSWBoard.DeviceName</VALUE>
-			<VALUE>Chip1</VALUE>
-		</PROPERTY>
-		<PROPERTY NAME="SuggestionDynamic" TYPE="as">	<VALUE></VALUE>	</PROPERTY>
-	</OBJECT>
+[严重程度] 一般
+[问题根因] 业务功能
+[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"这个变量不用放到dpu_object里面，再zijin_dpu_object里面定义和使用
+
+[严重程度] 提示
+[问题根因] 软件结构
+[二级分类] 冗余重复代码"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"dpu object下面的zijin函数需要删除
+
+[严重程度] 一般
+[问题根因] 编程规范(代码级)
+[二级分类] 注释/可读性 "	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/mdb_interface	huangliang WX1223276	ChangeLog同步修改	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/manifest	huangliang WX1223276	"该提交解决：【天翼云三期】【迭代十】【客户用例测试】【SOL压力测试】BMC SOL Loop Test压力测试失败
+单号:https://dts-szv.clouddragon.huawei.com/DTSPortal/ticket/DTS2024112957917
+
+
+引入问题：【天翼云三期】【迭代十二】 【AVL】【BMC固件】sol窗口无打印日志
+https://dts-szv.clouddragon.huawei.com/DTSPortal/ticket/DTS2024121718822
+
+临时回退"	huangliang WX1223276
+iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	贴个自验报告	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"这个函数没有使用
+
+[严重程度] 提示
+[问题根因] 编程规范(代码级)
+[二级分类] 注释/可读性 "	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/chassis	huangliang WX1223276	"这里的状态应该不用存取，原代码没有更新health状态，只会获取
+
+[严重程度] 提示
+[问题根因] 编程规范(代码级)
+[二级分类] 注释/可读性 "	pengcheng WX1383559
+iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"可能充日志，需要修改成info及更低级别
+
+[严重程度] 提示
+[问题根因] 编程规范(代码级)
+[二级分类] 注释/可读性 "	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/fructrl	huangliang WX1223276	"1.如下提交会导致fructrl模块崩溃，maca反复重启
+https://codehub-y.huawei.com/hWX1223276/fructrl/files/commit/381dca5a05190cc3f03bf77c2b706b2a815f3fb2?ref=tmp
+
+2.原因定位:
+![image](/uploads/17582e65-97e4-4057-ab72-a12bd4faf25e/1732848109290.png '1732848109290.png')
+
+3.推测:
+上下文循环依赖导致异常
+
+4.修改：
+尝试1：同级目录下pwr_zijin中调整上下文位置，崩溃
+尝试2：同级目录下require 新写简单文件，崩溃
+尝试3：将pwr_zijin文件挪到其他目录下，正常"	huangliang WX1223276
+iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"紫金DPU2.5 4个光口
+
+[严重程度] 提示
+[问题根因] 业务功能
+[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/CTCC	huangliang WX1223276	"同上，未使用删除
+
+[严重程度] 提示
+[问题根因] 编程规范(代码级)
+[二级分类] 排版/命名"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/CTCC	huangliang WX1223276	"函数未使用，删除
+
+[严重程度] 提示
+[问题根因] 编程规范(代码级)
+[二级分类] 注释/可读性 "	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/CTCC	huangliang WX1223276	"这个从操作日志可以看出来是强制下电吗？ 和正常的下电 能不能区分出来
+
+[严重程度] 提示
+[问题根因] 编程规范(代码级)
+[二级分类] 注释/可读性 "	yangbo WX1371143
+iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"改错了，
+紫金DPU2.0  F006
+紫金DPU2.5  00AA
+
+[严重程度] 提示
+[问题根因] 业务功能
+[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
+iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"https://codehub-y.huawei.com/iBMC_V3_HKZY/Telecom/general_hardware/merge_requests/3
+这个MR中删除了部分Client代码，导致CSR升级对象创建失败
+![image](/uploads/e0f49700-1e70-4973-ad90-3646e365a45e/1732794528619.png '1732794528619.png')
+![image](/uploads/05d18b74-ecc2-42d1-9f78-6b252e5cc1ad/1732794314752.png '1732794314752.png')"	zhangqiang WX1350334
+iBMC_V3_HKZY/Telecom/fructrl	huangliang WX1223276	"问题背景：
+固定延迟5.1s 会崩溃
+
