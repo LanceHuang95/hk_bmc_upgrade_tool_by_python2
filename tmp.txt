@@ -10,109 +10,57 @@
     <PROPERTY NAME="ReadingRaw" TYPE="rp">	<VALUE>CLU_power_exp.Value</VALUE>	</PROPERTY>
 
 
-代码量：不则算8.7K
-0.3折算后  4.3K
+BMCSet_SessionTimeout=60
+BMCSet_CustomSyslog_Trans_Protocol=2
+BMCSet_PowerRestoreDelayMode=RandomDelay
+BMCSet_PowerRestoreDelayTime=100
+BMCSet_POWERRESTOR=poweron
+Custom_TIMEZONE=UTC+08:00
+BMCSet_ETH0_DHCPMode=on
+BMCSet_Ipv6_DHCPMode=on
+BMCSet_NET_Mode=auto
+BMCSet_KVMTimeout=60
+BMCSet_PEF_Enable=off
+BMCSet_SSDPEnable=0
+BMCSet_RMCPCipherSuites_3=on
+BMCSet_InitialPasswordNeedModify=off
+BMCSet_InitialPwdPrompt=off
+BMCSet_PackageCustomer=CTCC
+BMCSet_CustomMainboard_ProductManufacturer=on
+Custom_Mainboard_ProductManufacturer=MK222
+BMCSet_CustomPowerCappingStatus=off
+BMCSet_TrapEnable=on
+BMCSet_TrapVersion=3
+BMCSet_UserPasswdComplexityForeverEnable=off
+BMCSet_UserPasswdComplexityCheckEnable=on
+BMCSet_SEL_Mode=RotateAfterFull
+BMCSet_QuerySELMaxNumValue=3000
+BMCSet_RedfishCustomManuName=Chinatelecom
+BMCSet_CustomName3=yfadmin
+BMCSet_CustomNamePassword3=CTCloud@60616@
+BMCSet_CustomNameAccess3=admin
+BMCSet_CustomLoginInterface3_web=on
+BMCSet_CustomLoginInterface3_snmp=on
+BMCSet_CustomLoginInterface3_ipmi=on
+BMCSet_CustomLoginInterface3_ssh=on
+BMCSet_CustomLoginInterface3_sftp=on
+BMCSet_CustomLoginInterface3_local=on
+BMCSet_CustomLoginInterface3_redfish=on
+BMCSet_CustomFirstLoginPolicy3=0
+BMCSet_CustomName5=ironic
+BMCSet_CustomNamePassword5=CTCloud@60616@
+BMCSet_CustomNameAccess5=admin
+BMCSet_CustomLoginInterface5_web=on
+BMCSet_CustomLoginInterface5_snmp=on
+BMCSet_CustomLoginInterface5_ipmi=on
+BMCSet_CustomLoginInterface5_ssh=on
+BMCSet_CustomLoginInterface5_sftp=on
+BMCSet_CustomLoginInterface5_local=on
+BMCSet_CustomLoginInterface5_redfish=on
+BMCSet_CustomFirstLoginPolicy5=0
+BMCSet_TrapSNMPv3UserID=3
+BMCSet_MACHINENAME=MK222
+BMCSet_DedicatedNCSIEnable=on
 
-iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"CoolingRequirement_1_10 和博通raid 重复
 
-[严重程度] 一般
-[问题根因] 业务功能
-[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"同上，拓展板存在冲突
-
-[严重程度] 一般
-[问题根因] 业务功能
-[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"这个条件和 拓展板里面的 CoolingRequirement_1_6冲突了
-![image.png](/uploads/5b63eab3-42e5-4e5d-9723-e866a5138bd6/image.png 'image.png')
-
-[严重程度] 一般
-[问题根因] 业务功能
-[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"这个是不是 ||  写漏了，这个表达式有问题
-
-[严重程度] 一般
-[问题根因] 业务功能
-[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"这个变量不用放到dpu_object里面，再zijin_dpu_object里面定义和使用
-
-[严重程度] 提示
-[问题根因] 软件结构
-[二级分类] 冗余重复代码"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"dpu object下面的zijin函数需要删除
-
-[严重程度] 一般
-[问题根因] 编程规范(代码级)
-[二级分类] 注释/可读性 "	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/mdb_interface	huangliang WX1223276	ChangeLog同步修改	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/manifest	huangliang WX1223276	"该提交解决：【天翼云三期】【迭代十】【客户用例测试】【SOL压力测试】BMC SOL Loop Test压力测试失败
-单号:https://dts-szv.clouddragon.huawei.com/DTSPortal/ticket/DTS2024112957917
-
-
-引入问题：【天翼云三期】【迭代十二】 【AVL】【BMC固件】sol窗口无打印日志
-https://dts-szv.clouddragon.huawei.com/DTSPortal/ticket/DTS2024121718822
-
-临时回退"	huangliang WX1223276
-iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	贴个自验报告	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"这个函数没有使用
-
-[严重程度] 提示
-[问题根因] 编程规范(代码级)
-[二级分类] 注释/可读性 "	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/chassis	huangliang WX1223276	"这里的状态应该不用存取，原代码没有更新health状态，只会获取
-
-[严重程度] 提示
-[问题根因] 编程规范(代码级)
-[二级分类] 注释/可读性 "	pengcheng WX1383559
-iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"可能充日志，需要修改成info及更低级别
-
-[严重程度] 提示
-[问题根因] 编程规范(代码级)
-[二级分类] 注释/可读性 "	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/fructrl	huangliang WX1223276	"1.如下提交会导致fructrl模块崩溃，maca反复重启
-https://codehub-y.huawei.com/hWX1223276/fructrl/files/commit/381dca5a05190cc3f03bf77c2b706b2a815f3fb2?ref=tmp
-
-2.原因定位:
-![image](/uploads/17582e65-97e4-4057-ab72-a12bd4faf25e/1732848109290.png '1732848109290.png')
-
-3.推测:
-上下文循环依赖导致异常
-
-4.修改：
-尝试1：同级目录下pwr_zijin中调整上下文位置，崩溃
-尝试2：同级目录下require 新写简单文件，崩溃
-尝试3：将pwr_zijin文件挪到其他目录下，正常"	huangliang WX1223276
-iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"紫金DPU2.5 4个光口
-
-[严重程度] 提示
-[问题根因] 业务功能
-[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/CTCC	huangliang WX1223276	"同上，未使用删除
-
-[严重程度] 提示
-[问题根因] 编程规范(代码级)
-[二级分类] 排版/命名"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/CTCC	huangliang WX1223276	"函数未使用，删除
-
-[严重程度] 提示
-[问题根因] 编程规范(代码级)
-[二级分类] 注释/可读性 "	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/CTCC	huangliang WX1223276	"这个从操作日志可以看出来是强制下电吗？ 和正常的下电 能不能区分出来
-
-[严重程度] 提示
-[问题根因] 编程规范(代码级)
-[二级分类] 注释/可读性 "	yangbo WX1371143
-iBMC_V3_HKZY/Telecom/vpd	huangliang WX1223276	"改错了，
-紫金DPU2.0  F006
-紫金DPU2.5  00AA
-
-[严重程度] 提示
-[问题根因] 业务功能
-[二级分类] 功能需求没有正确实现"	liaochaowan WX1328960
-iBMC_V3_HKZY/Telecom/general_hardware	huangliang WX1223276	"https://codehub-y.huawei.com/iBMC_V3_HKZY/Telecom/general_hardware/merge_requests/3
-这个MR中删除了部分Client代码，导致CSR升级对象创建失败
-![image](/uploads/e0f49700-1e70-4973-ad90-3646e365a45e/1732794528619.png '1732794528619.png')
-![image](/uploads/05d18b74-ecc2-42d1-9f78-6b252e5cc1ad/1732794314752.png '1732794314752.png')"	zhangqiang WX1350334
-iBMC_V3_HKZY/Telecom/fructrl	huangliang WX1223276	"问题背景：
-固定延迟5.1s 会崩溃
 
