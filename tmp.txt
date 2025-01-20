@@ -9,6 +9,14 @@
     </OBJECT>
     <PROPERTY NAME="ReadingRaw" TYPE="rp">	<VALUE>CLU_power_exp.Value</VALUE>	</PROPERTY>
 
+~ ~ $ busctl --user get-property bmc.kepler.nsm /bmc/kepler/Managers/1/NetworkProtocol/SSDP bmc.kepler.Managers.NetworkProtocol.PortConfig Enabled
+b true
+~ ~ $
+~ ~ $
+~ ~ $
+~ ~ $
+~ ~ $ busctl --user set-property bmc.kepler.nsm /bmc/kepler/Managers/1/NetworkProtocol/SSDP bmc.kepler.Managers.NetworkProtocol.PortConfig Enabled b false
+
 
 BMCSet_SessionTimeout=60
 BMCSet_CustomSyslog_Trans_Protocol=2
