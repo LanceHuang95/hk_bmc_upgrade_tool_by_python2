@@ -18,57 +18,34 @@ b true
 ~ ~ $ busctl --user set-property bmc.kepler.nsm /bmc/kepler/Managers/1/NetworkProtocol/SSDP bmc.kepler.Managers.NetworkProtocol.PortConfig Enabled b false
 
 
-BMCSet_SessionTimeout=60
-BMCSet_CustomSyslog_Trans_Protocol=2
-BMCSet_PowerRestoreDelayMode=RandomDelay
-BMCSet_PowerRestoreDelayTime=100
-BMCSet_POWERRESTOR=poweron
-Custom_TIMEZONE=UTC+08:00
-BMCSet_ETH0_DHCPMode=on
-BMCSet_Ipv6_DHCPMode=on
-BMCSet_NET_Mode=auto
-BMCSet_KVMTimeout=60
-BMCSet_PEF_Enable=off
-BMCSet_SSDPEnable=0
-BMCSet_RMCPCipherSuites_3=on
-BMCSet_InitialPasswordNeedModify=off
-BMCSet_InitialPwdPrompt=off
-BMCSet_PackageCustomer=CTCC
-BMCSet_CustomMainboard_ProductManufacturer=on
-Custom_Mainboard_ProductManufacturer=MK222
-BMCSet_CustomPowerCappingStatus=off
-BMCSet_TrapEnable=on
-BMCSet_TrapVersion=3
-BMCSet_UserPasswdComplexityForeverEnable=off
-BMCSet_UserPasswdComplexityCheckEnable=on
-BMCSet_SEL_Mode=RotateAfterFull
-BMCSet_QuerySELMaxNumValue=3000
-BMCSet_RedfishCustomManuName=Chinatelecom
-BMCSet_CustomName3=yfadmin
-BMCSet_CustomNamePassword3=CTCloud@60616@
-BMCSet_CustomNameAccess3=admin
-BMCSet_CustomLoginInterface3_web=on
-BMCSet_CustomLoginInterface3_snmp=on
-BMCSet_CustomLoginInterface3_ipmi=on
-BMCSet_CustomLoginInterface3_ssh=on
-BMCSet_CustomLoginInterface3_sftp=on
-BMCSet_CustomLoginInterface3_local=on
-BMCSet_CustomLoginInterface3_redfish=on
-BMCSet_CustomFirstLoginPolicy3=0
-BMCSet_CustomName5=ironic
-BMCSet_CustomNamePassword5=CTCloud@60616@
-BMCSet_CustomNameAccess5=admin
-BMCSet_CustomLoginInterface5_web=on
-BMCSet_CustomLoginInterface5_snmp=on
-BMCSet_CustomLoginInterface5_ipmi=on
-BMCSet_CustomLoginInterface5_ssh=on
-BMCSet_CustomLoginInterface5_sftp=on
-BMCSet_CustomLoginInterface5_local=on
-BMCSet_CustomLoginInterface5_redfish=on
-BMCSet_CustomFirstLoginPolicy5=0
-BMCSet_TrapSNMPv3UserID=3
-BMCSet_MACHINENAME=MK222
-BMCSet_DedicatedNCSIEnable=on
+伙伴进展：2025.02.27
+
+河南昆仑：
+5580 ：
+天数卡适配
+沐曦gpu 卡适配
+pcie switch 单双切
+0631Y111网卡适配
+
+兼容性适配：
+新增适配瀚博VA1-32G；新增适配凯侠nvme cd8
+
+字节 阿里蚂蚁项目
+
+
+长江计算：
+磐石 DPU4.0
+部件适配AIC NVMe
+
+920X:
+R420K存储服务器 4U机型：
+SAS EXP SWU-R424KV2-30S板适配
+15盘 BPS-15S-LFF-D板适配
+下层电源板EXU2 INT-R424KV2-4HWPSU适配
+
+宝德：
+WX1820AL&WX1860AL 网卡适配
+x710 E810 网卡适配
 
 
 
