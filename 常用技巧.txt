@@ -1,0 +1,489 @@
+ipmitool -H 51.2.162.237 -I lanplus -U Administrator -P Admin@9000 -b 0x06 -t 0x2c raw 0x06 0x01
+ .\ipmitool.exe  -H 51.0.0.2 -I lanplus -U Tech.ON -P TianGong8000@ raw 0x0 0x09 0x62 0 0
+
+ssh Administrator@51.2.162.237
+
+
+attach payload
+attach cooling_app
+dlogtype local
+dloglevel error
+
+------------------------------------------------------
+bmc调试： 工具
+1. 破解BMC，不需要重启
+ipmcset -d upgrade -v /tmp/telnet_1711.hpm
+通过telnet登录BMC
+
+
+2. 上传bmcdfx到环境
+
+cp /tmp/bmcdfx /home/
+chmod 755 /home/bmcdfx
+
+
+cp /tmp/libreadline.so.8 /home
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home
+
+
+cd /home
+mount -o remount rw /
+./bmcdfx emmc disable writeProtect 4
+./bmcdfx emmc disable writeProtect 5
+./bmcdfx emmc disable writeProtect 6
+umount /opt/pme/extern/profile
+mount -t ext4 -rw /data/opt/pme/extern/profile.img /opt/pme/extern/profile
+ 
+3. gdb_1711调试coredump
+解压、上传liblzma.so.so.5和gdb_1711文件到/home/Administrator，添加可执行执行权限
+
+attach进程：
+
+查询进程号: ps -AL | grep sensor_alarm
+
+attach进程：LD_PRELOAD=./liblzma.so.5 ./gdb_1711 attach 21958，命令会attach到PID为21957的进程。
+
+调试core文件：
+
+LD_PRELOAD=./liblzma.so.5 ./gdb_1711 /var/coredump/core-bmc_global /opt/pme/apps/bmc_global 
+调试bmc_global进程产生的core-bmc_global文件
+
+4.替换APP
+编译的app或lib库需要替换到环境中，需要使用的命令包括：
+以读写方式挂载分区
+替换app或lib，涉及的操作
+替换app：将其加入xshell的快速命令，根据需要将KAPP设置为需要调试的app名称
+date
+export KAPP=redfish
+md5sum /tmp/${KAPP}
+ps aux | grep -w ${KAPP}
+chmod +x /tmp/${KAPP}
+rm /opt/pme/apps/${KAPP}
+cp /tmp/${KAPP} /opt/pme/apps/${KAPP}
+killall ${KAPP}
+ 
+
+#天池机型
+
+cp /tmp/bmcdfx /home;cp /tmp/libreadline.so.8 /home;cd /home;chmod 777 bmcdfx;chmod 777 libreadline.so.8;LD_PRELOAD=./libreadline.so.8 ./bmcdfx emmc disable writeProtect 4;LD_PRELOAD=./libreadline.so.8 ./bmcdfx emmc disable writeProtect 5;LD_PRELOAD=./libreadline.so.8 ./bmcdfx emmc disable writeProtect 6;mount -o remount -rw /
+ 
+date
+export KAPP=redfish
+md5sum /tmp/${KAPP}
+ps aux | grep -w ${KAPP}
+chmod +x /tmp/${KAPP}
+rm -rf /opt/bmc/apps/legacy/${KAPP}/${KAPP}
+cp /tmp/${KAPP} /opt/bmc/apps/legacy/${KAPP}/${KAPP}
+killall ${KAPP}
+ 
+# 替换lua
+cd /opt/bmc/apps/legacy/portal/redfish
+chmod 550 /tmp/upgrade.lua
+cp /tmp/upgrade.lua  ./
+ls -alh
+killall portal
+
+ 
+替换lib：将其加入xshell的快速命令，根据需要将LIBSO设置为需要调试的lib文件名称（注意：一定要替换lib库的原始文件，与docker生成的lib文件匹配）；
+根据实际情况可能需要重启系统或应用以加载动态库：如是PME使用的一般需要重启，如像libupgrade*之类app使用库一般需要重启app。
+替换前可以使用find / -name libxxx搜索libxxx放置的路径并正确替换下述快速命令中的/opt/pme/lib路径。
+
+export LIBSO=libdflbase.so
+chmod 755 /tmp/${LIBSO}
+rm /opt/pme/lib/${LIBSO}
+cp /tmp/${LIBSO} /opt/pme/lib/${LIBSO}
+chmod 755 /opt/pme/lib/${LIBSO}
+
+
+替换XML:
+进入到 /opt/pme/extern/profile 目录下替换 xml
+4. 执行如下命令停止框架进程 
+killall dfm
+5. 执行如下命令重启pme
+sh /opt/pme/sbin/start_pme.sh restart
+
+-------------------------------------------------------------------------------------
+
+
+********************************************************************************
+xml加载流程：
+Line 211: 1970-01-01T08:00:18+08:00 iBMC dfm: [ dfm ] Load platform.xml successfully.
+Line 212: 1970-01-01T08:00:18+08:00 iBMC dfm: [ dfm ] Load base.xml successfully.
+Line 213: 1970-01-01T08:00:18+08:00 iBMC dfm: [ dfm ] Load _ea9.xml successfully.
+Line 214: 1970-01-01T08:00:19+08:00 iBMC dfm: [ dfm ] Load BASEBOARD_b9.xml successfully.
+Line 215: 1970-01-01T08:00:19+08:00 iBMC dfm: [ dfm ] Load 14220292_2a.xml successfully.
+Line 217: 1970-01-01T08:00:19+08:00 iBMC dfm: [ dfm ] Load 1406G002_73.xml successfully.
+Line 246: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load 1406G002_73_00.xml successfully.
+Line 247: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load 14220246_68.xml successfully.
+Line 248: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load UPGRADE_CPLD_00.xml successfully.
+Line 249: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load 14191046_ff.xml successfully.
+Line 250: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load PSUCustomizeSensor_ff.xml successfully.
+Line 251: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load 14191046_ff.xml successfully.
+Line 252: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load PSUCustomizeSensor_ff.xml successfully.
+Line 254: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load CustomizeSensor_ff.xml successfully.
+Line 255: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load 14140129_94.xml successfully.
+Line 256: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load ADC_b9.xml successfully.
+Line 257: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load VRD_b9_05.xml successfully.
+Line 258: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load PCIeAddrInfo_ff.xml successfully.
+Line 259: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load Riser1_94.xml successfully.
+Line 260: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load FAN_b9.xml successfully.
+Line 261: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load PSevent_b9.xml successfully.
+Line 262: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load M2_SATA_SSD_00.xml successfully.
+Line 263: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load PRODUCT_02.xml successfully.
+Line 264: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load COOLING_00.xml successfully.
+Line 265: 1970-01-01T08:00:20+08:00 iBMC dfm: [ dfm ] Load CLOCK_01.xml successfully.
+Line 558: 2022-12-07T16:47:00+08:00 iBMC dfm: [ dfm ] Load 14140130_15b3a2d6_15b30060.xml successfully.
+
+天池xml加载
+Line 1597: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load platform.xml successfully.
+Line 1598: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load base.xml successfully.
+Line 1600: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load _ff.xml successfully.
+Line 1601: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load BASEBOARD_ff.xml successfully.
+Line 1602: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load BMCCard_01.xml successfully.
+Line 1603: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load Serial_a1.xml successfully.
+Line 1604: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load InletOutlet_a1.xml successfully.
+Line 1605: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load CustomizeSensor_ff.xml successfully.
+Line 1606: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load ExpBoard_32323933.xml successfully.
+Line 1607: 1970-01-01T00:00:19+00:00 iBMC dfm: [ dfm ] Load PSevent_EXP_ff.xml successfully.
+Line 1608: 1970-01-01T00:00:20+00:00 iBMC dfm: [ dfm ] Load ADC_ExpBoard_00.xml successfully.
+Line 1609: 1970-01-01T00:00:20+00:00 iBMC dfm: [ dfm ] Load 1406G002_VF_35323933.xml successfully.
+Line 1610: 1970-01-01T00:00:20+00:00 iBMC dfm: [ dfm ] Load PSevent_HDD_ff.xml successfully.
+Line 1611: 1970-01-01T00:00:20+00:00 iBMC dfm: [ dfm ] Load 14220246_VF_00.xml successfully.
+Line 1612: 1970-01-01T00:00:20+00:00 iBMC dfm: [ dfm ] Load 14220246_VF_02.xml successfully.
+Line 1613: 1970-01-01T00:00:20+00:00 iBMC dfm: [ dfm ] Load 14191046_ff.xml successfully.
+Line 1616: 1970-01-01T00:00:20+00:00 iBMC dfm: [ dfm ] Load PSUCustomizeSensor_ff.xml successfully.
+Line 1619: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load FanBoard_34323933.xml successfully.
+Line 1634: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load FAN_00.xml successfully.
+Line 1639: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load PSevent_FAN_ff.xml successfully.
+Line 1640: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load FlexIO_32323933_39333334.xml successfully.
+Line 1651: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load CpuBoard_39333334.xml successfully.
+Line 1653: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load PSevent_CPU_ff.xml successfully.
+Line 1654: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load VRD_VF_IND_16_00.xml successfully.
+Line 1655: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load CpuMem_16.xml successfully.
+Line 1656: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load CHASSIS_INTRUSION_00.xml successfully.
+Line 1657: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load ADC_CpuBoard_00.xml successfully.
+Line 1661: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load KP_Riser_05.xml successfully.
+Line 1662: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load 14140129_VF_32333730.xml successfully.
+Line 1663: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load Riser_32333730_01.xml successfully.
+Line 1667: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load KP_Riser_07.xml successfully.
+Line 1668: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load 14140129_VF_31353535.xml successfully.
+Line 1669: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load Riser_31353535_02.xml successfully.
+Line 1670: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load PCIeAddrInfo_ff.xml successfully.
+Line 1672: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load Unit_Status_ff.xml successfully.
+Line 1673: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load Eth_a1.xml successfully.
+Line 1674: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load PRODUCT_FF_00.xml successfully.
+Line 1675: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load COOLING_00.xml successfully.
+Line 1676: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load MPC_00.xml successfully.
+Line 1677: 1970-01-01T00:00:21+00:00 iBMC dfm: [ dfm ] Load 14140130_NCSI_00.xml successfully.
+Line 2013: 2023-10-20T07:31:05+00:00 iBMC dfm: [ dfm ] Load 14140130_80880101_80880201.xml successfully.
+
+
+
+14140130_15b3a2d6_15b30060.xml 温度读取：
+i2cwrite 5 1 0xE6 0 4
+i2cread 5 1 0x3e 0x01
+ 
+
+i2cwrite 6 1 0xE6 0 2
+i2cread 6 2 0x3e 0x01
+
+i2cwrite 6 1 0xE6 0 2
+i2cread 6 2 0x3e 0x01
+ 
+
+risercard id结果：0x94
+RiserCard1Connect.id ->RiserCard1BoardIdAccessor->Riser1Card9555(0x4e 0)->riser1_pca9545_chip(pca9545_chan1)->i2c_5(0xe6) 
+i2cwrite 5 1 0xE6 0 1
+i2cread 5 1 0x4e 0
+ 
+pcie卡加载下xml流程：
+RiserCard1Connect(i2c_5,BOM:14140129,Id:0x94,Pos:0x08) ->RiserCardAnchor-8(Position=8,Slot=1)->
+PcieSlot2Connect(Present=1,Slot=2,Bom_id_auxid,Position=2050,Bus=pca9545_chan3-8) -
+PcieCardAnchor-802(Position=2050,Slot=2,Bus=pca9545_chan3-8,Legacy=ComRiserCard-8) ->
+
+
+1 2 3 4
+1 2 4 8
+
+模拟板卡在位：
+lsobj Connector
+lsprop PcieSlot1Connect-8
+
+% attach card
+% pcie_device_mock PcieSlot1Connect-8 1 0x15b3101d 0x15b30018
+
+connector_name=PcieSlot1Connect-8, pcie_type=0x00000001, vid_did=0x15B3101D, aux_id=0x15B30018
+old_vid_did=0xFFFFFFFF, old_aux_id=0xFFFFFFFF
+load pcie device(0x15B3101D) successfully
+
+卸载:
+setprop PcieSlot1Connect-8.Id 0
+setprop PcieSlot1Connect-8.AuxId 0
+setprop PcieSlot1Connect-8.Present 0
+或者重启bmc
+
+******************************************************************************************
+
+一键编译：
+部署签名
+进入/home/tool目录
+bash DeploySignature_V2.sh -l /home/workspace/V2R2_trunk
+
+npm config set @cloud:registry https://maven.repo.cmc.tools.huawei.com/artifactory/api/npm/cbu-npm-public/
+
+添加设备文件
+for dev_num in {0..8}
+do
+	mknod -m 0660 /dev/loop${dev_num} b 7 ${dev_num}
+done
+
+
+application/build目录下
+python3 build_one_click.py -b "TaiShan2280Mv2" -s -n
+ # 如果要zip包请去掉-n选项
+/home/workspace/V2R2_trunk/temp/partnerpkt/rootfs_rw_TaiShan2280Mv2_repair.hpm
+
+
+新框架
+python3 frame.py -t target_personal -b "board_name" # board_name为要构建的单板名
+
+3.10版本以上编译：
+
+cd /home/workspace/V2R2_trunk/application/build
+编译整包
+python3 frame.py -t target_personal -b "BM320"
+编译portal
+python frame.py -t target_personal -b "BM320" -p "frudata"
+单独编译app
+python works/build/work_build_app.py -b "BM320" -p "frudata"
+
+
+单个APP编译
+#source /opt/RTOS/208.1.0/dlsetenv.sh -p arm32A9le_5.10_ek_preempt_pro --sdk-path=/opt/hcc_arm32le
+source /opt/RTOS/207.8.0/dlsetenv.sh -p arm64le_4.4_ek_preempt_pro --sdk-path=/opt/hcc_arm64le
+切换到目标模块所在目录执行构建编译（以存储模块为例）
+cd /home/workspace/V2R2_trunk/temp/target/src/apps/storage_mgnt
+make clean
+make
+
+
+# 编译web_host
+进入目录：/home/workspace/V2R2_trunk/application/src/apps/web_host
+make aarch64-linux LUA_INCLUDE=/home/workspace/V2R2_trunk/application/src/include/open_source/luajit2 LIBRARY_PATH=/home/workspace/V2R2_trunk/application/src/lib_open_source GLIB_INCLUDE_PATH=/opt/RTOS/207.8.0/arm64le_4.4_ek_preempt_pro/sdk/usr/include/glib-2.0 GLIB_INCLUDE_PATH2=/opt/RTOS/207.8.0/arm64le_4.4_ek_preempt_pro/sdk/usr/lib64/glib-2.0/include GLIB_INCLUDE_PATH3=/opt/RTOS/207.8.0/arm64le_4.4_ek_preempt_pro/sdk/usr/include DFLIB_PATH=/home/workspace/V2R2_trunk/application/sdk/PME/V100R001C10/lib COMPATIBILITY_ENABLED=0 SECURITY_ENHANCED_COMPATIBLE_BOARD_V1=1 SECURITY_ENHANCED_COMPATIBLE_BOARD_V5=1 SECURITY_ENHANCED_COMPATIBLE_BOARD_V3=1
+输出目录：/home/workspace/V2R2_trunk/application/src/apps/web_host/release/opt/pme/bin/portal
+
+# 替换模块	
+cd /opt/pme/apps
+cp /tmp/storage_mgnt .
+chown root:root storage_mgnt
+chmod 550 storage_mgnt
+killall storage_mgnt
+
+# 替换lua
+cd /opt/pme/bin/portal/webrest/system
+chmod 550 /tmp/upgrade.lua
+cp /tmp/upgrade.lua  ./
+ls -alh
+killall portal
+ 
+#前端编译
+1. 安装nodejs
+2. user目录下 新增 .npmrc
+registry=https://cmc.centralrepo.rnd.huawei.com/npm/
+sass_binary_site=https://npm.taobao.org/mirrors/node-sass
+@cloud:registry=https://cmc.centralrepo.rnd.huawei.com/artifactory/api/npm/product_npm/
+@computing:registry=https://npm.cloudartifact.dgg.dragon.tools.huawei.com/artifactory/api/npm/npm-computing
+loglevel=info
+info=true
+strict-ssl=false
+
+3. 
+npm ci
+npm install
+npm install -g @angular/cli@10
+npm start
+
+4.webapp目录下 package.json 里修改
+第22 23行      
+"@cloud/tiny3": "10.0.4",
+"@cloud/tinyplus3": "10.0.4"
+第6行
+"start": "ng serve --ssl --proxy-config proxy.conf.json --port 4002",
+
+5. 把proxy.conf.json 放到 webapp目录下， 按实际环境修改
+
+6. npm start
+7.  https://localhost:4002/
+
+
+# docker编译
+"image": "kweecr01.huawei.com:80/zxy/ibmc:ibmc_build_sz_20221111_root"
+http://3ms.huawei.com/hi/group/2030499/wiki_6588100.html
+http://3ms.huawei.com/hi/group/2030499/wiki_6396322.html
+http://3ms.huawei.com/hi/group/2030499/wiki_6715086.html
+
+
+
+An exemple of the only solution that works for me in the simple usecase where I am on a fork and I want to checkout a new branch from a tag that is on the main project repository ( here upstream )
+
+git fetch upstream --tags
+Give me
+
+From https://github.com/keycloak/keycloak
+   90b29b0e31..0ba9055d28  stage      -> upstream/stage
+ * [new tag]    11.0.0     -> 11.0.0
+Then I can create a new branch from this tag and checkout on it
+
+git checkout -b tags/<name> <newbranch>
+
+git checkout tags/11.0.0 -b v11.0.0
+
+git rebase upstream/master
+git rebase origin master
+
+
+cd /opt/huawei/ibma/lib/common/config/
+chmod +w WhiteURLList.ini
+vi WhiteURLList.ini
+添加一行：
+"^/redfish/v1/_SmsID/.*$"
+重启 iBMA
+service iBMA restart
+https://90.90.84.55/redfish/v1/Sms/1/Systems/1
+
+
+
+% lsprop Riser2VirtualConnector-2
+ProductId=0
+Position=2
+SilkText=J6054
+Type=VirtualConnector
+Legacy=,
+Id=7
+Bus=,
+Chip=,
+Present=0
+AuxId=0
+Bom=KP_Riser
+Lib=null
+Slot=2
+
+
+% lsprop RiserCardConnect6-2
+ProductId=0
+Position=742
+SilkText=J6013-J6
+Type=RiserConnect
+Legacy=,
+Id=842217264
+Bus=HisportI2c6,
+Chip=,
+Present=1
+AuxId=0
+Bom=14140129_VF
+Lib=null
+Slot=3
+
+/*
+Anchor Bus被替换为对应Connector所包含的Bus对象
+Anchor Slot被替换为对应的Connector对象上的Slot号
+Anchor Chip不会被替换，一般为空值
+*/
+
+``` xml
+<OBJECT NAME="RiserCardAnchor" CLASS="Anchor" TYPE="Logical">
+	<PROPERTY NAME="Legacy" TYPE="roa">	    <VALUE></VALUE>                      </PROPERTY>
+	<PROPERTY NAME="Slot" TYPE="y">	<VALUE>0xff</VALUE>	</PROPERTY>
+	<PROPERTY NAME="Position" TYPE="u">	<VALUE>0xffff</VALUE>	</PROPERTY>
+	<PROPERTY NAME="SilkText" TYPE="s">	<VALUE></VALUE>	</PROPERTY>
+	<PROPERTY NAME="Bus" TYPE="roa">	<VALUE>i2c_5</VALUE>	</PROPERTY>
+	<PROPERTY NAME="Chip" TYPE="roa">	<VALUE></VALUE>	</PROPERTY>
+</OBJECT>
+```
+实际为
+
+% lsprop RiserCardAnchor-2e6
+Bus=HisportI2c6,
+Chip=,
+Slot=3
+Legacy=,
+Position=742
+SilkText=J6013-J6
+
+
+/*
+和Anchor同一级的器件
+器件的前级总线如果是Anchor所包含的总线，则需要将其替换为前级Connector对象所包含的相应总线
+器件的前级器件如果为空，需要替换为前级Connector对象所包含的前级器件对象
+eg：
+pca9545_chip的LBus配置为i2c_5，和当前Anchor的Bus一致，被替换为前级Connector的Bus对象
+pca9545_chip的PrevChip xml配置为空，被替换为前级Connector的Chip对象
+*/
+``` xml
+<OBJECT NAME="pca9545_chip" CLASS="Pca9545" TYPE="Physical">
+	<PROPERTY NAME="Addr" TYPE="u">	<VALUE>0xE2</VALUE>	</PROPERTY>
+	<PROPERTY NAME="AddrWidth" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+	<PROPERTY NAME="OffsetWidth" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+	<PROPERTY NAME="PrevChip" TYPE="ro">	<VALUE></VALUE>	</PROPERTY>
+	<PROPERTY NAME="Index" TYPE="u">	<VALUE>0</VALUE>	</PROPERTY>
+	<PROPERTY NAME="Level" TYPE="y">	<VALUE>1</VALUE>	</PROPERTY>
+	<PROPERTY NAME="LBusType" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+	<PROPERTY NAME="RBusType" TYPE="y">	<VALUE>0</VALUE>	</PROPERTY>
+	<PROPERTY NAME="LBus" TYPE="ro">	<VALUE>i2c_5</VALUE>	</PROPERTY>
+</OBJECT>
+```
+实际为
+% lsprop pca9545_chip-2e6
+RBusType=0
+LBusType=0
+Addr=226
+OffsetWidth=0
+PrevChip=null
+ResetChip=null
+AddrWidth=1
+Level=1
+Index=0
+LBus=HisportI2c6
+
+
+
+% lsprop PcieSlot2Connect-2e6
+ProductId=0
+Position=189954
+SilkText=J6013-J6-J2
+Type=PCIe
+Legacy=ComRiserCard-2e6,
+Id=452202496
+Bus=pca9545_chan2-2e6,
+Chip=pca9545_chip-2e6,
+Present=1
+AuxId=-2138701823
+Bom=14140130
+Lib=null
+Slot=8
+
+
+% lsprop PcieCardAnchor-2e602
+Bus=pca9545_chan2-2e6,
+Chip=,
+Slot=8
+Legacy=ComRiserCard-2e6,
+Position=189954
+SilkText=J6013-J6-J2
+
+
+% lsprop hpcard_cpld_chip-2e602
+RBusType=0
+LBusType=0
+Addr=122
+OffsetWidth=1
+PrevChip=pca9545_chip-2e6
+AddrWidth=1
+Level=2
+Index=0
+LBus=pca9545_chan2-2e6
+
+
+
+
+
